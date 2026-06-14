@@ -311,24 +311,20 @@ button { cursor: pointer; }
 
 .nav-logo {
     display: flex;
-    align-items: baseline;
-    font-family: var(--font-heading);
-    font-size: var(--fs-xl);
-    font-weight: 700;
+    align-items: center;
     z-index: 1001;
 }
 
-.logo-letter {
-    background: var(--gradient-text);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.logo-img {
+    height: 38px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform var(--transition-fast) ease;
 }
 
-.logo-dot {
-    color: var(--accent-violet);
-    font-size: var(--fs-2xl);
-    line-height: 1;
+.logo-img:hover {
+    transform: scale(1.04);
 }
 
 .nav-menu {
@@ -448,9 +444,6 @@ button { cursor: pointer; }
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* =====================================================
-   HERO SECTION
-   ===================================================== */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -466,6 +459,25 @@ button { cursor: pointer; }
     position: absolute;
     inset: 0;
     overflow: hidden;
+    z-index: 0;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: blur(20px) brightness(0.35);
+}
+
+.hero-video-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 10%, var(--bg-primary) 85%), rgba(8, 7, 16, 0.4);
+    z-index: 2;
 }
 
 .hero-orb {
@@ -474,6 +486,7 @@ button { cursor: pointer; }
     filter: blur(80px);
     opacity: 0.5;
     animation: float 8s ease-in-out infinite;
+    z-index: 3;
 }
 
 .hero-orb--1 {
@@ -512,12 +525,13 @@ button { cursor: pointer; }
     background-size: 60px 60px;
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
     -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    z-index: 4;
 }
 
 .hero-content {
     text-align: center;
     position: relative;
-    z-index: 1;
+    z-index: 5;
 }
 
 .hero-badge {
@@ -1185,11 +1199,43 @@ button { cursor: pointer; }
 /* =====================================================
    CONTACT SECTION
    ===================================================== */
+.contact {
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.contact-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: blur(25px) brightness(0.25);
+}
+
+.contact-video-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, transparent 30%, var(--bg-primary) 95%), rgba(8, 7, 16, 0.5);
+    z-index: 2;
+}
+
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--space-4xl);
     align-items: start;
+    position: relative;
+    z-index: 3;
 }
 
 .contact-info .section-tag { margin-bottom: var(--space-md); }
