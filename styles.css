@@ -430,7 +430,7 @@ button { cursor: pointer; }
     font-family: var(--font-heading);
     font-size: var(--fs-xs);
     font-weight: 600;
-    padding: 6px 14px;
+    padding: 5px 12px;
     border-radius: var(--radius-full);
     color: var(--text-tertiary);
     transition: all var(--transition-fast);
@@ -1515,4 +1515,13 @@ button { cursor: pointer; }
 
     .tech-grid { grid-template-columns: repeat(2, 1fr); }
     .project-image { height: 200px; }
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+    .nav-menu {
+        gap: var(--space-md);
+    }
+    .lang-btn {
+        padding: 5px 10px;
+    }
 }

@@ -314,10 +314,16 @@ const translations = {
         // Testimonials
         testimonials_tag: 'Depoimentos',
         testimonials_title: 'O Que os Clientes <span class="gradient-text">Dizem</span>',
+        test1_initials: 'MS',
+        test1_name: 'Martim Silva',
         test1_text: '"Trabalho absolutamente fenomenal. A landing page que ele construiu para nós aumentou nossas conversões em 40%. Entrega rápida, comunicação incrível e o design superou nossas expectativas."',
-        test1_role: 'CEO, TechVentures',
+        test1_role: 'Fundador, TecnoVanguarda',
+        test2_initials: 'SR',
+        test2_name: 'Sofia Romero',
         test2_text: '"Trabalhar com o Lautaro foi muito fácil. Ele entendeu nossa marca perfeitamente e entregou um site que realmente representa quem somos. Com certeza contratarei novamente para projetos futuros."',
-        test2_role: 'Fundadora, NovaBrand',
+        test2_role: 'Diretora de Marketing, NovaBrand',
+        test3_initials: 'JD',
+        test3_name: 'James Donovan',
         test3_text: '"O painel SaaS que ele desenvolveu é incrivelmente polido. Código limpo, ótima experiência do usuário e ele ainda implementou recursos que não havíamos pensado. Profissional de verdade."',
         test3_role: 'CTO, CloudFlow',
 
