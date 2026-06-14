@@ -459,6 +459,7 @@ button { cursor: pointer; }
     position: relative;
     overflow: hidden;
     padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .hero-bg {
@@ -530,7 +531,7 @@ button { cursor: pointer; }
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-full);
     backdrop-filter: blur(10px);
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--space-xl);
 }
 
 .badge-pulse {
@@ -563,7 +564,7 @@ button { cursor: pointer; }
     font-size: var(--fs-lg);
     color: var(--text-secondary);
     max-width: 580px;
-    margin: 0 auto var(--space-2xl);
+    margin: 0 auto var(--space-xl);
     line-height: 1.7;
 }
 
@@ -572,7 +573,7 @@ button { cursor: pointer; }
     align-items: center;
     justify-content: center;
     gap: var(--space-lg);
-    margin-bottom: var(--space-4xl);
+    margin-bottom: var(--space-2xl);
 }
 
 .hero-stats {
