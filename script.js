@@ -455,22 +455,49 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!data.name || !data.email || !data.message) return;
 
-            const t = translations[currentLang];
-            const successText = t.form_success_text.replace('{name}', data.name);
+            // Disable button / show sending state
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnHtml = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span>${currentLang === 'es' ? 'Enviando...' : 'Sending...'}</span>`;
 
-            contactForm.innerHTML = `
-                <div class="form-success-message">
-                    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
-                        <polyline points="22 4 12 14.01 9 11.01"/>
-                    </svg>
-                    <h3>${t.form_success_title}</h3>
-                    <p>${successText}</p>
-                </div>
-            `;
-            contactForm.classList.add('success');
+            // FormSubmit configuration
+            data._subject = `Nuevo mensaje de portfolio: ${data.name}`;
+            
+            fetch("https://formsubmit.co/ajax/lmaos.designer@gmail.com", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                if (response.ok) {
+                    const t = translations[currentLang];
+                    const successText = t.form_success_text.replace('{name}', data.name);
 
-            console.log('Form submitted:', data);
+                    contactForm.innerHTML = `
+                        <div class="form-success-message">
+                            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                                <polyline points="22 4 12 14.01 9 11.01"/>
+                            </svg>
+                            <h3>${t.form_success_title}</h3>
+                            <p>${successText}</p>
+                        </div>
+                    `;
+                    contactForm.classList.add('success');
+                } else {
+                    throw new Error("Failed to send");
+                }
+            })
+            .catch(error => {
+                console.error('FormSubmit Error:', error);
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnHtml;
+                alert(currentLang === 'es' ? 'Hubo un error al enviar el mensaje. Por favor, intentalo de nuevo.' : 'There was an error sending the message. Please try again.');
+            });
         });
     }
 
