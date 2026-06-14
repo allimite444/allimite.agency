@@ -16,9 +16,14 @@
         <div class="container header-container">
             <a href="#" class="logo">LUXE<span>DINING</span></a>
             <nav class="nav">
-                <a href="#about" class="nav-link">Our Story</a>
-                <a href="#menu" class="nav-link">Menu</a>
-                <a href="#booking" class="nav-link nav-link--btn">Book Table</a>
+                <a href="#about" class="nav-link" data-i18n="nav_story">Our Story</a>
+                <a href="#menu" class="nav-link" data-i18n="nav_menu">Menu</a>
+                <div class="lang-toggle" id="lang-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="pt">PT</button>
+                </div>
+                <a href="#booking" class="nav-link nav-link--btn" data-i18n="nav_book">Book Table</a>
             </nav>
             <button class="menu-toggle" id="menu-toggle">
                 <span></span><span></span>
@@ -30,19 +35,19 @@
     <section class="hero">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
-            <span class="hero-tagline">Est. 2018 | Michelin Starred</span>
-            <h1 class="hero-title">A Symphony of <span>Exquisite Flavors</span></h1>
-            <p class="hero-subtitle">Indulge in a culinary journey crafted by world-class chefs using locally sourced, organic ingredients in an atmosphere of refined elegance.</p>
+            <span class="hero-tagline" data-i18n="hero_tagline">Est. 2018 | Michelin Starred</span>
+            <h1 class="hero-title" data-i18n-html="hero_title">A Symphony of <span>Exquisite Flavors</span></h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Indulge in a culinary journey crafted by world-class chefs using locally sourced, organic ingredients in an atmosphere of refined elegance.</p>
             <div class="hero-ctas">
-                <a href="#menu" class="btn btn--primary">Explore Menu</a>
-                <a href="#booking" class="btn btn--secondary">Reserve Table</a>
+                <a href="#menu" class="btn btn--primary" data-i18n="hero_cta_menu">Explore Menu</a>
+                <a href="#booking" class="btn btn--secondary" data-i18n="hero_cta_book">Reserve Table</a>
             </div>
         </div>
         <div class="scroll-down">
             <div class="mouse">
                 <div class="wheel"></div>
             </div>
-            <span>Scroll</span>
+            <span data-i18n="hero_scroll">Scroll</span>
         </div>
     </section>
 
@@ -50,10 +55,10 @@
     <section class="about" id="about">
         <div class="container about-container">
             <div class="about-text">
-                <span class="section-tag">Our Philosophy</span>
-                <h2 class="section-title">Crafting Memories, One Dish at a Time</h2>
-                <p>At Luxe Dining, we believe dining is not just about food—it's an art form. Every plate is a carefully composed masterpiece, balancing textures, temperatures, and tastes to surprise and delight your palate.</p>
-                <p>Our kitchen is led by Chef Antoine Laurent, whose global experience and respect for seasonal ingredients bring a modern twist to classic culinary heritage.</p>
+                <span class="section-tag" data-i18n="about_tagline">Our Philosophy</span>
+                <h2 class="section-title" data-i18n="about_title">Crafting Memories, One Dish at a Time</h2>
+                <p data-i18n="about_p1">At Luxe Dining, we believe dining is not just about food—it's an art form. Every plate is a carefully composed masterpiece, balancing textures, temperatures, and tastes to surprise and delight your palate.</p>
+                <p data-i18n="about_p2">Our kitchen is led by Chef Antoine Laurent, whose global experience and respect for seasonal ingredients bring a modern twist to classic culinary heritage.</p>
             </div>
             <div class="about-visual">
                 <div class="image-frame">
@@ -70,16 +75,16 @@
     <section class="menu-section" id="menu">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Chef's Selection</span>
-                <h2 class="section-title">Our Seasonal Menu</h2>
+                <span class="section-tag" data-i18n="menu_tagline">Chef's Selection</span>
+                <h2 class="section-title" data-i18n="menu_title">Our Seasonal Menu</h2>
             </div>
             
             <!-- Menu Tabs -->
             <div class="menu-tabs">
-                <button class="tab-btn active" data-category="starters">Starters</button>
-                <button class="tab-btn" data-category="mains">Mains</button>
-                <button class="tab-btn" data-category="desserts">Desserts</button>
-                <button class="tab-btn" data-category="drinks">Cocktails</button>
+                <button class="tab-btn active" data-category="starters" data-i18n="menu_tab_starters">Starters</button>
+                <button class="tab-btn" data-category="mains" data-i18n="menu_tab_mains">Mains</button>
+                <button class="tab-btn" data-category="desserts" data-i18n="menu_tab_desserts">Desserts</button>
+                <button class="tab-btn" data-category="drinks" data-i18n="menu_tab_cocktails">Cocktails</button>
             </div>
 
             <!-- Menu Grid -->
@@ -95,30 +100,30 @@
         <div class="container booking-container">
             <div class="booking-card">
                 <div class="booking-header">
-                    <span class="section-tag">Reservations</span>
-                    <h2 class="section-title">Book A Table</h2>
-                    <p>Secure your dining experience. For parties larger than 8, please call us directly.</p>
+                    <span class="section-tag" data-i18n="book_tagline">Reservations</span>
+                    <h2 class="section-title" data-i18n="book_title">Book A Table</h2>
+                    <p data-i18n="book_desc">Secure your dining experience. For parties larger than 8, please call us directly.</p>
                 </div>
                 <form class="booking-form" id="booking-form">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="b-name">Full Name</label>
-                            <input type="text" id="b-name" required placeholder="John Doe">
+                            <label for="b-name" data-i18n="book_label_name">Full Name</label>
+                            <input type="text" id="b-name" required data-i18n-placeholder="book_ph_name" placeholder="John Doe">
                         </div>
                         <div class="form-group">
-                            <label for="b-email">Email Address</label>
-                            <input type="email" id="b-email" required placeholder="john@example.com">
+                            <label for="b-email" data-i18n="book_label_email">Email Address</label>
+                            <input type="email" id="b-email" required data-i18n-placeholder="book_ph_email" placeholder="john@example.com">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="b-date">Select Date</label>
+                            <label for="b-date" data-i18n="book_label_date">Select Date</label>
                             <input type="date" id="b-date" required>
                         </div>
                         <div class="form-group">
-                            <label for="b-time">Select Time</label>
+                            <label for="b-time" data-i18n="book_label_time">Select Time</label>
                             <select id="b-time" required>
-                                <option value="" disabled selected>Select time</option>
+                                <option value="" disabled selected data-i18n="book_ph_time">Select time</option>
                                 <option>18:00</option>
                                 <option>19:00</option>
                                 <option>20:00</option>
@@ -127,16 +132,16 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="b-guests">Guests</label>
+                            <label for="b-guests" data-i18n="book_label_guests">Guests</label>
                             <select id="b-guests" required>
-                                <option value="2">2 People</option>
-                                <option value="3">3 People</option>
-                                <option value="4">4 People</option>
-                                <option value="5-8">5 - 8 People</option>
+                                <option value="2" data-i18n="book_guests_2">2 People</option>
+                                <option value="3" data-i18n="book_guests_3">3 People</option>
+                                <option value="4" data-i18n="book_guests_4">4 People</option>
+                                <option value="5-8" data-i18n="book_guests_5">5 - 8 People</option>
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn--primary btn--full">Confirm Reservation</button>
+                    <button type="submit" class="btn btn--primary btn--full" data-i18n="book_btn">Confirm Reservation</button>
                 </form>
             </div>
         </div>
@@ -147,20 +152,20 @@
         <div class="container footer-grid">
             <div class="footer-col">
                 <h3 class="logo">LUXE<span>DINING</span></h3>
-                <p>Culinary perfection and refined hospitality in the heart of the city.</p>
+                <p data-i18n="footer_desc">Culinary perfection and refined hospitality in the heart of the city.</p>
             </div>
             <div class="footer-col">
-                <h4>Hours</h4>
-                <p>Tuesday — Sunday<br>18:00 — 23:30</p>
-                <p>Monday<br>Closed</p>
+                <h4 data-i18n="footer_hours">Hours</h4>
+                <p data-i18n-html="footer_days_week">Tuesday — Sunday<br>18:00 — 23:30</p>
+                <p data-i18n-html="footer_monday">Monday<br>Closed</p>
             </div>
             <div class="footer-col">
-                <h4>Contact</h4>
-                <p>123 Gourmet Blvd, Food District<br>+1 (555) 019-2834<br>reservations@luxedining.com</p>
+                <h4 data-i18n="footer_contact">Contact</h4>
+                <p><span data-i18n="footer_address">123 Gourmet Blvd, Food District</span><br>+1 (555) 019-2834<br>reservations@luxedining.com</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 Luxe Dining. Built for portfolio presentation.</p>
+            <p data-i18n-html="footer_copy">&copy; 2026 Luxe Dining. Built for portfolio presentation.</p>
         </div>
     </footer>
 

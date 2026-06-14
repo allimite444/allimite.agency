@@ -16,9 +16,14 @@
         <div class="container header-container">
             <a href="#" class="logo">Nova<span>Brand</span></a>
             <nav class="nav">
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#work" class="nav-link">Our Work</a>
-                <a href="#contact" class="nav-link nav-link--btn">Get in Touch</a>
+                <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
+                <a href="#work" class="nav-link" data-i18n="nav_work">Our Work</a>
+                <div class="lang-toggle" id="lang-toggle">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="pt">PT</button>
+                </div>
+                <a href="#contact" class="nav-link nav-link--btn" data-i18n="nav_contact">Get in Touch</a>
             </nav>
             <button class="menu-toggle" id="menu-toggle">
                 <span></span><span></span>
@@ -30,12 +35,12 @@
     <section class="hero">
         <div class="hero-grid-bg"></div>
         <div class="container hero-content">
-            <span class="hero-tag">We Build Next-Gen Brands</span>
-            <h1 class="hero-title">We craft digital experiences that <span>convert & scale</span></h1>
-            <p class="hero-subtitle">NovaBrand is a full-service creative agency helping ambitious businesses grow through strategic design, high-converting copy, and targeted marketing.</p>
+            <span class="hero-tag" data-i18n="hero_tagline">We Build Next-Gen Brands</span>
+            <h1 class="hero-title" data-i18n-html="hero_title">We craft digital experiences that <span>convert & scale</span></h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">NovaBrand is a full-service creative agency helping ambitious businesses grow through strategic design, high-converting copy, and targeted marketing.</p>
             <div class="hero-ctas">
-                <a href="#work" class="btn btn--primary">View Our Work</a>
-                <a href="#contact" class="btn btn--secondary">Start Project</a>
+                <a href="#work" class="btn btn--primary" data-i18n="hero_cta_work">View Our Work</a>
+                <a href="#contact" class="btn btn--secondary" data-i18n="hero_cta_start">Start Project</a>
             </div>
         </div>
     </section>
@@ -44,24 +49,24 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">What We Do</span>
-                <h2 class="section-title">Services to fuel your growth</h2>
+                <span class="section-tag" data-i18n="services_tag">What We Do</span>
+                <h2 class="section-title" data-i18n="services_title">Services to fuel your growth</h2>
             </div>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">📣</div>
-                    <h3>Growth Marketing</h3>
-                    <p>High-ROI paid advertising and marketing campaigns designed to scale your client acquisition funnel rapidly.</p>
+                    <h3 data-i18n="svc1_title">Growth Marketing</h3>
+                    <p data-i18n="svc1_desc">High-ROI paid advertising and marketing campaigns designed to scale your client acquisition funnel rapidly.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🎨</div>
-                    <h3>Brand Strategy</h3>
-                    <p>Memorable brand identity design, messaging frameworks, and positioning that set you apart from competitors.</p>
+                    <h3 data-i18n="svc2_title">Brand Strategy</h3>
+                    <p data-i18n="svc2_desc">Memorable brand identity design, messaging frameworks, and positioning that set you apart from competitors.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">💻</div>
-                    <h3>Web & UX Design</h3>
-                    <p>Stunning, fast-loading websites and landing pages optimized for maximum user experience and high conversions.</p>
+                    <h3 data-i18n="svc3_title">Web & UX Design</h3>
+                    <p data-i18n="svc3_desc">Stunning, fast-loading websites and landing pages optimized for maximum user experience and high conversions.</p>
                 </div>
             </div>
         </div>
@@ -71,24 +76,24 @@
     <section class="work" id="work">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Proven Results</span>
-                <h2 class="section-title">Case studies from our partners</h2>
+                <span class="section-tag" data-i18n="work_tag">Proven Results</span>
+                <h2 class="section-title" data-i18n="work_title">Case studies from our partners</h2>
             </div>
             <div class="work-grid">
                 <div class="work-card">
                     <div class="work-image-placeholder">📈</div>
                     <div class="work-info">
-                        <span class="work-stat">+240% Sales Increase</span>
-                        <h3>FitLife E-Commerce</h3>
-                        <p>Complete redesign and scaling strategy for a premier wellness and lifestyle fitness brand.</p>
+                        <span class="work-stat" data-i18n="work1_stat">+240% Sales Increase</span>
+                        <h3 data-i18n="work1_title">FitLife E-Commerce</h3>
+                        <p data-i18n="work1_desc">Complete redesign and scaling strategy for a premier wellness and lifestyle fitness brand.</p>
                     </div>
                 </div>
                 <div class="work-card">
                     <div class="work-image-placeholder">⚡</div>
                     <div class="work-info">
-                        <span class="work-stat">150k+ Monthly Visitors</span>
-                        <h3>SaaSify Platform</h3>
-                        <p>Engineered a robust organic growth framework and modern interactive website template.</p>
+                        <span class="work-stat" data-i18n="work2_stat">150k+ Monthly Visitors</span>
+                        <h3 data-i18n="work2_title">SaaSify Platform</h3>
+                        <p data-i18n="work2_desc">Engineered a robust organic growth framework and modern interactive website template.</p>
                     </div>
                 </div>
             </div>
@@ -100,34 +105,34 @@
         <div class="container contact-container">
             <div class="contact-card">
                 <div class="contact-header">
-                    <span class="section-tag">Let's Team Up</span>
-                    <h2 class="section-title">Ready to scale?</h2>
-                    <p>Fill out the form below and one of our growth strategists will reach out to schedule a discovery call.</p>
+                    <span class="section-tag" data-i18n="contact_tag">Let's Team Up</span>
+                    <h2 class="section-title" data-i18n="contact_title">Ready to scale?</h2>
+                    <p data-i18n="contact_desc">Fill out the form below and one of our growth strategists will reach out to schedule a discovery call.</p>
                 </div>
                 <form class="contact-form" id="novabrand-form">
                     <div class="form-group">
-                        <label for="n-name">Your Name</label>
-                        <input type="text" id="n-name" required placeholder="Jane Doe">
+                        <label for="n-name" data-i18n="form_name">Your Name</label>
+                        <input type="text" id="n-name" required data-i18n-placeholder="form_name_ph" placeholder="Jane Doe">
                     </div>
                     <div class="form-group">
-                        <label for="n-email">Your Email</label>
-                        <input type="email" id="n-email" required placeholder="jane@company.com">
+                        <label for="n-email" data-i18n="form_email">Your Email</label>
+                        <input type="email" id="n-email" required data-i18n-placeholder="form_email_ph" placeholder="jane@company.com">
                     </div>
                     <div class="form-group">
-                        <label for="n-goal">Primary Goal</label>
+                        <label for="n-goal" data-i18n="form_goal">Primary Goal</label>
                         <select id="n-goal" required>
-                            <option value="" disabled selected>Select your goal</option>
-                            <option>Increase website conversions</option>
-                            <option>Launch a new brand/product</option>
-                            <option>Scale paid acquisition channels</option>
-                            <option>Other / Not sure</option>
+                            <option value="" disabled selected data-i18n="form_goal_default">Select your goal</option>
+                            <option data-i18n="form_goal_1">Increase website conversions</option>
+                            <option data-i18n="form_goal_2">Launch a new brand/product</option>
+                            <option data-i18n="form_goal_3">Scale paid acquisition channels</option>
+                            <option data-i18n="form_goal_4">Other / Not sure</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="n-message">Tell us about your brand</label>
-                        <textarea id="n-message" rows="4" placeholder="Briefly describe your business, audience, and challenges..."></textarea>
+                        <label for="n-message" data-i18n="form_desc_label">Tell us about your brand</label>
+                        <textarea id="n-message" rows="4" data-i18n-placeholder="form_desc_ph" placeholder="Briefly describe your business, audience, and challenges..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn--primary btn--full">Get Started</button>
+                    <button type="submit" class="btn btn--primary btn--full" data-i18n="form_btn">Get Started</button>
                 </form>
             </div>
         </div>
@@ -138,10 +143,10 @@
         <div class="container footer-content">
             <div class="footer-left">
                 <a href="#" class="logo">Nova<span>Brand</span></a>
-                <p>Scaling digital brands into market leaders through modern marketing and design.</p>
+                <p data-i18n="footer_desc">Scaling digital brands into market leaders through modern marketing and design.</p>
             </div>
             <div class="footer-right">
-                <p>&copy; 2026 NovaBrand Creative Agency. Built for portfolio presentation.</p>
+                <p data-i18n-html="footer_copy">&copy; 2026 NovaBrand Creative Agency. Built for portfolio presentation.</p>
             </div>
         </div>
     </footer>

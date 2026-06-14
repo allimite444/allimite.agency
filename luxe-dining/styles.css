@@ -658,3 +658,42 @@ h2 span {
     color: rgba(255, 255, 255, 0.25);
     font-size: 0.8rem;
 }
+
+/* =====================================================
+   LANGUAGE SWITCHER
+   ===================================================== */
+.lang-toggle {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid rgba(197, 168, 128, 0.2);
+    color: var(--text-muted);
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    transition: var(--transition);
+}
+
+.lang-btn.active {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.lang-btn:hover:not(.active) {
+    color: var(--text-main);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+    .lang-toggle {
+        margin-top: 0.5rem;
+        justify-content: center;
+    }
+}

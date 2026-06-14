@@ -82,10 +82,16 @@ const translations = {
         // Testimonials
         testimonials_tag: 'Client Love',
         testimonials_title: 'What People <span class="gradient-text">Say</span>',
+        test1_initials: 'MR',
+        test1_name: 'Mark Reynolds',
         test1_text: '"Absolutely phenomenal work. The landing page he built for us increased our conversions by 40%. Fast delivery, amazing communication, and the design exceeded our expectations."',
         test1_role: 'CEO, TechVentures',
+        test2_initials: 'SC',
+        test2_name: 'Sarah Chen',
         test2_text: '"Working with Lautaro was a breeze. He understood our brand perfectly and delivered a website that truly represents who we are. Will definitely hire again for future projects."',
         test2_role: 'Founder, NovaBrand',
+        test3_initials: 'JD',
+        test3_name: 'James Donovan',
         test3_text: '"The SaaS dashboard he developed is incredibly polished. Clean code, great UX, and he even implemented features we hadn\'t thought of. True professional."',
         test3_role: 'CTO, CloudFlow',
 
@@ -192,11 +198,17 @@ const translations = {
         // Testimonials
         testimonials_tag: 'Opiniones',
         testimonials_title: 'Lo que Dicen mis <span class="gradient-text">Clientes</span>',
-        test1_text: '"Trabajo absolutamente fenomenal. La landing page que nos construyó aumentó nuestras conversiones un 40%. Entrega rápida, comunicación excelente, y el diseño superó nuestras expectativas."',
-        test1_role: 'CEO, TechVentures',
-        test2_text: '"Trabajar con Lautaro fue genial. Entendió nuestra marca perfectamente y entregó un sitio web que realmente nos representa. Sin duda lo volveré a contratar."',
-        test2_role: 'Fundadora, NovaBrand',
-        test3_text: '"El dashboard SaaS que desarrolló es increíblemente pulido. Código limpio, gran UX, e incluso implementó funcionalidades que no habíamos pensado. Un verdadero profesional."',
+        test1_initials: 'MG',
+        test1_name: 'Martín Gómez',
+        test1_text: '"Un laburo espectacular. La landing page que nos armó superó todas las expectativas, aumentó las consultas un 40%. Rapidez y muy buena comunicación."',
+        test1_role: 'Fundador, TecnoVanguardia',
+        test2_initials: 'SR',
+        test2_name: 'Sofía Romero',
+        test2_text: '"Trabajar con Lautaro fue un placer. Entendió al toque la identidad de nuestra marca y armó una web hermosa y muy rápida. Lo súper recomiendo."',
+        test2_role: 'Directora de Marketing, NovaBrand',
+        test3_initials: 'JD',
+        test3_name: 'James Donovan',
+        test3_text: '"El panel de control que desarrolló está impecable. Código muy limpio, excelente experiencia de usuario y sumó funciones clave que no habíamos planeado."',
         test3_role: 'CTO, CloudFlow',
 
         // Contact
@@ -224,6 +236,116 @@ const translations = {
         // Form success
         form_success_title: '¡Mensaje Enviado!',
         form_success_text: '¡Gracias, {name}! Te respondo en menos de 24 horas.',
+    },
+
+    pt: {
+        // Nav
+        nav_about: 'Sobre Mim',
+        nav_services: 'Serviços',
+        nav_projects: 'Projetos',
+        nav_reviews: 'Avaliações',
+        nav_contact: 'Fale Comigo',
+
+        // Hero
+        hero_badge: 'Disponível para novos projetos',
+        hero_title: 'Eu Crio<br><span class="gradient-text">Experiências Digitais</span>',
+        hero_subtitle: 'Desenvolvedor Web & Designer criando sites modernos e de alto desempenho que geram resultados reais para empresas em todo o mundo.',
+        hero_cta_work: 'Ver Meu Trabalho',
+        hero_cta_talk: 'Fale Comigo',
+        stat_projects: 'Projetos Criados',
+        stat_clients: 'Clientes Satisfeitos',
+        stat_satisfaction: 'Satisfação',
+        scroll_text: 'Role para explorar',
+
+        // About
+        about_tag: 'Sobre Mim',
+        about_title: 'Transformando Ideias em <span class="gradient-text">Realidade Perfeita</span>',
+        about_p1: 'Sou um desenvolvedor web apaixonado que transforma ideias de negócios em experiências digitais incríveis. Especializo-me na criação de sites rápidos, modernos e responsivos que não apenas parecem incríveis, mas também <strong>convertem visitantes em clientes</strong>.',
+        about_p2: 'Seja para uma landing page elegante, um site corporativo completo ou um aplicativo web sob medida — entrego qualidade premium no prazo, sempre. Minha abordagem combina tecnologia de ponta com design humanizado para criar soluções que realmente se destacam.',
+        about_h1: 'Entrega Rápida — 2 a 5 dias úteis',
+        about_h2: '100% Responsivo em todos os dispositivos',
+        about_h3: 'Otimizado para SEO nos mecanismos de busca',
+        about_h4: 'Revisões Ilimitadas até você ficar satisfeito',
+        tech_title: 'Tecnologias',
+
+        // Services
+        services_tag: 'O Que Eu Faço',
+        services_title: 'Serviços Que <span class="gradient-text">Geram Resultados</span>',
+        services_desc: 'De landing pages simples a aplicações web complexas — ofereço soluções de ponta a ponta personalizadas para as necessidades do seu negócio.',
+        svc1_title: 'Landing Pages',
+        svc1_desc: 'Landing pages de alta conversão projetadas para capturar leads e gerar vendas. Rápidas, bonitas e otimizadas.',
+        svc1_price: 'A partir de $150',
+        svc2_title: 'Sites Corporativos',
+        svc2_desc: 'Sites completos com várias páginas que estabelecem a presença online profissional e a credibilidade da sua marca.',
+        svc2_price: 'A partir de $300',
+        svc3_title: 'E-Commerce',
+        svc3_desc: 'Lojas online que tornam as vendas fluidas. Catálogos de produtos, carrinho de compras e integração de pagamentos.',
+        svc3_price: 'A partir de $500',
+        svc4_title: 'Aplicações Web',
+        svc4_desc: 'Sistemas web customizados com recursos dinâmicos — painéis de controle, ferramentas, plataformas SaaS e mais.',
+        svc4_price: 'A partir de $800',
+        svc5_title: 'Redesenho de Sites',
+        svc5_desc: 'Transforme seu site desatualizado em uma experiência moderna, rápida e responsiva para celular que impressiona.',
+        svc5_price: 'A partir de $200',
+        svc6_title: 'Otimização de SEO',
+        svc6_desc: 'Melhore seu posicionamento nos buscadores com SEO técnico, otimização de performance e melhores práticas.',
+        svc6_price: 'A partir de $100',
+
+        // Projects
+        projects_tag: 'Meu Trabalho',
+        projects_title: 'Projetos <span class="gradient-text">Destacados</span>',
+        projects_desc: 'Uma seleção de trabalhos recentes mostrando minha versatilidade — de restaurantes elegantes a plataformas SaaS robustas.',
+        proj1_desc: 'Site elegante de restaurante com reservas online, menu interativo e galeria imersiva.',
+        proj2_desc: 'Site arrojado de agência de marketing com animações dinâmicas, estudos de caso e formulários de conversão.',
+        proj3_desc: 'Portfólio de fotografia minimalista com galeria lightbox em tela cheia e transições de página suaves.',
+        proj4_desc: 'Painel de gerenciamento em nuvem com analytics em tempo real, autenticação de usuários e faturamento de assinatura.',
+        proj_link: 'Ver Projeto',
+
+        // Process
+        process_tag: 'Como Eu Trabalho',
+        process_title: 'Processo Simples de <span class="gradient-text">3 Etapas</span>',
+        step1_title: 'Descoberta',
+        step1_desc: 'Alinhamos seus objetivos, público-alvo e visão. Faço as perguntas certas para entender exatamente o que você precisa.',
+        step2_title: 'Construção & Iteração',
+        step2_desc: 'Desenvolvo seu projeto com feedbacks regulares. Você verá o progresso e dará suas sugestões ao longo do processo.',
+        step3_title: 'Lançamento & Suporte',
+        step3_desc: 'Publicamos seu projeto refinado e forneço suporte contínuo para garantir que tudo funcione perfeitamente.',
+
+        // Testimonials
+        testimonials_tag: 'Depoimentos',
+        testimonials_title: 'O Que os Clientes <span class="gradient-text">Dizem</span>',
+        test1_text: '"Trabalho absolutamente fenomenal. A landing page que ele construiu para nós aumentou nossas conversões em 40%. Entrega rápida, comunicação incrível e o design superou nossas expectativas."',
+        test1_role: 'CEO, TechVentures',
+        test2_text: '"Trabalhar com o Lautaro foi muito fácil. Ele entendeu nossa marca perfeitamente e entregou um site que realmente representa quem somos. Com certeza contratarei novamente para projetos futuros."',
+        test2_role: 'Fundadora, NovaBrand',
+        test3_text: '"O painel SaaS que ele desenvolveu é incrivelmente polido. Código limpo, ótima experiência do usuário e ele ainda implementou recursos que não havíamos pensado. Profissional de verdade."',
+        test3_role: 'CTO, CloudFlow',
+
+        // Contact
+        contact_tag: 'Entre em Contato',
+        contact_title: 'Vamos Criar Algo <span class="gradient-text">Incrível</span>',
+        contact_desc: 'Tem um projeto em mente? Eu adoraria ouvir a respeito. Preencha o formulário e responderei em até 24 horas.',
+        contact_location: 'Disponível para todo o mundo (Remoto)',
+        form_name: 'Seu Nome',
+        form_name_ph: 'João Silva',
+        form_email: 'Seu E-mail',
+        form_budget: 'Faixa de Orçamento',
+        form_budget_default: 'Selecione seu orçamento',
+        form_budget_1: '$100 — $300',
+        form_budget_2: '$300 — $500',
+        form_budget_3: '$500 — $1.000',
+        form_budget_4: '$1.000+',
+        form_message: 'Detalhes do Projeto',
+        form_message_ph: 'Fale sobre o seu projeto...',
+        form_submit: 'Enviar Mensagem',
+
+        // Footer
+        footer_tagline: 'Criando experiências digitais que geram impacto.',
+        footer_copy: '© 2026 Lautaro. Todos os direitos reservados.',
+
+        // Form success
+        form_success_title: 'Mensagem Enviada!',
+        form_success_text: 'Obrigado, {name}! Entrarei em contato em até 24 horas.',
     }
 };
 
@@ -276,14 +398,16 @@ function applyTranslations(lang) {
     // Update page title
     const titles = {
         en: 'Lautaro | Web Developer & Digital Creator',
-        es: 'Lautaro | Desarrollador Web & Creador Digital'
+        es: 'Lautaro | Desarrollador Web & Creador Digital',
+        pt: 'Lautaro | Desenvolvedor Web & Criador Digital'
     };
     document.title = titles[lang] || titles.en;
 
     // Update meta description
     const descriptions = {
         en: 'Professional web developer specializing in modern, high-performance websites and web applications.',
-        es: 'Desarrollador web profesional especializado en sitios web modernos y de alto rendimiento.'
+        es: 'Desarrollador web profesional especializado en sitios web modernos y de alto rendimiento.',
+        pt: 'Desenvolvedor web profissional especializado em sites modernos e de alto desempenho.'
     };
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute('content', descriptions[lang] || descriptions.en);
