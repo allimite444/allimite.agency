@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elena Rostova | Fine Art Photography & Visual Storytelling portfolio.">
+    <title>Elena Rostova | Fine Art Photography</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-line"></div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">Elena Rostova<span class="logo-dot">.</span></a>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#gallery" class="nav-link active" data-i18n="nav_gallery">Gallery</a>
+                <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+                <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a>
+                
+                <div class="lang-selector" id="lang-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="es">ES</button>
+                    <button class="lang-btn" data-lang="pt">PT</button>
+                </div>
+            </nav>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-tagline" data-i18n="hero_tagline">Fine Art & Editorial Photography</span>
+            <h1 class="hero-title">
+                <span data-i18n="hero_t1">Capturing the</span><br>
+                <span class="italic-serif" data-i18n="hero_t2">silent poetry</span><br>
+                <span data-i18n="hero_t3">of passing moments.</span>
+            </h1>
+            <a href="#gallery" class="btn-explore">
+                <span data-i18n="btn_explore">Explore Gallery</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <!-- Filter Controls -->
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+                <button class="filter-btn" data-filter="portraits" data-i18n="filter_portraits">Portraits</button>
+                <button class="filter-btn" data-filter="landscapes" data-i18n="filter_landscapes">Landscapes</button>
+                <button class="filter-btn" data-filter="architecture" data-i18n="filter_architecture">Architecture</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Item 1 -->
+                <div class="gallery-item" data-category="portraits">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80" alt="Serene Portrait" class="gallery-img">
+                        <div class="img-overlay">
+                            <div class="img-info">
+                                <span class="img-category" data-i18n="cat_portrait">Portrait</span>
+                                <h3 class="img-title">Aura of Solitude</h3>
+                            </div>
+                            <span class="view-btn">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="gallery-item" data-category="landscapes">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Ocean Tide" class="gallery-img">
+                        <div class="img-overlay">
+                            <div class="img-info">
+                                <span class="img-category" data-i18n="cat_landscape">Landscape</span>
+                                <h3 class="img-title">Whispering Waters</h3>
+                            </div>
+                            <span class="view-btn">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="gallery-item" data-category="architecture">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Modern Concrete Architecture" class="gallery-img">
+                        <div class="img-overlay">
+                            <div class="img-info">
+                                <span class="img-category" data-i18n="cat_architecture">Architecture</span>
+                                <h3 class="img-title">Concrete Lines</h3>
+                            </div>
+                            <span class="view-btn">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="gallery-item" data-category="portraits">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=800&q=80" alt="Classic Portrait" class="gallery-img">
+                        <div class="img-overlay">
+                            <div class="img-info">
+                                <span class="img-category" data-i18n="cat_portrait">Portrait</span>
+                                <h3 class="img-title">Shadows of Thought</h3>
+                            </div>
+                            <span class="view-btn">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="gallery-item" data-category="landscapes">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80" alt="Misty Forest" class="gallery-img">
+                        <div class="img-overlay">
+                            <div class="img-info">
+                                <span class="img-category" data-i18n="cat_landscape">Landscape</span>
+                                <h3 class="img-title">Mist & Pine</h3>
+                            </div>
+                            <span class="view-btn">+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="gallery-item" data-category="architecture">
+                    <div class="image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Brutalist Glass facade" class="gallery-img">
+                        <div class="img-overlay">
+                            <div class="img-info">
+                                <span class="img-category" data-i18n="cat_architecture">Architecture</span>
+                                <h3 class="img-title">Reflective Geometry</h3>
+                            </div>
+                            <span class="view-btn">+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container about-grid">
+            <div class="about-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80" alt="Elena Rostova Portrait" class="about-img">
+            </div>
+            <div class="about-text">
+                <span class="section-tag" data-i18n="about_tag">The Artist</span>
+                <h2 class="about-title">Elena Rostova</h2>
+                <p class="about-p1" data-i18n="about_p1">
+                    I am an award-winning fine art and editorial photographer based in Milan, Italy. Over the past decade, my work has explored the delicate intersection of natural light, raw emotion, and minimalist composition.
+                </p>
+                <p class="about-p2" data-i18n="about_p2">
+                    Believing that every photograph is a short poem composed of silence, my collections focus on highlighting the beauty in quietness. I collaborate with luxury brands, design studios, and architectural agencies worldwide to capture visual narratives that transcend time.
+                </p>
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <span class="stat-num">10+</span>
+                        <span class="stat-lbl" data-i18n="stat_exp">Years Exp.</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="stat-num">15+</span>
+                        <span class="stat-lbl" data-i18n="stat_exh">Exhibitions</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="stat-num">120+</span>
+                        <span class="stat-lbl" data-i18n="stat_pub">Publications</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container contact-container">
+            <div class="contact-header">
+                <span class="section-tag" data-i18n="contact_tag">Collaboration</span>
+                <h2 class="contact-title" data-i18n="contact_title">Let's Create Together</h2>
+                <p class="contact-desc" data-i18n="contact_desc">
+                    For booking inquiries, collaborations, or print sales, please fill out the form below or send an email directly to elena@rostova.com.
+                </p>
+            </div>
+            
+            <form class="contact-form" id="photo-contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name" data-i18n="form_name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" data-i18n="form_email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message" data-i18n="form_message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Describe your vision..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">
+                    <span data-i18n="form_submit">Send Message</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="footer-copy">© 2026 Elena Rostova. All rights reserved.</p>
+            <div class="footer-socials">
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Vogue Portfolio</a>
+                <a href="#" class="social-link">Behance</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <button class="lightbox-arrow lightbox-arrow--prev" id="lightbox-prev" aria-label="Previous image">&#10094;</button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption">
+                <span class="lightbox-category" id="lightbox-category">Portrait</span>
+                <h3 class="lightbox-title" id="lightbox-title">Aura of Solitude</h3>
+            </div>
+        </div>
+        <button class="lightbox-arrow lightbox-arrow--next" id="lightbox-next-btn" aria-label="Next image">&#10095;</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
