@@ -635,6 +635,12 @@ button { cursor: pointer; }
     animation: fadeInUp 1s ease 1.5s both;
 }
 
+@media (max-height: 800px) {
+    .scroll-indicator {
+        display: none !important;
+    }
+}
+
 .scroll-mouse {
     width: 24px;
     height: 38px;
