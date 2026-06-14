@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe Dining — Fine Culinary Experience</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">LUXE<span>DINING</span></a>
+            <nav class="nav">
+                <a href="#about" class="nav-link">Our Story</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#booking" class="nav-link nav-link--btn">Book Table</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="hero-tagline">Est. 2018 | Michelin Starred</span>
+            <h1 class="hero-title">A Symphony of <span>Exquisite Flavors</span></h1>
+            <p class="hero-subtitle">Indulge in a culinary journey crafted by world-class chefs using locally sourced, organic ingredients in an atmosphere of refined elegance.</p>
+            <div class="hero-ctas">
+                <a href="#menu" class="btn btn--primary">Explore Menu</a>
+                <a href="#booking" class="btn btn--secondary">Reserve Table</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-container">
+            <div class="about-text">
+                <span class="section-tag">Our Philosophy</span>
+                <h2 class="section-title">Crafting Memories, One Dish at a Time</h2>
+                <p>At Luxe Dining, we believe dining is not just about food—it's an art form. Every plate is a carefully composed masterpiece, balancing textures, temperatures, and tastes to surprise and delight your palate.</p>
+                <p>Our kitchen is led by Chef Antoine Laurent, whose global experience and respect for seasonal ingredients bring a modern twist to classic culinary heritage.</p>
+            </div>
+            <div class="about-visual">
+                <div class="image-frame">
+                    <div class="gold-border"></div>
+                    <div class="image-placeholder">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Menu Section -->
+    <section class="menu-section" id="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Chef's Selection</span>
+                <h2 class="section-title">Our Seasonal Menu</h2>
+            </div>
+            
+            <!-- Menu Tabs -->
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-category="starters">Starters</button>
+                <button class="tab-btn" data-category="mains">Mains</button>
+                <button class="tab-btn" data-category="desserts">Desserts</button>
+                <button class="tab-btn" data-category="drinks">Cocktails</button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="menu-grid" id="menu-grid">
+                <!-- Items will be injected via JS for smoothness, or statically defined here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="booking">
+        <div class="booking-bg"></div>
+        <div class="container booking-container">
+            <div class="booking-card">
+                <div class="booking-header">
+                    <span class="section-tag">Reservations</span>
+                    <h2 class="section-title">Book A Table</h2>
+                    <p>Secure your dining experience. For parties larger than 8, please call us directly.</p>
+                </div>
+                <form class="booking-form" id="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="b-name">Full Name</label>
+                            <input type="text" id="b-name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="b-email">Email Address</label>
+                            <input type="email" id="b-email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="b-date">Select Date</label>
+                            <input type="date" id="b-date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="b-time">Select Time</label>
+                            <select id="b-time" required>
+                                <option value="" disabled selected>Select time</option>
+                                <option>18:00</option>
+                                <option>19:00</option>
+                                <option>20:00</option>
+                                <option>21:00</option>
+                                <option>22:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="b-guests">Guests</label>
+                            <select id="b-guests" required>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5-8">5 - 8 People</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Confirm Reservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3 class="logo">LUXE<span>DINING</span></h3>
+                <p>Culinary perfection and refined hospitality in the heart of the city.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hours</h4>
+                <p>Tuesday — Sunday<br>18:00 — 23:30</p>
+                <p>Monday<br>Closed</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>123 Gourmet Blvd, Food District<br>+1 (555) 019-2834<br>reservations@luxedining.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Luxe Dining. Built for portfolio presentation.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
