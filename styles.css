@@ -1326,6 +1326,14 @@ button { cursor: pointer; }
     transition: all var(--transition-medium);
 }
 
+.social-link.instagram-link {
+    width: auto;
+    padding: 0 var(--space-lg);
+    gap: var(--space-sm);
+    font-size: var(--fs-sm);
+    font-weight: 500;
+}
+
 .social-link:hover {
     border-color: var(--accent-violet);
     color: var(--accent-purple);
