@@ -1326,7 +1326,8 @@ button { cursor: pointer; }
     transition: all var(--transition-medium);
 }
 
-.social-link.instagram-link {
+.social-link.instagram-link,
+.social-link.x-link {
     width: auto;
     padding: 0 var(--space-lg);
     gap: var(--space-sm);
