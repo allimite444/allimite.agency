@@ -24,6 +24,7 @@ const serviceTranslations = {
             subtitle: 'High-converting pages designed to capture leads, showcase a specific offer, and drive direct sales.',
             meta_price: 'From $150',
             meta_delivery: '2-5 business days',
+            what_is_highlight: 'Your core offer on a single page fully optimized to sell.',
             what_is_desc: 'A Landing Page is a single, conversion-focused web page built specifically for marketing or advertising campaigns. Unlike traditional multi-page websites, it removes all distractions (like complex navigation menus or generic info) and is structured around a single, highly persuasive Call to Action (CTA) to convert visitors into customers.',
             brand_title: 'Personal Brand',
             brand_subtitle: 'For Professionals, Creators & Consultants',
@@ -52,6 +53,7 @@ const serviceTranslations = {
             subtitle: 'Complete multi-page websites that establish your brand\'s professional online presence and global credibility.',
             meta_price: 'From $300',
             meta_delivery: '5-10 business days',
+            what_is_highlight: 'The digital headquarters for your brand to build global trust.',
             what_is_desc: 'A Business Website is a complete multi-page platform that serves as the official digital headquarters for your brand or company. It details who you are, what values you stand for, what services or products you offer, and hosts trust signals like client testimonials, certifications, and case studies to convert search traffic into warm client inquiries.',
             brand_title: 'Personal Brand',
             brand_subtitle: 'For Professionals, Speakers & Experts',
@@ -80,6 +82,7 @@ const serviceTranslations = {
             subtitle: 'Stunning online stores that make selling seamless. Product catalogs, shopping carts, and secure payment integrations.',
             meta_price: 'From $500',
             meta_delivery: '7-15 business days',
+            what_is_highlight: 'Your store open 24/7, fully automated and without borders.',
             what_is_desc: 'An E-Commerce Store is a dynamic website that enables companies to exhibit, manage, and sell products or services directly to consumers over the internet. It includes catalog filtering, product description sheets, digital shopping carts, secure checkout gateways, and automated inventory and shipping management.',
             brand_title: 'Personal Brand',
             brand_subtitle: 'For Content Creators & Influencers',
@@ -108,6 +111,7 @@ const serviceTranslations = {
             subtitle: 'Custom web software with dynamic functionality, databases, user portals, and SaaS dashboards.',
             meta_price: 'From $800',
             meta_delivery: '10-20 business days',
+            what_is_highlight: 'Custom web software built to automate operations and scale.',
             what_is_desc: 'A Web Application is a highly interactive software application that runs in the browser, powered by a database and custom logic. Unlike static pages, it allows users to create accounts, log in, manipulate data, query complex databases, generate real-time reports, and subscribe to services (SaaS).',
             brand_title: 'Personal Brand',
             brand_subtitle: 'For Creators, Teachers & Tech Leaders',
@@ -136,6 +140,7 @@ const serviceTranslations = {
             subtitle: 'Transform your outdated website into a modern, fast, mobile-friendly experience that inspires trust.',
             meta_price: 'From $200',
             meta_delivery: '5-7 business days',
+            what_is_highlight: 'Digital evolution: speed, modern aesthetics, and better UX.',
             what_is_desc: 'A Website Redesign is the comprehensive overhaul of an existing site to modernize its visual aesthetics, optimize its technical code, improve loading speed, and align the interface with current user experience (UX) and mobile standards without losing current search engine authority.',
             brand_title: 'Personal Brand',
             brand_subtitle: 'For Professionals Evolving Their Brand',
@@ -164,6 +169,7 @@ const serviceTranslations = {
             subtitle: 'Boost your search rankings with technical SEO audits, performance tuning, and organic traffic strategies.',
             meta_price: 'From $100',
             meta_delivery: 'Continuous / Variable',
+            what_is_highlight: 'Organic search visibility to attract hot leads without ad spend.',
             what_is_desc: 'SEO Optimization is the practice of aligning your website\'s code, architecture, speed, and content with search engine algorithms (like Google). The goal is to rank organically for terms relevant to your business, generating a constant flow of interested visitors without spending on advertising.',
             brand_title: 'Personal Brand',
             brand_subtitle: 'For Authors, Consultants & Leaders',
@@ -209,6 +215,7 @@ const serviceTranslations = {
             subtitle: 'Páginas de alta conversión diseñadas para capturar leads, destacar una oferta y generar ventas directas.',
             meta_price: 'Desde $150',
             meta_delivery: '2-5 días hábiles',
+            what_is_highlight: 'Tu oferta principal en una sola página optimizada para vender.',
             what_is_desc: 'Una Landing Page (o página de aterrizaje) es una única página web diseñada específicamente para campañas de marketing o publicidad. A diferencia de un sitio web tradicional, elimina cualquier tipo de distracción (como menús complejos o información secundaria) y se estructura en torno a una única llamada a la acción (CTA) clara y persuasiva, con el objetivo de convertir visitas en clientes.',
             brand_title: 'Marca Personal',
             brand_subtitle: 'Para Profesionales, Creadores y Consultores',
@@ -237,6 +244,7 @@ const serviceTranslations = {
             subtitle: 'Sitios web completos de varias páginas que establecen la presencia profesional online y la credibilidad global de tu marca.',
             meta_price: 'Desde $300',
             meta_delivery: '5-10 días hábiles',
+            what_is_highlight: 'La sede digital de tu empresa para construir confianza global.',
             what_is_desc: 'Un Sitio Empresarial es una plataforma web completa de múltiples secciones que funciona como la sede digital oficial de una marca o empresa. Comunica quién sos, tus valores, qué servicios o productos ofrecés y expone elementos de confianza como testimonios, certificaciones y casos de estudio, para convertir a las visitas de motores de búsqueda en clientes calificados.',
             brand_title: 'Marca Personal',
             brand_subtitle: 'Para Profesionales, Conferencistas y Expertos',
@@ -265,6 +273,7 @@ const serviceTranslations = {
             subtitle: 'Tiendas online diseñadas para vender sin fricción. Catálogos, carritos y pasarelas de pago seguras.',
             meta_price: 'Desde $500',
             meta_delivery: '7-15 días hábiles',
+            what_is_highlight: 'Tu tienda abierta las 24 horas, de forma automática y sin fronteras.',
             what_is_desc: 'Una tienda E-Commerce es un sitio web dinámico que permite a las empresas exhibir, gestionar y vender productos o servicios directamente por internet. Incluye catálogos interactivos con filtros, fichas de producto detalladas, carrito de compras virtual, pasarela de pago seguro y herramientas automatizadas de control de stock y logística.',
             brand_title: 'Marca Personal',
             brand_subtitle: 'Para Creadores de Contenido e Influencers',
@@ -293,6 +302,7 @@ const serviceTranslations = {
             subtitle: 'Software a medida ejecutable en el navegador. Bases de datos, portales de usuario y plataformas SaaS.',
             meta_price: 'Desde $800',
             meta_delivery: '10-20 días hábiles',
+            what_is_highlight: 'Software personalizado que automatiza procesos y escala tu negocio.',
             what_is_desc: 'Una Aplicación Web es una herramienta de software interactiva que se ejecuta en el navegador del usuario y está conectada a bases de datos y lógica de negocios compleja. A diferencia de las páginas estáticas, permite a los usuarios registrarse, iniciar sesión, procesar datos complejos en tiempo real y suscribirse a herramientas digitales (SaaS).',
             brand_title: 'Marca Personal',
             brand_subtitle: 'Para Creadores, Educadores y Líderes Técnicos',
@@ -321,6 +331,7 @@ const serviceTranslations = {
             subtitle: 'Transformamos tu sitio web obsoleto en una experiencia moderna, rápida y adaptable que genera confianza inmediata.',
             meta_price: 'Desde $200',
             meta_delivery: '5-7 días hábiles',
+            what_is_highlight: 'Evolución digital: velocidad, estética moderna y mejor UX.',
             what_is_desc: 'El Rediseño Web consiste en reestructurar un sitio web actual para modernizar su aspecto visual, acelerar su velocidad de carga y adaptarlo a los estándares actuales de experiencia de usuario (UX) y usabilidad móvil, sin perder el posicionamiento orgánico ya ganado en buscadores.',
             brand_title: 'Marca Personal',
             brand_subtitle: 'Para Profesionales en Crecimiento',
@@ -349,6 +360,7 @@ const serviceTranslations = {
             subtitle: 'Mejoramos tu ranking en motores de búsqueda con SEO técnico, optimización de velocidad y estrategias de contenidos.',
             meta_price: 'Desde $100',
             meta_delivery: 'Continuo / Variable',
+            what_is_highlight: 'Visibilidad orgánica para atraer clientes calificados sin pagar publicidad.',
             what_is_desc: 'La Optimización SEO es el conjunto de técnicas de código, estructura y contenido aplicadas a tu sitio web para adaptarlo a los algoritmos de motores de búsqueda (como Google). Su finalidad es lograr que tu web aparezca en los primeros resultados de forma gratuita, atrayendo visitas calificadas continuamente sin pagar publicidad.',
             brand_title: 'Marca Personal',
             brand_subtitle: 'Para Autores, Consultores y Referentes',
@@ -394,11 +406,12 @@ const serviceTranslations = {
             subtitle: 'Páginas de alta conversão projetadas para capturar leads, destacar ofertas e gerar vendas diretas.',
             meta_price: 'A partir de $150',
             meta_delivery: '2-5 dias úteis',
+            what_is_highlight: 'Sua oferta principal em uma única página otimizada para vender.',
             what_is_desc: 'Uma Landing Page (ou página de destino) é uma página web única construída especificamente para campanhas de marketing ou publicidade. Diferente de um site tradicional, ela elimina qualquer tipo de distração (como menus complexos ou links extras) e foca em uma chamada para ação (CTA) única e persuasiva, visando converter o maior número possível de visitantes em clientes.',
             brand_title: 'Marca Pessoal',
             brand_subtitle: 'Para Profissionais, Criadores e Consultores',
             brand_bullets: [
-                '<strong>Vendas Diretas:</strong> Promova e venda seus e-books, cursos online, mentorias ou palestras de forma direta e sem desvios.',
+                '<strong>Direct Sales:</strong> Promova e venda seus e-books, cursos online, mentorias ou palestras de forma direta e sem desvios.',
                 '<strong>Captação de Leads:</strong> Aumente sua lista de e-mails oferecendo materiais gratuitos como PDFs ou guias práticos.',
                 '<strong>Foco Total:</strong> Direcione o tráfego do link da sua bio do Instagram para uma página focada apenas em converter.'
             ],
@@ -422,6 +435,7 @@ const serviceTranslations = {
             subtitle: 'Sites completos de várias páginas que estabelecem a presença online profissional e a credibilidade do seu negócio.',
             meta_price: 'A partir de $300',
             meta_delivery: '5-10 dias úteis',
+            what_is_highlight: 'A sede digital da sua empresa para construir confiança global.',
             what_is_desc: 'Um Site Corporativo é uma plataforma digital de várias páginas que atua como a sede oficial do seu negócio ou marca na internet. Ele apresenta a história da empresa, seus valores corporativos, a lista completa de serviços ou produtos e exibe selos de confiança, depoimentos de clientes e cases de sucesso para qualificar o público que pesquisa pela sua empresa.',
             brand_title: 'Marca Pessoal',
             brand_subtitle: 'Para Profissionais, Palestrantes e Especialistas',
@@ -450,11 +464,12 @@ const serviceTranslations = {
             subtitle: 'Lojas online modernas projetadas para vender de forma fluida. Catálogos, carrinhos e checkout integrado.',
             meta_price: 'A partir de $500',
             meta_delivery: '7-15 dias úteis',
+            what_is_highlight: 'Sua loja aberta 24 horas por dia, automatizada e sem fronteiras.',
             what_is_desc: 'Uma loja E-Commerce é um site interativo que permite às empresas exibir, gerenciar e vender seus produtos ou serviços na internet. Possui catálogo de itens com filtros de busca, páginas detalhadas com fotos e descrições, carrinho virtual de compras, processamento de pagamento seguro e controle integrado de entregas e estoque.',
             brand_title: 'Marca Pessoal',
             brand_subtitle: 'Para Criadores de Conteúdo e Influencers',
             brand_bullets: [
-                '<strong>Monetize sua Base:</strong> Venda sua linha de roupas, brindes, livros físicos ou produtos licenciados diretamente aos seus fãs.',
+                '<strong>Monetize sua Base:</strong> Venda sua linha de roupas, brindes, livros físicos ou produtos personalizados diretamente aos seus fãs.',
                 '<strong>Venda de Infoprodutos:</strong> Comercialize presets, pacotes de design, PDFs ou cursos com envio automático pós-pagamento.',
                 '<strong>Controle de Clientes:</strong> Tenha acesso total aos dados de contato dos compradores para ações de remarketing por e-mail.'
             ],
@@ -478,6 +493,7 @@ const serviceTranslations = {
             subtitle: 'Sistemas web customizados executados no navegador. Bancos de dados, painéis de controle e plataformas SaaS.',
             meta_price: 'A partir de $800',
             meta_delivery: '10-20 dias úteis',
+            what_is_highlight: 'Software personalizado para automatizar processos e escalar seu negócio.',
             what_is_desc: 'Uma Aplicação Web é um software completo executado diretamente a partir de um navegador de internet. Ao contrário de um site simples, conta com lógica de programação avançada e banco de dados que permite aos usuários criar perfis, fazer login, gerar relatórios em tempo real e pagar assinaturas dinâmicas (SaaS).',
             brand_title: 'Marca Pessoal',
             brand_subtitle: 'Para Creadores e Líderes de Tecnologia',
@@ -486,7 +502,7 @@ const serviceTranslations = {
                 '<strong>Áreas de Membros:</strong> Crie um portal de ensino por assinatura recorrente com controle rígido de acesso dos alunos.',
                 '<strong>Pioneirismo de Marca:</strong> Desenvolva uma ferramenta inovadora para consolidar seu nome como líder tecnológico de seu nicho.'
             ],
-            business_title: 'Negócio ou Empresa',
+            business_title: 'Negocio ou Empresa',
             business_subtitle: 'Para Startups e Times Corporativos',
             business_bullets: [
                 '<strong>Lançamento de SaaS:</strong> Tire sua ideia de software do papel utilizando uma infraestrutura de banco de dados robusta e moderna.',
@@ -506,6 +522,7 @@ const serviceTranslations = {
             subtitle: 'Transforme seu site antigo em uma ferramenta moderna, ágil e focada em resultados que passa credibilidade.',
             meta_price: 'A partir de $200',
             meta_delivery: '5-7 dias úteis',
+            what_is_highlight: 'Evolução digital: velocidade, modernidade e melhor experiência.',
             what_is_desc: 'O Redesenho de um Site consiste na reestruturação completa de uma página existente para modernizar sua estética visual, otimizar seu código técnico, acelerar seu carregamento e alinhar seu layout aos padrões de usabilidade móvel (UX), sem perder a autoridade já conquistada nas buscas orgânicas do Google.',
             brand_title: 'Marca Pessoal',
             brand_subtitle: 'Para Profissionais em Evolução',
@@ -534,6 +551,7 @@ const serviceTranslations = {
             subtitle: 'Melhore seu posicionamento orgânico no Google com SEO técnico, melhorias de velocidade e conteúdo.',
             meta_price: 'A partir de $100',
             meta_delivery: 'Contínuo / Variável',
+            what_is_highlight: 'Visibilidade orgânica para atrair clientes qualificados sem pagar anúncios.',
             what_is_desc: 'A Otimização de SEO é o conjunto de ações de código, estrutura técnica e conteúdo voltadas a adaptar seu site aos algoritmos de busca (como o Google). O objetivo é posicionar sua marca nas primeiras posições de forma orgânica (gratuita), gerando tráfego qualificado de clientes que já buscam pela sua solução.',
             brand_title: 'Marca Pessoal',
             brand_subtitle: 'Para Autores, Consultores e Especialistas',
@@ -579,7 +597,6 @@ function applyServiceTranslations(lang) {
 
     // --- TRANSLATE COMMON STRINGS ---
     const map = {
-        'nav-back': common.back_to_home,
         'cat-tag': common.category_service,
         'cta-start': common.cta_start_project,
         'title-what-is': common.what_is_it,
@@ -615,6 +632,9 @@ function applyServiceTranslations(lang) {
 
     const pillDeliveryEl = document.getElementById('pill-delivery');
     if (pillDeliveryEl) pillDeliveryEl.textContent = `${common.delivery_prefix} ${spec.meta_delivery.replace('Delivery:', '').replace('Entrega:', '')}`;
+
+    const whatIsHighlightEl = document.getElementById('what-is-highlight');
+    if (whatIsHighlightEl) whatIsHighlightEl.textContent = spec.what_is_highlight;
 
     const whatIsDescEl = document.getElementById('what-is-desc');
     if (whatIsDescEl) whatIsDescEl.textContent = spec.what_is_desc;

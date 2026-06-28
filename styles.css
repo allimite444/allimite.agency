@@ -1753,35 +1753,30 @@ button { cursor: pointer; }
     color: var(--accent-purple);
 }
 
-/* What is section - Card style */
-.what-is-card {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: var(--space-3xl);
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.015) 0%, rgba(255, 255, 255, 0.005) 100%);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--glow-violet);
-    position: relative;
+/* What is section - Editorial Grid style */
+.what-is-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-3xl);
+    align-items: center;
 }
 
-.what-is-card::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 250px;
-    height: 250px;
-    background: radial-gradient(circle, rgba(197, 168, 128, 0.03) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 0;
+.what-is-highlight-container {
+    border-left: 2px solid var(--accent-purple);
+    padding-left: var(--space-lg);
+    text-align: left;
 }
 
-.what-is-card p {
-    position: relative;
-    z-index: 1;
-    color: var(--text-secondary);
+.what-is-highlight {
+    font-family: var(--font-heading);
+    font-size: var(--fs-2xl);
+    line-height: 1.3;
+    font-weight: 500;
+    margin: 0;
+}
+
+.what-is-text {
+    text-align: left;
 }
 
 /* Comparison Grid */
@@ -1960,7 +1955,8 @@ button { cursor: pointer; }
     .service-detail-hero .hero-title {
         font-size: var(--fs-3xl);
     }
-    .what-is-card {
-        padding: var(--space-xl);
+    .what-is-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
     }
 }
