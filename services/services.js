@@ -630,8 +630,7 @@ function applyServiceTranslations(lang) {
     const pillPriceEl = document.getElementById('pill-price');
     if (pillPriceEl) pillPriceEl.textContent = `${common.price_prefix} ${spec.meta_price.replace('From ', '').replace('Desde ', '').replace('A partir de ', '')}`;
 
-    const pillDeliveryEl = document.getElementById('pill-delivery');
-    if (pillDeliveryEl) pillDeliveryEl.textContent = `${common.delivery_prefix} ${spec.meta_delivery.replace('Delivery:', '').replace('Entrega:', '')}`;
+
 
     const whatIsHighlightEl = document.getElementById('what-is-highlight');
     if (whatIsHighlightEl) whatIsHighlightEl.textContent = spec.what_is_highlight;
