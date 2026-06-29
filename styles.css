@@ -318,7 +318,13 @@ button { cursor: pointer; }
     letter-spacing: -0.02em;
     color: var(--text-primary);
     z-index: 1001;
-    transition: transform var(--transition-fast) ease;
+    transition: transform var(--transition-fast) ease, opacity var(--transition-fast) ease;
+}
+
+.navbar.menu-open .nav-logo {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-10px);
 }
 
 .logo-letter {
@@ -1578,6 +1584,13 @@ button { cursor: pointer; }
 
     .container { padding: 0 var(--space-lg); }
     .nav-container { padding: 0 var(--space-lg); }
+
+    .logo-img {
+        height: 28px;
+    }
+    .navbar.scrolled .logo-img {
+        height: 24px;
+    }
 
     /* Mobile Nav */
     .nav-toggle {
