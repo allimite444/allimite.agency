@@ -161,15 +161,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuData = {
         en: {
             starters: [
-                { name: "Truffle Arancini", price: "$18", desc: "Crispy risotto balls, wild mushroom, black truffle paste, house aioli.", image: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=200&q=80" },
-                { name: "Heirloom Burrata", price: "$22", desc: "Local heirloom tomatoes, aged balsamic glaze, basil oil, toasted sourdough.", image: "https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=200&q=80" },
-                { name: "Pan-Seared Scallops", price: "$26", desc: "Cauliflower purée, crispy prosciutto, microgreens, brown butter sauce.", image: "https://images.unsplash.com/photo-1532636875304-0c8fe1197e14?auto=format&fit=crop&w=200&q=80" },
+                { name: "Truffle Arancini", price: "$18", desc: "Crispy risotto balls, wild mushroom, black truffle paste, house aioli.", image: "../assets/luxe_arancini.png" },
+                { name: "Heirloom Burrata", price: "$22", desc: "Local heirloom tomatoes, aged balsamic glaze, basil oil, toasted sourdough.", image: "../assets/luxe_burrata.png" },
+                { name: "Pan-Seared Scallops", price: "$26", desc: "Cauliflower purée, crispy prosciutto, microgreens, brown butter sauce.", image: "../assets/luxe_scallops.png" },
                 { name: "Roasted Beet Salad", price: "$19", desc: "Goat cheese whip, candied walnuts, baby arugula, citrus vinaigrette.", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=200&q=80" }
             ],
             mains: [
                 { name: "Dry-Aged Ribeye", price: "$56", desc: "14oz ribeye, roasted garlic bone marrow, rosemary fingerling potatoes.", image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=200&q=80" },
                 { name: "Chilean Sea Bass", price: "$48", desc: "Miso glazed, ginger-scallion broth, baby bok choy, jasmine rice.", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=200&q=80" },
-                { name: "Herb Crust Lamb Rack", price: "$52", desc: "Dijon herb crust, parsnip purée, honey glazed carrots, red wine jus.", image: "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=200&q=80" },
+                { name: "Herb Crust Lamb Rack", price: "$52", desc: "Dijon herb crust, parsnip purée, honey glazed carrots, red wine jus.", image: "../assets/luxe_lamb_rack.png" },
                 { name: "Truffle Tagliatelle", price: "$38", desc: "House-made pasta, wild mushrooms, creamy truffle sauce, parmigiano reggiano.", image: "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=200&q=80" }
             ],
             desserts: [
@@ -185,15 +185,15 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         es: {
             starters: [
-                { name: "Arancini de Trufa", price: "$18", desc: "Bolas de risotto crujientes, hongos silvestres, pasta de trufa negra, alioli de la casa.", image: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=200&q=80" },
-                { name: "Burrata de Tomates Reliquia", price: "$22", desc: "Tomates reliquia locales, glaseado balsámico añejo, aceite de albahaca, masa madre tostada.", image: "https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=200&q=80" },
-                { name: "Vieiras Selladas a la Sartén", price: "$26", desc: "Puré de coliflor, prosciutto crujiente, microbrotes, salsa de manteca marrón.", image: "https://images.unsplash.com/photo-1532636875304-0c8fe1197e14?auto=format&fit=crop&w=200&q=80" },
+                { name: "Arancini de Trufa", price: "$18", desc: "Bolas de risotto crujientes, hongos silvestres, pasta de trufa negra, alioli de la casa.", image: "../assets/luxe_arancini.png" },
+                { name: "Burrata de Tomates Reliquia", price: "$22", desc: "Tomates reliquia locales, glaseado balsámico añejo, aceite de albahaca, masa madre tostada.", image: "../assets/luxe_burrata.png" },
+                { name: "Vieiras Selladas a la Sartén", price: "$26", desc: "Puré de coliflor, prosciutto crujiente, microbrotes, salsa de manteca marrón.", image: "../assets/luxe_scallops.png" },
                 { name: "Ensalada de Remolacha Asada", price: "$19", desc: "Queso de cabra batido, nueces confitadas, rúcula tierna, vinagreta de cítricos.", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=200&q=80" }
             ],
             mains: [
                 { name: "Ribeye Madurado", price: "$56", desc: "Ojo de bife de 14oz, tuétano con ajo asado, papas fingerling al romero.", image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=200&q=80" },
                 { name: "Lubina Chilena", price: "$48", desc: "Glaseado de miso, caldo de jengibre y cebollín, bok choy tierno, arroz jazmín.", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=200&q=80" },
-                { name: "Carré de Cordero en Costra de Hierbas", price: "$52", desc: "Costra de hierbas y Dijon, puré de chirivía, zanahorias glaseadas con miel, jus de vino tinto.", image: "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=200&q=80" },
+                { name: "Carré de Cordero en Costra de Hierbas", price: "$52", desc: "Costra de hierbas y Dijon, puré de chirivía, zanahorias glaseadas con miel, jus de vino tinto.", image: "../assets/luxe_lamb_rack.png" },
                 { name: "Tagliatelle de Trufa", price: "$38", desc: "Pasta artesanal, hongos silvestres, salsa cremosa de trufa, parmigiano reggiano.", image: "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=200&q=80" }
             ],
             desserts: [
@@ -209,15 +209,15 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         pt: {
             starters: [
-                { name: "Arancini de Trufas", price: "$18", desc: "Bolinhos de risoto crocantes, cogumelos silvestres, pasta de trutas negras, aioli da casa.", image: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=200&q=80" },
-                { name: "Burrata de Tomates Heritage", price: "$22", desc: "Tomates heritage locais, redução de balsâmico envelhecido, azeite de manjericão, fermentação natural tostada.", image: "https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=200&q=80" },
-                { name: "Vieiras Grelhadas", price: "$26", desc: "Purê de couve-flor, presunto cru crocante, brotos, molho de manteiga queimada.", image: "https://images.unsplash.com/photo-1532636875304-0c8fe1197e14?auto=format&fit=crop&w=200&q=80" },
+                { name: "Arancini de Trufas", price: "$18", desc: "Bolinhos de risoto crocantes, cogumelos silvestres, pasta de trutas negras, aioli da casa.", image: "../assets/luxe_arancini.png" },
+                { name: "Burrata de Tomates Heritage", price: "$22", desc: "Tomates heritage locais, redução de balsâmico envelhecido, azeite de manjericão, fermentação natural tostada.", image: "../assets/luxe_burrata.png" },
+                { name: "Vieiras Grelhadas", price: "$26", desc: "Purê de couve-flor, presunto cru crocante, brotos, molho de manteiga queimada.", image: "../assets/luxe_scallops.png" },
                 { name: "Salada de Beterraba Assada", price: "$19", desc: "Queijo de cabra batido, nozes caramelizadas, rúcula baby, vinagrete cítrico.", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=200&q=80" }
             ],
             mains: [
                 { name: "Ribeye Maturado", price: "$56", desc: "Ribeye de 14oz, tutano com alho assado, batatas fingerling com alecrim.", image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=200&q=80" },
                 { name: "Robalo Chileno", price: "$48", desc: "Grelhado com miso, caldo de gengibre e cebolinha, baby bok choy, arroz jasmim.", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=200&q=80" },
-                { name: "Carré de Cordeiro em Crosta de Ervas", price: "$52", desc: "Crosta de ervas e Dijon, purê de pastinaca, cenouras caramelizadas com mel, jus de vinho tinto.", image: "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=200&q=80" },
+                { name: "Carré de Cordeiro em Crosta de Ervas", price: "$52", desc: "Crosta de ervas e Dijon, purê de pastinaca, cenouras caramelizadas com mel, jus de vinho tinto.", image: "../assets/luxe_lamb_rack.png" },
                 { name: "Tagliatelle de Trufas", price: "$38", desc: "Massa artesanal, cogumelos silvestres, molho cremoso de trutas, queijo parmigiano reggiano.", image: "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=200&q=80" }
             ],
             desserts: [
