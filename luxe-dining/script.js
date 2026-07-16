@@ -161,74 +161,74 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuData = {
         en: {
             starters: [
-                { name: "Truffle Arancini", price: "$18", desc: "Crispy risotto balls, wild mushroom, black truffle paste, house aioli." },
-                { name: "Heirloom Burrata", price: "$22", desc: "Local heirloom tomatoes, aged balsamic glaze, basil oil, toasted sourdough." },
-                { name: "Pan-Seared Scallops", price: "$26", desc: "Cauliflower purée, crispy prosciutto, microgreens, brown butter sauce." },
-                { name: "Roasted Beet Salad", price: "$19", desc: "Goat cheese whip, candied walnuts, baby arugula, citrus vinaigrette." }
+                { name: "Truffle Arancini", price: "$18", desc: "Crispy risotto balls, wild mushroom, black truffle paste, house aioli.", image: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=200&q=80" },
+                { name: "Heirloom Burrata", price: "$22", desc: "Local heirloom tomatoes, aged balsamic glaze, basil oil, toasted sourdough.", image: "https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=200&q=80" },
+                { name: "Pan-Seared Scallops", price: "$26", desc: "Cauliflower purée, crispy prosciutto, microgreens, brown butter sauce.", image: "https://images.unsplash.com/photo-1532636875304-0c8fe1197e14?auto=format&fit=crop&w=200&q=80" },
+                { name: "Roasted Beet Salad", price: "$19", desc: "Goat cheese whip, candied walnuts, baby arugula, citrus vinaigrette.", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=200&q=80" }
             ],
             mains: [
-                { name: "Dry-Aged Ribeye", price: "$56", desc: "14oz ribeye, roasted garlic bone marrow, rosemary fingerling potatoes." },
-                { name: "Chilean Sea Bass", price: "$48", desc: "Miso glazed, ginger-scallion broth, baby bok choy, jasmine rice." },
-                { name: "Herb Crust Lamb Rack", price: "$52", desc: "Dijon herb crust, parsnip purée, honey glazed carrots, red wine jus." },
-                { name: "Truffle Tagliatelle", price: "$38", desc: "House-made pasta, wild mushrooms, creamy truffle sauce, parmigiano reggiano." }
+                { name: "Dry-Aged Ribeye", price: "$56", desc: "14oz ribeye, roasted garlic bone marrow, rosemary fingerling potatoes.", image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=200&q=80" },
+                { name: "Chilean Sea Bass", price: "$48", desc: "Miso glazed, ginger-scallion broth, baby bok choy, jasmine rice.", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=200&q=80" },
+                { name: "Herb Crust Lamb Rack", price: "$52", desc: "Dijon herb crust, parsnip purée, honey glazed carrots, red wine jus.", image: "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=200&q=80" },
+                { name: "Truffle Tagliatelle", price: "$38", desc: "House-made pasta, wild mushrooms, creamy truffle sauce, parmigiano reggiano.", image: "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=200&q=80" }
             ],
             desserts: [
-                { name: "Deconstructed Mille-Feuille", price: "$16", desc: "Puff pastry, vanilla bean pastry cream, fresh raspberries, gold leaf." },
-                { name: "Dark Chocolate Soufflé", price: "$18", desc: "72% Valrhona chocolate, Tahitian vanilla bean gelato." },
-                { name: "Signature Tiramisu", price: "$15", desc: "Mascarpone sabayon, espresso-soaked ladyfingers, cocoa dusting." }
+                { name: "Deconstructed Mille-Feuille", price: "$16", desc: "Puff pastry, vanilla bean pastry cream, fresh raspberries, gold leaf.", image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=200&q=80" },
+                { name: "Dark Chocolate Soufflé", price: "$18", desc: "72% Valrhona chocolate, Tahitian vanilla bean gelato.", image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=200&q=80" },
+                { name: "Signature Tiramisu", price: "$15", desc: "Mascarpone sabayon, espresso-soaked ladyfingers, cocoa dusting.", image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=200&q=80" }
             ],
             drinks: [
-                { name: "The Smoked Old Fashioned", price: "$20", desc: "Bourbon, angostura bitters, orange peel, applewood smoke dome." },
-                { name: "Lavender Sage Gimlet", price: "$18", desc: "Artisanal gin, fresh lime, lavender syrup, fresh sage leaf." },
-                { name: "Gold Leaf Martini", price: "$22", desc: "Vodka, dry vermouth, stuffed blue cheese olives, edible 24k gold leaf." }
+                { name: "The Smoked Old Fashioned", price: "$20", desc: "Bourbon, angostura bitters, orange peel, applewood smoke dome.", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=200&q=80" },
+                { name: "Lavender Sage Gimlet", price: "$18", desc: "Artisanal gin, fresh lime, lavender syrup, fresh sage leaf.", image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=200&q=80" },
+                { name: "Gold Leaf Martini", price: "$22", desc: "Vodka, dry vermouth, stuffed blue cheese olives, edible 24k gold leaf.", image: "https://images.unsplash.com/photo-1575037614876-c38a4d44f5b8?auto=format&fit=crop&w=200&q=80" }
             ]
         },
         es: {
             starters: [
-                { name: "Arancini de Trufa", price: "$18", desc: "Bolas de risotto crujientes, hongos silvestres, pasta de trufa negra, alioli de la casa." },
-                { name: "Burrata de Tomates Reliquia", price: "$22", desc: "Tomates reliquia locales, glaseado balsámico añejo, aceite de albahaca, masa madre tostada." },
-                { name: "Vieiras Selladas a la Sartén", price: "$26", desc: "Puré de coliflor, prosciutto crujiente, microbrotes, salsa de manteca marrón." },
-                { name: "Ensalada de Remolacha Asada", price: "$19", desc: "Queso de cabra batido, nueces confitadas, rúcula tierna, vinagreta de cítricos." }
+                { name: "Arancini de Trufa", price: "$18", desc: "Bolas de risotto crujientes, hongos silvestres, pasta de trufa negra, alioli de la casa.", image: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=200&q=80" },
+                { name: "Burrata de Tomates Reliquia", price: "$22", desc: "Tomates reliquia locales, glaseado balsámico añejo, aceite de albahaca, masa madre tostada.", image: "https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=200&q=80" },
+                { name: "Vieiras Selladas a la Sartén", price: "$26", desc: "Puré de coliflor, prosciutto crujiente, microbrotes, salsa de manteca marrón.", image: "https://images.unsplash.com/photo-1532636875304-0c8fe1197e14?auto=format&fit=crop&w=200&q=80" },
+                { name: "Ensalada de Remolacha Asada", price: "$19", desc: "Queso de cabra batido, nueces confitadas, rúcula tierna, vinagreta de cítricos.", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=200&q=80" }
             ],
             mains: [
-                { name: "Ribeye Madurado", price: "$56", desc: "Ojo de bife de 14oz, tuétano con ajo asado, papas fingerling al romero." },
-                { name: "Lubina Chilena", price: "$48", desc: "Glaseado de miso, caldo de jengibre y cebollín, bok choy tierno, arroz jazmín." },
-                { name: "Carré de Cordero en Costra de Hierbas", price: "$52", desc: "Costra de hierbas y Dijon, puré de chirivía, zanahorias glaseadas con miel, jus de vino tinto." },
-                { name: "Tagliatelle de Trufa", price: "$38", desc: "Pasta artesanal, hongos silvestres, salsa cremosa de trufa, parmigiano reggiano." }
+                { name: "Ribeye Madurado", price: "$56", desc: "Ojo de bife de 14oz, tuétano con ajo asado, papas fingerling al romero.", image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=200&q=80" },
+                { name: "Lubina Chilena", price: "$48", desc: "Glaseado de miso, caldo de jengibre y cebollín, bok choy tierno, arroz jazmín.", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=200&q=80" },
+                { name: "Carré de Cordero en Costra de Hierbas", price: "$52", desc: "Costra de hierbas y Dijon, puré de chirivía, zanahorias glaseadas con miel, jus de vino tinto.", image: "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=200&q=80" },
+                { name: "Tagliatelle de Trufa", price: "$38", desc: "Pasta artesanal, hongos silvestres, salsa cremosa de trufa, parmigiano reggiano.", image: "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=200&q=80" }
             ],
             desserts: [
-                { name: "Milhojas Desestructurado", price: "$16", desc: "Hojaldre, crema pastelera de vainilla, frambuesas frescas, lámina de oro." },
-                { name: "Soufflé de Chocolate Negro", price: "$18", desc: "Chocolate Valrhona al 72%, gelato de vainilla de Tahití." },
-                { name: "Tiramisú de la Casa", price: "$15", desc: "Sabayón de mascarpone, vainillas empapadas en espresso, espolvoreado de cacao." }
+                { name: "Milhojas Desestructurado", price: "$16", desc: "Hojaldre, crema pastelera de vainilla, frambuesas frescas, lámina de oro.", image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=200&q=80" },
+                { name: "Soufflé de Chocolate Negro", price: "$18", desc: "Chocolate Valrhona al 72%, gelato de vainilla de Tahití.", image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=200&q=80" },
+                { name: "Tiramisú de la Casa", price: "$15", desc: "Sabayón de mascarpone, vainillas empapadas en espresso, espolvoreado de cacao.", image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=200&q=80" }
             ],
             drinks: [
-                { name: "Old Fashioned Ahumado", price: "$20", desc: "Bourbon, amargo de angostura, piel de naranja, cúpula de humo de madera de manzano." },
-                { name: "Gimlet de Lavanda y Salvia", price: "$18", desc: "Ginebra artesanal, lima fresca, almíbar de lavanda, hoja de salvia fresca." },
-                { name: "Martini con Lámina de Oro", price: "$22", desc: "Vodka, vermut seco, aceitunas rellenas de queso azul, lámina de oro comestible de 24k." }
+                { name: "Old Fashioned Ahumado", price: "$20", desc: "Bourbon, amargo de angostura, piel de naranja, cúpula de humo de madera de manzano.", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=200&q=80" },
+                { name: "Gimlet de Lavanda y Salvia", price: "$18", desc: "Ginebra artesanal, lima fresca, almíbar de lavanda, hoja de salvia fresca.", image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=200&q=80" },
+                { name: "Martini con Lámina de Oro", price: "$22", desc: "Vodka, vermut seco, aceitunas rellenas de queso azul, lámina de oro comestible de 24k.", image: "https://images.unsplash.com/photo-1575037614876-c38a4d44f5b8?auto=format&fit=crop&w=200&q=80" }
             ]
         },
         pt: {
             starters: [
-                { name: "Arancini de Trufas", price: "$18", desc: "Bolinhos de risoto crocantes, cogumelos silvestres, pasta de trufas negras, aioli da casa." },
-                { name: "Burrata de Tomates Heritage", price: "$22", desc: "Tomates heritage locais, redução de balsâmico envelhecido, azeite de manjericão, fermentação natural tostada." },
-                { name: "Vieiras Grelhadas", price: "$26", desc: "Purê de couve-flor, presunto cru crocante, brotos, molho de manteiga queimada." },
-                { name: "Salada de Beterraba Assada", price: "$19", desc: "Queijo de cabra batido, nozes caramelizadas, rúcula baby, vinagrete cítrico." }
+                { name: "Arancini de Trufas", price: "$18", desc: "Bolinhos de risoto crocantes, cogumelos silvestres, pasta de trutas negras, aioli da casa.", image: "https://images.unsplash.com/photo-1541532713592-79a0317b6b77?auto=format&fit=crop&w=200&q=80" },
+                { name: "Burrata de Tomates Heritage", price: "$22", desc: "Tomates heritage locais, redução de balsâmico envelhecido, azeite de manjericão, fermentação natural tostada.", image: "https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=200&q=80" },
+                { name: "Vieiras Grelhadas", price: "$26", desc: "Purê de couve-flor, presunto cru crocante, brotos, molho de manteiga queimada.", image: "https://images.unsplash.com/photo-1532636875304-0c8fe1197e14?auto=format&fit=crop&w=200&q=80" },
+                { name: "Salada de Beterraba Assada", price: "$19", desc: "Queijo de cabra batido, nozes caramelizadas, rúcula baby, vinagrete cítrico.", image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=200&q=80" }
             ],
             mains: [
-                { name: "Ribeye Maturado", price: "$56", desc: "Ribeye de 14oz, tutano com alho assado, batatas fingerling com alecrim." },
-                { name: "Robalo Chileno", price: "$48", desc: "Grelhado com miso, caldo de gengibre e cebolinha, baby bok choy, arroz jasmim." },
-                { name: "Carré de Cordeiro em Crosta de Ervas", price: "$52", desc: "Crosta de ervas e Dijon, purê de pastinaca, cenouras caramelizadas com mel, jus de vinho tinto." },
-                { name: "Tagliatelle de Trufas", price: "$38", desc: "Massa artesanal, cogumelos silvestres, molho cremoso de trufas, queijo parmigiano reggiano." }
+                { name: "Ribeye Maturado", price: "$56", desc: "Ribeye de 14oz, tutano com alho assado, batatas fingerling com alecrim.", image: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=200&q=80" },
+                { name: "Robalo Chileno", price: "$48", desc: "Grelhado com miso, caldo de gengibre e cebolinha, baby bok choy, arroz jasmim.", image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=200&q=80" },
+                { name: "Carré de Cordeiro em Crosta de Ervas", price: "$52", desc: "Crosta de ervas e Dijon, purê de pastinaca, cenouras caramelizadas com mel, jus de vinho tinto.", image: "https://images.unsplash.com/photo-1603048588665-791ca8aea617?auto=format&fit=crop&w=200&q=80" },
+                { name: "Tagliatelle de Trufas", price: "$38", desc: "Massa artesanal, cogumelos silvestres, molho cremoso de trutas, queijo parmigiano reggiano.", image: "https://images.unsplash.com/photo-1612874742237-6526221588e3?auto=format&fit=crop&w=200&q=80" }
             ],
             desserts: [
-                { name: "Mil-Folhas Desconstruído", price: "$16", desc: "Massa folhada, creme de confeiteiro de baunilha, framboesas frescas, folha de ouro." },
-                { name: "Soufflé de Chocolate Amargo", price: "$18", desc: "Chocolate Valrhona 72%, gelato de baunilha do Taiti." },
-                { name: "Tiramisú da Casa", price: "$15", desc: "Sabayon de mascarpone, biscoitos champanhe embebidos em espresso, cacau em pó." }
+                { name: "Mil-Folhas Desconstruído", price: "$16", desc: "Massa folhada, creme de confeiteiro de baunilha, framboesas frescas, folha de ouro.", image: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=200&q=80" },
+                { name: "Soufflé de Chocolate Amargo", price: "$18", desc: "Chocolate Valrhona 72%, gelato de baunilha do Taiti.", image: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=200&q=80" },
+                { name: "Tiramisú da Casa", price: "$15", desc: "Sabayon de mascarpone, biscoitos champanhe embebidos em espresso, cacau em pó.", image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=200&q=80" }
             ],
             drinks: [
-                { name: "Old Fashioned Defumado", price: "$20", desc: "Bourbon, bitter de angostura, casca de laranja, cúpula de fumaça de macieira." },
-                { name: "Gimlet de Lavanda e Sálvia", price: "$18", desc: "Gin artesanal, limão fresco, xarope de lavanda, folha de sálvia fresca." },
-                { name: "Martini com Folha de Ouro", price: "$22", desc: "Vodka, vermute seco, azeitonas recheadas com queijo azul, folha de ouro comestível de 24k." }
+                { name: "Old Fashioned Defumado", price: "$20", desc: "Bourbon, bitter de angostura, casca de laranja, cúpula de fumaça de macieira.", image: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=200&q=80" },
+                { name: "Gimlet de Lavanda e Sálvia", price: "$18", desc: "Gin artesanal, limão fresco, xarope de lavanda, folha de sálvia fresca.", image: "https://images.unsplash.com/photo-1536935338788-846bb9981813?auto=format&fit=crop&w=200&q=80" },
+                { name: "Martini com Folha de Ouro", price: "$22", desc: "Vodka, vermute seco, azeitonas recheadas com queijo azul, folha de ouro comestível de 24k.", image: "https://images.unsplash.com/photo-1575037614876-c38a4d44f5b8?auto=format&fit=crop&w=200&q=80" }
             ]
         }
     };
@@ -312,11 +312,14 @@ document.addEventListener('DOMContentLoaded', () => {
             itemElement.style.transitionDelay = `${index * 0.08}s`;
             
             itemElement.innerHTML = `
-                <div class="menu-item-header">
-                    <h3>${item.name}</h3>
-                    <span class="menu-item-price">${item.price}</span>
+                <img src="${item.image}" alt="${item.name}" class="menu-item-img">
+                <div class="menu-item-content">
+                    <div class="menu-item-header">
+                        <h3>${item.name}</h3>
+                        <span class="menu-item-price">${item.price}</span>
+                    </div>
+                    <p>${item.desc}</p>
                 </div>
-                <p>${item.desc}</p>
             `;
             
             menuGrid.appendChild(itemElement);
