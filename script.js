@@ -36,6 +36,12 @@ const translations = {
         about_h4: "Unlimited Revisions until you're happy",
         tech_title: 'Tech Stack',
 
+        // Founder
+        founder_tag: "CEO & Founder",
+        founder_title: "Lautaro Silvero",
+        founder_p1: "Hello! Welcome to Allimite Agency. I am Lautaro Silvero, 27 years old, and from the province of Misiones, Argentina, I lead this project as CEO and Founder.",
+        founder_p2: "My goal from day one has been to break traditional barriers and truly push our clients' potential to the limit. In a constantly changing digital environment, we focus on creating solid, innovative, and personalized strategies. Here, we don't just shape ideas, we build the success of your brand.",
+
         // Services
         services_tag: 'What We Do',
         services_title: 'Services That <span class="gradient-text">Deliver Results</span>',
@@ -154,6 +160,12 @@ const translations = {
         about_h4: 'Revisiones Ilimitadas hasta que estén satisfechos',
         tech_title: 'Tecnologías',
 
+        // Founder
+        founder_tag: "CEO y Fundador",
+        founder_title: "Lautaro Silvero",
+        founder_p1: "¡Hola! Bienvenidos a Allimite Agency. Soy Lautaro Silvero, tengo 27 años y desde la provincia de Misiones, Argentina, lidero este proyecto como CEO y Fundador.",
+        founder_p2: "Mi objetivo desde el primer día ha sido romper las barreras tradicionales y llevar el potencial de nuestros clientes verdaderamente al límite. En un entorno digital que cambia constantemente, nos enfocamos en crear estrategias sólidas, innovadoras y personalizadas. Aquí no solo plasmamos ideas, construimos el éxito de tu marca.",
+
         // Services
         services_tag: 'Qué Hacemos',
         services_title: 'Servicios que <span class="gradient-text">Dan Resultados</span>',
@@ -271,6 +283,12 @@ const translations = {
         about_h3: 'Otimizado para SEO nos mecanismos de busca',
         about_h4: 'Revisões Ilimitadas até você ficar satisfeito',
         tech_title: 'Tecnologias',
+
+        // Founder
+        founder_tag: "CEO e Fundador",
+        founder_title: "Lautaro Silvero",
+        founder_p1: "Olá! Bem-vindos à Allimite Agency. Sou Lautaro Silvero, tenho 27 anos e da província de Misiones, Argentina, lidero este projeto como CEO e Fundador.",
+        founder_p2: "Meu objetivo desde o primeiro dia tem sido quebrar as barreiras tradicionais e levar o potencial de nossos clientes verdadeiramente ao limite. Em um ambiente digital que muda constantemente, nos concentramos em criar estratégias sólidas, inovadoras e personalizadas. Aqui não apenas moldamos ideias, construímos o sucesso da sua marca.",
 
         // Services
         services_tag: 'O Que Fazemos',
