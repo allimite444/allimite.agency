@@ -1004,89 +1004,17 @@ button { cursor: pointer; }
 .mockup-bar span:nth-child(2) { background: #ffbd2e; }
 .mockup-bar span:nth-child(3) { background: #28c840; }
 
-.mockup-content {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    height: calc(100% - 28px);
+.mockup-img {
+    width: 100%;
+    height: calc(100% - 25px); /* Accounts for mockup-bar height */
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.mockup-nav {
-    height: 6px;
-    width: 60%;
-    background: rgba(255, 255, 255, 0.08);
-    border-radius: 3px;
-}
-
-.mockup-hero-block {
-    height: 40%;
-    background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(59, 130, 246, 0.2));
-    border-radius: 4px;
-}
-
-.mockup-grid-block {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 6px;
-    flex: 1;
-}
-
-.mockup-grid-block div {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 3px;
-}
-
-.mockup-cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px;
-    flex: 1;
-}
-
-.mockup-cols div {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 3px;
-}
-
-.mockup-masonry {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
-    gap: 5px;
-    flex: 1;
-}
-
-.mockup-masonry div {
-    background: rgba(255, 255, 255, 0.07);
-    border-radius: 3px;
-}
-
-.mockup-masonry div:first-child {
-    grid-row: span 2;
-}
-
-.mockup-dashboard {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    gap: 6px;
-    flex: 1;
-}
-
-.mockup-sidebar {
-    background: rgba(255, 255, 255, 0.04);
-    border-radius: 3px;
-}
-
-.mockup-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5px;
-}
-
-.mockup-main div {
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 3px;
+.project-card:hover .mockup-img {
+    transform: scale(1.06);
 }
 
 .project-info {
