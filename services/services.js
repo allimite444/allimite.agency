@@ -195,11 +195,11 @@ const serviceTranslations = {
 
         'automatizaciones': {
             title: 'Automations & Bots (WhatsApp / n8n)',
-            subtitle: 'Automated workflows, n8n integration, WhatsApp chatbots, and AI agents to scale sales and streamline operations.',
+            subtitle: 'Automated workflows, n8n integration, WhatsApp chatbots, email automations, and AI agents to scale sales and streamline operations.',
             meta_price: 'From $250',
             meta_delivery: '3-7 business days',
             what_is_highlight: 'Automate repetitive processes, save hours, and instantly respond to clients 24/7.',
-            what_is_desc: 'n8n automations and WhatsApp bots connect your apps and systems to operate on autopilot. From lead qualification and sales follow-ups to automated AI responses and real-time syncing with your CRM or Google Sheets.',
+            what_is_desc: 'n8n automations and WhatsApp bots connect your apps and systems to operate on autopilot. From lead qualification, email sequences, and sales follow-ups to automated AI responses and real-time syncing with your CRM or Google Sheets.',
             brand_title: 'Personal Brand & Creators',
             brand_subtitle: 'For Consultants, Coaches & Content Creators',
             brand_bullets: [
@@ -415,11 +415,11 @@ const serviceTranslations = {
 
         'automatizaciones': {
             title: 'Automatizaciones & Bots (WhatsApp / n8n)',
-            subtitle: 'Flujos de trabajo automatizados, integración de n8n, chatbots de WhatsApp e IA para escalar las ventas y optimizar la atención de tu negocio.',
+            subtitle: 'Flujos de trabajo automatizados, integración de n8n, chatbots de WhatsApp, automatizaciones de correo electrónico e IA para escalar las ventas y optimizar la atención de tu negocio.',
             meta_price: 'Desde $250',
             meta_delivery: '3-7 días hábiles',
             what_is_highlight: 'Automatiza procesos repetitivos, ahorra tiempo y responde a tus clientes en segundos las 24 horas.',
-            what_is_desc: 'Las automatizaciones con n8n y bots de WhatsApp integran tus aplicaciones y sistemas para operar en piloto automático. Desde la calificación e ingesta de prospectos hasta el seguimiento de ventas, respuestas automáticas con Inteligencia Artificial y sincronización en tiempo real con tu CRM o planillas de Google.',
+            what_is_desc: 'Las automatizaciones con n8n y bots de WhatsApp integran tus aplicaciones y sistemas para operar en piloto automático. Desde la calificación e ingesta de prospectos, secuencias de correo electrónico, hasta el seguimiento de ventas, respuestas automáticas con Inteligencia Artificial y sincronización en tiempo real con tu CRM o planillas de Google.',
             brand_title: 'Marca Personal & Creadores',
             brand_subtitle: 'Para Consultores, Coaches y Marcas Personales',
             brand_bullets: [
@@ -635,11 +635,11 @@ const serviceTranslations = {
 
         'automatizaciones': {
             title: 'Automações & Bots (WhatsApp / n8n)',
-            subtitle: 'Fluxos de trabalho automatizados, integração com n8n, chatbots de WhatsApp e IA para escalar vendas e otimizar o atendimento.',
+            subtitle: 'Fluxos de trabalho automatizados, integração com n8n, chatbots de WhatsApp, automações de e-mail e IA para escalar vendas e otimizar o atendimento.',
             meta_price: 'A partir de $250',
             meta_delivery: '3-7 dias úteis',
             what_is_highlight: 'Automatize processos repetitivos, economize tempo e responda aos clientes em segundos 24 horas por dia.',
-            what_is_desc: 'Automações com n8n e bots de WhatsApp integram seus sistemas para funcionar no piloto automático. Qualificação de leads, acompanhamento de vendas, respostas automáticas com Inteligência Artificial e sincronização em tempo real com seu CRM.',
+            what_is_desc: 'Automações com n8n e bots de WhatsApp integram seus sistemas para funcionar no piloto automático. Qualificação de leads, sequências de e-mail, acompanhamento de vendas, respostas automáticas com Inteligência Artificial e sincronização em tempo real com seu CRM.',
             brand_title: 'Marca Pessoal e Criadores',
             brand_subtitle: 'Para Consultores, Mentores e Criadores de Conteúdo',
             brand_bullets: [

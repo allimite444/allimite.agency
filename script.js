@@ -48,25 +48,19 @@ const translations = {
         services_desc: 'From simple landing pages to complex web applications — we offer end-to-end solutions tailored to your business needs.',
         svc1_title: 'Landing Pages',
         svc1_desc: 'High-converting landing pages designed to capture leads and drive sales. Fast, beautiful, and optimized.',
-        svc1_price: 'From $200',
         svc2_title: 'Business Websites',
         svc2_desc: "Complete multi-page websites that establish your brand's professional online presence and credibility.",
-        svc2_price: 'From $300',
         svc3_title: 'E-Commerce',
         svc3_desc: 'Online stores that make selling seamless. Product catalogs, shopping carts, and payment integration.',
-        svc3_price: 'From $400',
         svc4_title: 'Web Applications',
         svc4_desc: 'Custom web apps with dynamic functionality — dashboards, tools, SaaS platforms, and more.',
-        svc4_price: 'From $500',
         svc5_title: 'Website Redesign',
         svc5_desc: 'Transform your outdated website into a modern, fast, mobile-friendly experience that impresses.',
-        svc5_price: 'From $250',
         svc6_title: 'SEO Optimization',
         svc6_desc: 'Boost your search engine rankings with technical SEO, performance tuning, and best practices.',
-        svc6_price: 'From $100',
         svc7_title: 'Automations & Bots',
-        svc7_desc: 'Automated workflows, n8n integration, WhatsApp chatbots, and AI agents to streamline support and business operations.',
-        svc7_price: 'From $250',
+        svc7_desc: 'Automated workflows with n8n, WhatsApp chatbots, email automations, and AI agents to streamline support and business operations.',
+        svc_cta: 'Learn More',
 
         // Projects
         projects_tag: 'Our Work',
@@ -76,6 +70,7 @@ const translations = {
         proj2_desc: 'Bold marketing agency website with dynamic animations, case studies, and lead generation forms.',
         proj3_desc: 'Minimalist photography portfolio with fullscreen lightbox gallery and smooth page transitions.',
         proj4_desc: 'Cloud management dashboard with real-time analytics, user authentication, and subscription billing.',
+        proj5_desc: 'Single-product Shopify e-commerce store for HydroPore Pro™, a hydro-facial cleansing device. Spa-inspired design with video demos and high-conversion sales funnel.',
         proj_link: 'View Project',
 
         // Process
@@ -175,25 +170,19 @@ const translations = {
         services_desc: 'Desde landing pages simples hasta aplicaciones web complejas — ofrecemos soluciones integrales adaptadas a las necesidades de su negocio.',
         svc1_title: 'Landing Pages',
         svc1_desc: 'Landing pages de alta conversión diseñadas para captar leads e impulsar ventas. Rápidas, atractivas y optimizadas.',
-        svc1_price: 'Desde $200',
         svc2_title: 'Sitios Empresariales',
         svc2_desc: 'Sitios web completos de varias páginas que establecen la presencia profesional online de su marca.',
-        svc2_price: 'Desde $300',
         svc3_title: 'E-Commerce',
         svc3_desc: 'Tiendas online que hacen que vender sea fácil. Catálogos, carritos de compra e integración de pagos.',
-        svc3_price: 'Desde $400',
         svc4_title: 'Aplicaciones Web',
         svc4_desc: 'Apps web personalizadas con funcionalidad dinámica — dashboards, herramientas, plataformas SaaS y más.',
-        svc4_price: 'Desde $500',
         svc5_title: 'Rediseño Web',
         svc5_desc: 'Transformamos su sitio web obsoleto en una experiencia moderna, rápida y mobile-friendly que impresiona.',
-        svc5_price: 'Desde $250',
         svc6_title: 'Optimización SEO',
         svc6_desc: 'Mejoramos su posicionamiento en buscadores con SEO técnico, optimización de rendimiento y mejores prácticas.',
-        svc6_price: 'Desde $100',
         svc7_title: 'Automatizaciones & Bots',
-        svc7_desc: 'Flujos de trabajo automatizados, integración de n8n, chatbots de WhatsApp e IA para optimizar la atención y procesos.',
-        svc7_price: 'Desde $250',
+        svc7_desc: 'Flujos de trabajo automatizados con n8n, chatbots de WhatsApp, automatizaciones de correo electrónico e IA para optimizar la atención y procesos.',
+        svc_cta: 'Conocer Más',
 
         // Projects
         projects_tag: 'Nuestro Trabajo',
@@ -203,6 +192,7 @@ const translations = {
         proj2_desc: 'Sitio web audaz de agencia de marketing con animaciones dinámicas, casos de estudio y formularios de captación.',
         proj3_desc: 'Portfolio minimalista de fotografía con galería lightbox a pantalla completa y transiciones suaves.',
         proj4_desc: 'Dashboard de gestión en la nube con analytics en tiempo real, autenticación y facturación por suscripción.',
+        proj5_desc: 'Tienda e-commerce monoproducto en Shopify para HydroPore Pro™, un limpiador facial por hidro-succión. Diseño spa con demostraciones en video y embudo de alta conversión.',
         proj_link: 'Ver Proyecto',
 
         // Process
@@ -302,25 +292,19 @@ const translations = {
         services_desc: 'De landing pages simples a aplicações web complexas — oferecemos soluções de ponta a ponta personalizadas para as necessidades do seu negócio.',
         svc1_title: 'Landing Pages',
         svc1_desc: 'Landing pages de alta conversão projetadas para capturar leads e gerar vendas. Rápidas, bonitas e otimizadas.',
-        svc1_price: 'A partir de $200',
         svc2_title: 'Sites Corporativos',
         svc2_desc: 'Sites completos com várias páginas que estabelecem a presença online profissional e a credibilidade da sua marca.',
-        svc2_price: 'A partir de $300',
         svc3_title: 'E-Commerce',
         svc3_desc: 'Lojas online que tornam as vendas fluidas. Catálogos de produtos, carrinho de compras e integração de pagamentos.',
-        svc3_price: 'A partir de $400',
         svc4_title: 'Aplicações Web',
         svc4_desc: 'Sistemas web customizados com recursos dinâmicos — painéis de controle, ferramentas, plataformas SaaS e mais.',
-        svc4_price: 'A partir de $500',
         svc5_title: 'Redesenho de Sites',
         svc5_desc: 'Transformamos seu site desatualizado em uma experiência moderna, rápida e adaptável para celular que impressiona.',
-        svc5_price: 'A partir de $250',
         svc6_title: 'Otimização de SEO',
         svc6_desc: 'Melhore seu posicionamento nos buscadores com SEO técnico, otimização de performance e melhores práticas.',
-        svc6_price: 'A partir de $100',
         svc7_title: 'Automações & Bots',
-        svc7_desc: 'Fluxos de trabalho automatizados, integração n8n, chatbots do WhatsApp e IA para otimizar atendimento e processos.',
-        svc7_price: 'A partir de $250',
+        svc7_desc: 'Fluxos de trabalho automatizados com n8n, chatbots do WhatsApp, automações de e-mail e IA para otimizar atendimento e processos.',
+        svc_cta: 'Saiba Mais',
 
         // Projects
         projects_tag: 'Nosso Trabalho',
@@ -330,6 +314,7 @@ const translations = {
         proj2_desc: 'Site arrojado de agência de marketing com animações dinâmicas, estudos de caso e formulários de conversão.',
         proj3_desc: 'Portfólio de fotografia minimalista com galeria lightbox em tela cheia e transições de página suaves.',
         proj4_desc: 'Painel de gerenciamento em nuvem com analytics em tempo real, autenticação de usuários e faturamento de assinatura.',
+        proj5_desc: 'Loja e-commerce monoproduto na Shopify para HydroPore Pro™, um limpador facial por hidro-sucção. Design spa com demonstrações em vídeo e funil de alta conversão.',
         proj_link: 'Ver Projeto',
 
         // Process
@@ -553,6 +538,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => revealObserver.observe(el));
 
+    // ===== STAGGERED SERVICE CARD REVEAL =====
+    document.querySelectorAll('.services-grid .service-card.reveal').forEach((card, i) => {
+        card.style.transitionDelay = `${i * 0.08}s`;
+    });
+
     // ===== COUNTER ANIMATION =====
     const statNumbers = document.querySelectorAll('.stat-number[data-target]');
     let countersAnimated = false;
@@ -728,6 +718,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (document.readyState === 'complete') {
         document.body.style.opacity = '1';
+    }
+
+    // ===== SERVICE CARDS TILT 3D =====
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 25;
+                const rotateY = (centerX - x) / 25;
+                card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
     }
 
 });

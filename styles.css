@@ -946,27 +946,29 @@ button { cursor: pointer; }
 }
 
 /* =====================================================
-   SERVICES SECTION
+   SERVICES SECTION — ELITE REDESIGN
    ===================================================== */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
+    gap: var(--space-2xl);
 }
 
 .service-card {
     display: block;
     color: inherit;
     text-decoration: none;
-    padding: var(--space-2xl);
-    background: var(--bg-card);
-    border: 1px solid var(--border-subtle);
+    padding: var(--space-2xl) var(--space-xl);
+    background: linear-gradient(165deg, rgba(197, 168, 128, 0.04) 0%, rgba(255, 255, 255, 0.02) 40%, rgba(0, 0, 0, 0.15) 100%);
+    border: 1px solid rgba(197, 168, 128, 0.12);
     border-radius: var(--radius-lg);
-    transition: all var(--transition-medium);
+    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.4s ease, background 0.4s ease;
     position: relative;
     overflow: hidden;
+    will-change: transform;
 }
 
+/* Animated gold sweep bar on top */
 .service-card::before {
     content: '';
     position: absolute;
@@ -975,38 +977,76 @@ button { cursor: pointer; }
     right: 0;
     height: 2px;
     background: var(--gradient-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Subtle inner glow overlay */
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, rgba(197, 168, 128, 0.06) 0%, transparent 60%);
     opacity: 0;
-    transition: opacity var(--transition-medium);
+    transition: opacity 0.5s ease;
+    pointer-events: none;
 }
 
 .service-card:hover {
-    border-color: var(--border-hover);
-    background: var(--bg-card-hover);
-    transform: translateY(-4px);
-    box-shadow: var(--glow-violet);
+    border-color: rgba(197, 168, 128, 0.3);
+    background: linear-gradient(165deg, rgba(197, 168, 128, 0.08) 0%, rgba(255, 255, 255, 0.03) 40%, rgba(0, 0, 0, 0.12) 100%);
+    box-shadow: 0 12px 48px rgba(197, 168, 128, 0.12), 0 0 0 1px rgba(197, 168, 128, 0.08);
 }
 
 .service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover::after {
     opacity: 1;
 }
 
+/* Icon with animated glow */
 .service-icon {
-    width: 56px;
-    height: 56px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(197, 168, 128, 0.1);
-    border: 1px solid rgba(197, 168, 128, 0.2);
+    background: rgba(197, 168, 128, 0.08);
+    border: 1px solid rgba(197, 168, 128, 0.18);
     border-radius: var(--radius-md);
     color: var(--accent-purple);
-    margin-bottom: var(--space-lg);
-    transition: all var(--transition-medium);
+    margin-bottom: var(--space-xl);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+}
+
+.service-icon::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: calc(var(--radius-md) + 4px);
+    background: radial-gradient(circle, rgba(197, 168, 128, 0.25) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: -1;
 }
 
 .service-card:hover .service-icon {
     background: rgba(197, 168, 128, 0.15);
-    transform: scale(1.05);
+    transform: scale(1.1);
+    border-color: rgba(197, 168, 128, 0.35);
+    box-shadow: 0 0 20px rgba(197, 168, 128, 0.2);
+}
+
+.service-card:hover .service-icon::after {
+    opacity: 1;
 }
 
 .service-card h3 {
@@ -1014,24 +1054,45 @@ button { cursor: pointer; }
     font-size: var(--fs-lg);
     font-weight: 600;
     margin-bottom: var(--space-md);
+    transition: color 0.3s ease;
+}
+
+.service-card:hover h3 {
+    color: var(--accent-cyan);
 }
 
 .service-card p {
     font-size: var(--fs-sm);
     color: var(--text-secondary);
     line-height: 1.7;
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-xl);
 }
 
-.service-price {
+/* CTA link that appears on hover */
+.service-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-family: var(--font-heading);
     font-size: var(--fs-sm);
-    font-weight: 600;
-    color: var(--accent-cyan);
-    padding: 6px 14px;
-    background: rgba(6, 182, 212, 0.1);
-    border: 1px solid rgba(6, 182, 212, 0.2);
-    border-radius: var(--radius-full);
+    font-weight: 500;
+    color: var(--accent-purple);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease;
+}
+
+.service-cta svg {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-cta {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:hover .service-cta svg {
+    transform: translateX(4px);
 }
 
 /* =====================================================
@@ -1074,6 +1135,8 @@ button { cursor: pointer; }
 .project-gradient--2 { background: linear-gradient(135deg, #0a1628, #152544, #0a1628); }
 .project-gradient--3 { background: linear-gradient(135deg, #1a1005, #2e1f0a, #1a1005); }
 .project-gradient--4 { background: linear-gradient(135deg, #051a1a, #0a2e2e, #051a1a); }
+.project-gradient--5 { background: linear-gradient(135deg, #071e2e, #0c3350, #071e2e); }
+
 
 /* CSS-only Website Mockups */
 .project-mockup {
