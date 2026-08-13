@@ -191,6 +191,35 @@ const serviceTranslations = {
             feat2_desc: 'Tuning page load speeds to meet Google\'s strict Core Web Vitals criteria, giving you an edge in rankings.',
             feat3_title: 'On-Page Optimization',
             feat3_desc: 'Optimizing page titles, headings structure, meta descriptions, image alt tags, and keyword densities.'
+        },
+
+        'automatizaciones': {
+            title: 'Automations & Bots (WhatsApp / n8n)',
+            subtitle: 'Automated workflows, n8n integration, WhatsApp chatbots, and AI agents to scale sales and streamline operations.',
+            meta_price: 'From $250',
+            meta_delivery: '3-7 business days',
+            what_is_highlight: 'Automate repetitive processes, save hours, and instantly respond to clients 24/7.',
+            what_is_desc: 'n8n automations and WhatsApp bots connect your apps and systems to operate on autopilot. From lead qualification and sales follow-ups to automated AI responses and real-time syncing with your CRM or Google Sheets.',
+            brand_title: 'Personal Brand & Creators',
+            brand_subtitle: 'For Consultants, Coaches & Content Creators',
+            brand_bullets: [
+                '<strong>24/7 WhatsApp Support:</strong> Answer FAQs, book appointments, and share purchase links automatically without staying online.',
+                '<strong>Lead Qualification:</strong> Filter high-value leads with interactive menus or AI agents before scheduling calls.',
+                '<strong>Massive Time Savings:</strong> Eliminate tedious manual tasks and focus 100% on high-impact work and VIP clients.'
+            ],
+            business_title: 'Business & Company',
+            business_subtitle: 'For SMBs, E-commerce & Sales Teams',
+            business_bullets: [
+                '<strong>Process Orchestration with n8n:</strong> Connect WhatsApp, CRMs, payment gateways (Stripe, Mercado Pago), email, and databases seamlessly.',
+                '<strong>Instant Replies & AI Chatbots:</strong> Reduce client waiting time to 0 seconds, boosting lead conversion rates.',
+                '<strong>Automated Alerts & Reports:</strong> Send order confirmations, payment reminders, and team notifications in real time.'
+            ],
+            feat1_title: 'Complex n8n Workflows',
+            feat1_desc: 'Advanced logical workflows connecting multiple web tools, APIs, and databases.',
+            feat2_title: 'Official WhatsApp Chatbots',
+            feat2_desc: 'Smart conversational bots designed to handle FAQs, dispatch files, take bookings, and process orders.',
+            feat3_title: 'CRM & AI Integration (OpenAI/Gemini)',
+            feat3_desc: 'AI-driven virtual agents trained on your business data for human-like customer assistance.'
         }
     },
 
@@ -382,6 +411,35 @@ const serviceTranslations = {
             feat2_desc: 'Mejoramos la velocidad de respuesta del servidor y la optimización de código exigida por las métricas Core Web Vitals de Google.',
             feat3_title: 'SEO On-Page Avanzado',
             feat3_desc: 'Optimización estratégica de títulos, meta descripciones, etiquetas alt de imágenes y densidad balanceada de palabras clave.'
+        },
+
+        'automatizaciones': {
+            title: 'Automatizaciones & Bots (WhatsApp / n8n)',
+            subtitle: 'Flujos de trabajo automatizados, integración de n8n, chatbots de WhatsApp e IA para escalar las ventas y optimizar la atención de tu negocio.',
+            meta_price: 'Desde $250',
+            meta_delivery: '3-7 días hábiles',
+            what_is_highlight: 'Automatiza procesos repetitivos, ahorra tiempo y responde a tus clientes en segundos las 24 horas.',
+            what_is_desc: 'Las automatizaciones con n8n y bots de WhatsApp integran tus aplicaciones y sistemas para operar en piloto automático. Desde la calificación e ingesta de prospectos hasta el seguimiento de ventas, respuestas automáticas con Inteligencia Artificial y sincronización en tiempo real con tu CRM o planillas de Google.',
+            brand_title: 'Marca Personal & Creadores',
+            brand_subtitle: 'Para Consultores, Coaches y Marcas Personales',
+            brand_bullets: [
+                '<strong>Atención 24/7 en WhatsApp:</strong> Responde dudas frecuentes, agenda citas y envía enlaces de compra en automático sin estar conectado.',
+                '<strong>Captación & Calificación de Leads:</strong> Filtra prospectos calificados mediante menús interactivos o IA antes de agendar llamadas.',
+                '<strong>Ahorro Masivo de Tiempo:</strong> Elimina tareas manuales repetitivas para enfocarte 100% en crear contenido y atender clientes VIP.'
+            ],
+            business_title: 'Negocio o Empresa',
+            business_subtitle: 'Para Pymes, E-commerce y Equipos Comerciales',
+            business_bullets: [
+                '<strong>Orquestación de Procesos con n8n:</strong> Conecta WhatsApp, CRM, pasarelas de pago (Mercado Pago, Stripe), correo y bases de datos sin límites.',
+                '<strong>Respuestas Inmediatas & Chatbots IA:</strong> Reduce el tiempo de respuesta a 0 segundos, aumentando drásticamente la tasa de conversión.',
+                '<strong>Notificaciones & Reportes Automáticos:</strong> Envía confirmaciones de pedido, recordatorios de pago y reportes a tu equipo en tiempo real.'
+            ],
+            feat1_title: 'Workflows Complejos en n8n',
+            feat1_desc: 'Diseño e integración de flujos lógicos avanzados y conexión entre múltiples herramientas web.',
+            feat2_title: 'Chatbots de WhatsApp Oficiales',
+            feat2_desc: 'Bots conversacionales inteligentes para responder consultas, enviar archivos, procesar pedidos y agendar turnos.',
+            feat3_title: 'Integración CRM e IA (OpenAI/Gemini)',
+            feat3_desc: 'Agentes virtuales con IA contextualizados con la información de tu empresa para atención humana fluida.'
         }
     },
 
@@ -573,6 +631,35 @@ const serviceTranslations = {
             feat2_desc: 'Melhoramos os tempos de carregamento e resposta de páginas do site de acordo com os critérios rígidos do Google.',
             feat3_title: 'SEO On-Page Focado',
             feat3_desc: 'Ajuste de tags de título, descrições meta, tags alt em fotos e estruturação balanceada de palavras-chave no texto.'
+        },
+
+        'automatizaciones': {
+            title: 'Automações & Bots (WhatsApp / n8n)',
+            subtitle: 'Fluxos de trabalho automatizados, integração com n8n, chatbots de WhatsApp e IA para escalar vendas e otimizar o atendimento.',
+            meta_price: 'A partir de $250',
+            meta_delivery: '3-7 dias úteis',
+            what_is_highlight: 'Automatize processos repetitivos, economize tempo e responda aos clientes em segundos 24 horas por dia.',
+            what_is_desc: 'Automações com n8n e bots de WhatsApp integram seus sistemas para funcionar no piloto automático. Qualificação de leads, acompanhamento de vendas, respostas automáticas com Inteligência Artificial e sincronização em tempo real com seu CRM.',
+            brand_title: 'Marca Pessoal e Criadores',
+            brand_subtitle: 'Para Consultores, Mentores e Criadores de Conteúdo',
+            brand_bullets: [
+                '<strong>Atendimento 24/7 no WhatsApp:</strong> Responda dúvidas, agende reuniões e envie links de pagamento automaticamente.',
+                '<strong>Qualificação de Leads:</strong> Filtre os melhores clientes com menus interativos ou IA antes de agendar reuniões.',
+                '<strong>Economia de Tempo:</strong> Elimine tarefas manuais repetitivas e foque no crescimento da sua marca.'
+            ],
+            business_title: 'Negocio ou Empresa',
+            business_subtitle: 'Para PMEs, E-commerce e Equipes Comerciais',
+            business_bullets: [
+                '<strong>Orquestração com n8n:</strong> Conecte WhatsApp, CRM, plataformas de pagamento, e-mail e bancos de dados sem limites.',
+                '<strong>Respostas Imediatas e Chatbots IA:</strong> Reduza o tempo de espera para 0 segundos, aumentando a conversão de vendas.',
+                '<strong>Notificações Automáticas:</strong> Envie confirmações de pedidos, lembretes e relatórios para sua equipe em tempo real.'
+            ],
+            feat1_title: 'Workflows Avançados no n8n',
+            feat1_desc: 'Criação de fluxos lógicos e integração de múltiplas ferramentas web e APIs.',
+            feat2_title: 'Chatbots Oficiais de WhatsApp',
+            feat2_desc: 'Bots conversacionais inteligentes para atender clientes, agendar horários e processar pedidos.',
+            feat3_title: 'Integração com CRM e IA (OpenAI/Gemini)',
+            feat3_desc: 'Agentes virtuais com IA treinados com os dados do seu negócio para um atendimento natural.'
         }
     }
 };
@@ -581,7 +668,7 @@ const serviceTranslations = {
 /* APPLICATION CONTROLLER FOR SERVICES SUBPAGES */
 // =====================================================
 
-let currentLang = localStorage.getItem('portfolio-lang') || 'en';
+let currentLang = localStorage.getItem('portfolio-lang') || 'es';
 
 function applyServiceTranslations(lang) {
     currentLang = lang;

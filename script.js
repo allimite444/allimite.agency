@@ -64,6 +64,9 @@ const translations = {
         svc6_title: 'SEO Optimization',
         svc6_desc: 'Boost your search engine rankings with technical SEO, performance tuning, and best practices.',
         svc6_price: 'From $100',
+        svc7_title: 'Automations & Bots',
+        svc7_desc: 'Automated workflows, n8n integration, WhatsApp chatbots, and AI agents to streamline support and business operations.',
+        svc7_price: 'From $250',
 
         // Projects
         projects_tag: 'Our Work',
@@ -188,6 +191,9 @@ const translations = {
         svc6_title: 'Optimización SEO',
         svc6_desc: 'Mejoramos su posicionamiento en buscadores con SEO técnico, optimización de rendimiento y mejores prácticas.',
         svc6_price: 'Desde $100',
+        svc7_title: 'Automatizaciones & Bots',
+        svc7_desc: 'Flujos de trabajo automatizados, integración de n8n, chatbots de WhatsApp e IA para optimizar la atención y procesos.',
+        svc7_price: 'Desde $250',
 
         // Projects
         projects_tag: 'Nuestro Trabajo',
@@ -312,6 +318,9 @@ const translations = {
         svc6_title: 'Otimização de SEO',
         svc6_desc: 'Melhore seu posicionamento nos buscadores com SEO técnico, otimização de performance e melhores práticas.',
         svc6_price: 'A partir de $100',
+        svc7_title: 'Automações & Bots',
+        svc7_desc: 'Fluxos de trabalho automatizados, integração n8n, chatbots do WhatsApp e IA para otimizar atendimento e processos.',
+        svc7_price: 'A partir de $250',
 
         // Projects
         projects_tag: 'Nosso Trabalho',
@@ -382,7 +391,7 @@ const translations = {
 // =====================================================
 // i18n ENGINE
 // =====================================================
-let currentLang = localStorage.getItem('portfolio-lang') || 'en';
+let currentLang = localStorage.getItem('portfolio-lang') || 'es';
 
 function applyTranslations(lang) {
     currentLang = lang;
