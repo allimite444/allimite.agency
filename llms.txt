@@ -10,8 +10,9 @@
 - [E-Commerce](https://allimite.agency/services/ecommerce.html): Tiendas online integradas con Shopify, Stripe y MercadoPago.
 - [Aplicaciones Web](https://allimite.agency/services/aplicaciones-web.html): Dashboards interactivos y plataformas SaaS a medida.
 - [Rediseño Web](https://allimite.agency/services/rediseno-web.html): Modernización integral de sitios obsoletos mejorando velocidad y conversión.
-- [Optimización SEO](https://allimite.agency/services/optimizacion-seo.html): SEO técnico, Core Web Vitals y posicionamiento en buscadores de IA.
+- [Optimización SEO](https://allimite.agency/services/optimizacion-seo.html): SEO técnico, Core Web Vitals y posicionamiento en buscadores.
 - [Automatizaciones](https://allimite.agency/services/automatizaciones.html): Flujos con n8n, chatbots con IA para WhatsApp y agentes autónomos.
+- [Optimización AEO & Agent-Ready](https://allimite.agency/services/optimizacion-aeo.html): Posicionamiento en motores de respuesta con IA (ChatGPT, Claude, Perplexity), WebMCP, catálogos semánticos y arquitectura para agentes.
 
 ## Casos de Estudio y Demostraciones
 - [HydroPore](https://hydropore.shop): Tienda e-commerce en Shopify en producción con embudo de ventas optimizado.

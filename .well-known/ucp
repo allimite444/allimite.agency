@@ -25,12 +25,17 @@
         },
         {
           "name": "E-Commerce / Aplicación Web",
-          "startingAt": 7000,
+          "startingAt": 4500,
+          "currency": "USD"
+        },
+        {
+          "name": "Optimización AEO & Infraestructura Agent-Ready",
+          "startingAt": 2000,
           "currency": "USD"
         },
         {
           "name": "Automatizaciones & Agentes IA a Medida",
-          "startingAt": 15000,
+          "startingAt": 3500,
           "currency": "USD"
         }
       ]

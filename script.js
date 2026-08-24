@@ -60,6 +60,8 @@ const translations = {
         svc6_desc: 'Boost your search engine rankings with technical SEO, performance tuning, and best practices.',
         svc7_title: 'Automations & Bots',
         svc7_desc: 'Automated workflows with n8n, WhatsApp chatbots, email automations, and AI agents to streamline support and business operations.',
+        svc8_title: 'AEO & Agent-Ready Optimization',
+        svc8_desc: 'Optimization for AI answer engines (ChatGPT, Perplexity, Claude). Technical agent audit, WebMCP runtime, semantic catalogs, and protocol readiness.',
         svc_cta: 'Learn More',
 
         // Projects
@@ -182,6 +184,8 @@ const translations = {
         svc6_desc: 'Mejoramos su posicionamiento en buscadores con SEO técnico, optimización de rendimiento y mejores prácticas.',
         svc7_title: 'Automatizaciones & Bots',
         svc7_desc: 'Flujos de trabajo automatizados con n8n, chatbots de WhatsApp, automatizaciones de correo electrónico e IA para optimizar la atención y procesos.',
+        svc8_title: 'Optimización AEO & Agent-Ready',
+        svc8_desc: 'Posicionamiento en motores de respuesta con IA (ChatGPT, Perplexity, Claude). Auditoría técnica, WebMCP, catálogos semánticos y preparación para agentes.',
         svc_cta: 'Conocer Más',
 
         // Projects
@@ -304,6 +308,8 @@ const translations = {
         svc6_desc: 'Melhore seu posicionamento nos buscadores com SEO técnico, otimização de performance e melhores práticas.',
         svc7_title: 'Automações & Bots',
         svc7_desc: 'Fluxos de trabalho automatizados com n8n, chatbots do WhatsApp, automações de e-mail e IA para otimizar atendimento e processos.',
+        svc8_title: 'Otimização AEO & Agent-Ready',
+        svc8_desc: 'Posicionamento em mecanismos de resposta com IA (ChatGPT, Perplexity, Claude). Auditoria técnica, WebMCP, catálogos semânticos e preparação para agentes.',
         svc_cta: 'Saiba Mais',
 
         // Projects
@@ -749,11 +755,12 @@ if (typeof navigator !== 'undefined' && navigator.modelContext) {
     const SERVICIOS_AGENCIA = [
         { id: "landing-pages", name: "Landing Pages de Alta Conversión", url: "https://allimite.agency/services/landing-pages.html", price_starting: "$1,500" },
         { id: "sitios-empresariales", name: "Sitios Web Empresariales", url: "https://allimite.agency/services/sitios-empresariales.html", price_starting: "$3,000" },
-        { id: "ecommerce", name: "E-Commerce con Pasarelas de Pago", url: "https://allimite.agency/services/ecommerce.html", price_starting: "$3,500" },
-        { id: "aplicaciones-web", name: "Aplicaciones Web & SaaS a Medida", url: "https://allimite.agency/services/aplicaciones-web.html", price_starting: "$5,000" },
-        { id: "rediseno-web", name: "Rediseño & Modernización Web", url: "https://allimite.agency/services/rediseno-web.html", price_starting: "$2,000" },
+        { id: "ecommerce", name: "E-Commerce con Pasarelas de Pago", url: "https://allimite.agency/services/ecommerce.html", price_starting: "$4,500" },
+        { id: "aplicaciones-web", name: "Aplicaciones Web & SaaS a Medida", url: "https://allimite.agency/services/aplicaciones-web.html", price_starting: "$7,000" },
+        { id: "rediseno-web", name: "Rediseño & Modernización Web", url: "https://allimite.agency/services/rediseno-web.html", price_starting: "$2,500" },
         { id: "optimizacion-seo", name: "Optimización SEO y Core Web Vitals", url: "https://allimite.agency/services/optimizacion-seo.html", price_starting: "$1,500" },
-        { id: "automatizaciones", name: "Automatizaciones con IA, n8n y WhatsApp", url: "https://allimite.agency/services/automatizaciones.html", price_starting: "$2,500" }
+        { id: "automatizaciones", name: "Automatizaciones con IA, n8n y WhatsApp", url: "https://allimite.agency/services/automatizaciones.html", price_starting: "$3,500" },
+        { id: "optimizacion-aeo", name: "Optimización AEO & Infraestructura Agent-Ready", url: "https://allimite.agency/services/optimizacion-aeo.html", price_starting: "$2,000" }
     ];
 
     navigator.modelContext.provideContext({
@@ -777,7 +784,7 @@ if (typeof navigator !== 'undefined' && navigator.modelContext) {
                     properties: {
                         nombre: { type: "string", description: "Nombre del cliente o empresa." },
                         email: { type: "string", format: "email", description: "Correo electrónico de contacto." },
-                        servicio: { type: "string", enum: ["landing-pages", "sitios-empresariales", "ecommerce", "aplicaciones-web", "rediseno-web", "optimizacion-seo", "automatizaciones"] },
+                        servicio: { type: "string", enum: ["landing-pages", "sitios-empresariales", "ecommerce", "aplicaciones-web", "rediseno-web", "optimizacion-seo", "automatizaciones", "optimizacion-aeo"] },
                         detalle: { type: "string", description: "Requerimientos y alcance del proyecto." },
                         presupuesto: { type: "string", enum: ["1500-3000", "3000-7000", "7000-15000", "15000+"] }
                     }

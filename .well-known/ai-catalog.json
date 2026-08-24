@@ -101,6 +101,20 @@
         "agente de IA para atención al cliente y presupuestos",
         "dejar de responder consultas a mano"
       ]
+    },
+    {
+      "identifier": "urn:air:allimite.agency:services:optimizacion-aeo",
+      "id": "urn:air:allimite.agency:services:optimizacion-aeo",
+      "name": "Optimización AEO & Infraestructura Agent-Ready",
+      "displayName": "Optimización AEO & Infraestructura Agent-Ready",
+      "type": "text/html",
+      "url": "https://allimite.agency/services/optimizacion-aeo.html",
+      "representativeQueries": [
+        "optimizar mi web para chatgpt y claude",
+        "auditoría aeo y preparación para agentes de ia",
+        "cómo hacer que perplexity recomiende mi empresa",
+        "implementar webmcp y catálogo de agentes en mi sitio"
+      ]
     }
   ]
 }

@@ -1199,6 +1199,15 @@ button { cursor: pointer; }
     --svc-icon-border: rgba(34, 211, 238, 0.25);
 }
 
+/* Optimización AEO & Agent-Ready — Indigo / AI Aura */
+.service-card--indigo {
+    --svc-accent: #818cf8;
+    --svc-glow: rgba(129, 140, 248, 0.2);
+    --svc-icon-bg: rgba(129, 140, 248, 0.1);
+    --svc-icon-bg-hover: rgba(129, 140, 248, 0.22);
+    --svc-icon-border: rgba(129, 140, 248, 0.3);
+}
+
 
 /* =====================================================
    PROJECTS SECTION
