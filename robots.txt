@@ -23,3 +23,4 @@ Allow: /
 Content-Signal: search=yes, ai-input=yes, ai-train=no
 
 Sitemap: https://allimite.agency/sitemap.xml
+Agentmap: https://allimite.agency/.well-known/ai-catalog.json
