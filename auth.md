@@ -46,6 +46,38 @@ inside a browser session, because it carries page context automatically.
 
 ## Supported authentication methods
 
+This service does not operate an OAuth authorization server, so the registration flow
+is declared here in full. Machine-readable form:
+
+```json
+{
+  "agent_auth": {
+    "skill": "https://allimite.agency/.well-known/agent-skills/index.json",
+    "register_uri": "https://formsubmit.co/ajax/lmaos.designer@gmail.com",
+    "registration_methods": [
+      {
+        "type": "anonymous",
+        "register_uri": "https://formsubmit.co/ajax/lmaos.designer@gmail.com",
+        "claim_uri": "https://formsubmit.co/ajax/lmaos.designer@gmail.com",
+        "credential_types_supported": ["none"],
+        "request_format": "application/json",
+        "required_fields": ["name", "email", "message"],
+        "issues_credential": false,
+        "human_review": true
+      }
+    ],
+    "identity_types_supported": ["anonymous"],
+    "anonymous": {
+      "credential_types_supported": ["none"],
+      "claim_uri": "https://formsubmit.co/ajax/lmaos.designer@gmail.com"
+    },
+    "scopes_supported": ["public:read", "public:write"],
+    "bearer_methods_supported": [],
+    "revocation_uri": null
+  }
+}
+```
+
 ### 1. Anonymous access — default, no credential required
 
 - `identity_types_supported`: `["anonymous"]`
