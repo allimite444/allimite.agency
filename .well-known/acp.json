@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "merchant": {
+    "name": "ALLIMITE Agency",
+    "url": "https://allimite.agency/",
+    "email": "lmaos.designer@gmail.com"
+  },
+  "capabilities": {
+    "quotes": true,
+    "invoicing": true,
+    "autonomous_checkout": false
+  },
+  "checkout_url": "https://allimite.agency/#contact",
+  "quote_endpoint": "https://allimite.agency/#contact"
+}
