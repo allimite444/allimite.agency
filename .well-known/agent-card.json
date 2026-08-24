@@ -7,6 +7,10 @@
     "email": "lmaos.designer@gmail.com",
     "url": "https://allimite.agency/#contact"
   },
+  "protocols": [
+    "ap2",
+    "a2a"
+  ],
   "skills": [
     {
       "id": "list_services",

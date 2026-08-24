@@ -4,6 +4,12 @@
     "version": "1.0"
   },
   "api_base_url": "https://allimite.agency",
+  "transports": [
+    {
+      "type": "http",
+      "endpoint": "https://allimite.agency/#contact"
+    }
+  ],
   "merchant": {
     "name": "ALLIMITE Agency",
     "url": "https://allimite.agency/",
