@@ -1,5 +1,4 @@
 {
-  "$schema": "https://a2a-protocol.org/schema/agent-card.json",
   "name": "ALLIMITE Agency Agent",
   "description": "Autonomous quoting, scoping, and web design/development services agent for ALLIMITE Agency.",
   "version": "1.0.0",
@@ -8,7 +7,7 @@
     "email": "lmaos.designer@gmail.com",
     "url": "https://allimite.agency/#contact"
   },
-  "capabilities": [
+  "skills": [
     {
       "id": "list_services",
       "name": "List Agency Services",
@@ -17,21 +16,21 @@
     {
       "id": "request_quote",
       "name": "Request Project Quote",
-      "description": "Submits project requirements to receive a customized high-ticket proposal."
+      "description": "Submits project requirements to receive a customized proposal."
     }
   ],
-  "interfaces": [
+  "supportedInterfaces": [
     {
       "type": "webmcp",
-      "endpoint": "https://allimite.agency/"
+      "url": "https://allimite.agency/"
     },
     {
       "type": "mcp",
-      "manifest": "https://allimite.agency/.well-known/mcp.json"
+      "url": "https://allimite.agency/.well-known/mcp.json"
     },
     {
       "type": "ard",
-      "manifest": "https://allimite.agency/.well-known/ai-catalog.json"
+      "url": "https://allimite.agency/.well-known/ai-catalog.json"
     }
   ]
 }

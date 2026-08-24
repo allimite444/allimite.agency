@@ -1,41 +1,43 @@
 {
-  "version": "1.0",
-  "name": "ALLIMITE Agency",
-  "domain": "allimite.agency",
-  "description": "Digital Agency specializing in high-converting landing pages, corporate websites, e-commerce, and AI automations.",
-  "currency": "USD",
-  "paymentMethods": [
-    "bank_transfer",
-    "stripe",
-    "mercadopago",
-    "crypto"
-  ],
-  "pricing": {
-    "tiers": [
-      {
-        "name": "Landing Page de Alta Conversión",
-        "startingAt": 1500,
-        "currency": "USD"
-      },
-      {
-        "name": "Sitio Web Empresarial",
-        "startingAt": 3000,
-        "currency": "USD"
-      },
-      {
-        "name": "E-Commerce / Aplicación Web",
-        "startingAt": 7000,
-        "currency": "USD"
-      },
-      {
-        "name": "Automatizaciones & Agentes IA a Medida",
-        "startingAt": 15000,
-        "currency": "USD"
-      }
-    ]
-  },
-  "contact": {
-    "email": "lmaos.designer@gmail.com",
-    "endpoint": "https://allimite.agency/#contact"
+  "ucp": {
+    "version": "1.0",
+    "name": "ALLIMITE Agency",
+    "domain": "allimite.agency",
+    "description": "Digital Agency specializing in high-converting landing pages, corporate websites, e-commerce, and AI automations.",
+    "currency": "USD",
+    "paymentMethods": [
+      "bank_transfer",
+      "stripe",
+      "mercadopago",
+      "crypto"
+    ],
+    "pricing": {
+      "tiers": [
+        {
+          "name": "Landing Page de Alta Conversión",
+          "startingAt": 1500,
+          "currency": "USD"
+        },
+        {
+          "name": "Sitio Web Empresarial",
+          "startingAt": 3000,
+          "currency": "USD"
+        },
+        {
+          "name": "E-Commerce / Aplicación Web",
+          "startingAt": 7000,
+          "currency": "USD"
+        },
+        {
+          "name": "Automatizaciones & Agentes IA a Medida",
+          "startingAt": 15000,
+          "currency": "USD"
+        }
+      ]
+    },
+    "contact": {
+      "email": "lmaos.designer@gmail.com",
+      "endpoint": "https://allimite.agency/#contact"
+    }
   }
 }
