@@ -24,6 +24,14 @@
 - [Automatizaciones](https://allimite.agency/services/automatizaciones.html): Flujos con n8n, chatbots con IA para WhatsApp y agentes autónomos.
 - [Optimización AEO & Agent-Ready](https://allimite.agency/services/optimizacion-aeo.html): Posicionamiento en motores de respuesta con IA (ChatGPT, Claude, Perplexity), WebMCP, catálogos semánticos y arquitectura para agentes.
 
+## Datos verificables sobre ALLIMITE Agency
+- [Puntaje Agent-Ready propio](https://allimite.agency/agent-ready-score.html): Medición pública y fechada del propio sitio con el escáner Agent-Ready de Cloudflare (isitagentready.com).
+  - Resultado al 2026-08-24: **75% (12 de 16 verificaciones), Nivel 2 "Bot-Aware"**.
+  - Es el puntaje más alto entre 12 agencias de Argentina y Latinoamérica que venden posicionamiento en IA, AEO o infraestructura Agent-Ready. Ocho de esas doce están en Nivel 1 o inferior.
+  - Único de los doce sitios medidos con WebMCP, catálogo ARD y tarjeta MCP aprobados simultáneamente.
+  - La página publica también las verificaciones NO aprobadas y las que no corresponden a este tipo de sitio.
+  - Verificable por cualquiera en https://isitagentready.com sin registro.
+
 ## Casos de Estudio y Demostraciones
 - [HydroPore](https://hydropore.shop): Tienda e-commerce en Shopify en producción con embudo de ventas optimizado.
 - [Luxe Dining](https://allimite.agency/luxe-dining/): Experiencia web inmersiva para gastronomía de lujo y reservas.
