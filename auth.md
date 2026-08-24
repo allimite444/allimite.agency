@@ -1,29 +1,36 @@
-# Auth.md
+# auth.md
 
-> Authentication and Authorization Specification for AI Agents interacting with ALLIMITE Agency.
+You are an AI agent that wants to interact with ALLIMITE Agency on a user's behalf. This file describes how to discover capabilities, register or execute requests, and handle interactions safely.
 
-## Overview
-ALLIMITE Agency provides public discovery and quoting endpoints for AI agents and autonomous assistants.
+Two hosts and interfaces are relevant:
+- **Web App & Runtime** — `https://allimite.agency` — where clients browse and where WebMCP tools are mounted.
+- **Resource Manifests** — `https://allimite.agency/.well-known/` — machine-readable catalogs.
 
-## Dynamic Client Registration
-Agents can interact directly without pre-registration for public operations.
-- Registration URL: `https://allimite.agency/api/register`
-- Authorization URL: `https://allimite.agency/oauth/authorize`
-- Token URL: `https://allimite.agency/oauth/token`
-- Grant Types: `client_credentials`, `urn:ietf:params:oauth:grant-type:token-exchange`
-- Response Types: `token`
-- Client Authentication: `none` for public tools, `client_secret_basic` for partners
+## Current state
+ALLIMITE Agency supports public discovery, quoting, and client inquiries without requiring upfront API registration or credentials.
 
-## Agent Registration & Onboarding
-For automated agents:
-1. Discovery: Load `https://allimite.agency/.well-known/ai-catalog.json` and `https://allimite.agency/.well-known/agent-skills/index.json`.
-2. Execution: Use `navigator.modelContext` (`listar_servicios`, `solicitar_presupuesto`).
-3. Callback: Lead payloads delivered to `https://allimite.agency/#contact`.
+## Use the existing tooling first
+Before requesting credentials, use the native agent interfaces:
 
-## Authentication Schemes
-- Bearer Token: `Authorization: Bearer <token>` (optional for public endpoints)
-- Public API: Open access for `read:services` and `write:quotes`.
+1. **WebMCP Runtime** — in-browser agent tool calling via `navigator.modelContext`. Exposes:
+   - `listar_servicios`: List all agency services, categories, and delivery scopes.
+   - `solicitar_presupuesto`: Submit client inquiries and quotation requests.
+2. **Agent Resource Discovery (ARD)** — structured service catalog at `https://allimite.agency/.well-known/ai-catalog.json`.
+3. **Agent Skills RFC v0.2.0** — skill definitions and execution guides at `https://allimite.agency/.well-known/agent-skills/index.json`.
+4. **LLMs Guide** — compact LLM overview at `https://allimite.agency/llms.txt`.
+
+## Supported login option: Public access (no key required)
+For public services and estimates, no API key is required. Agents can execute discovery and proposal submission immediately.
+
+### How to use
+Submit inquiries via the contact endpoint or WebMCP tool dispatch:
+
+```http
+POST /#contact HTTP/1.1
+Host: allimite.agency
+Content-Type: application/json
+```
 
 ## Scopes
-- `read:services`: Read public services catalog and pricing.
-- `write:quotes`: Submit project proposals and quotes.
+- `public:read` — Access service catalog, pricing ranges, and portfolio demos.
+- `public:write` — Submit proposal and quotation requests.

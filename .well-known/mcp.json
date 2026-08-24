@@ -1,0 +1,21 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schema.json",
+  "name": "allimite-agency",
+  "title": "ALLIMITE Agency MCP Server",
+  "description": "Herramientas de cotización y catálogo de servicios de desarrollo web y automatizaciones de ALLIMITE Agency.",
+  "version": "1.0.0",
+  "transport": {
+    "type": "webmcp",
+    "url": "https://allimite.agency/"
+  },
+  "tools": [
+    {
+      "name": "listar_servicios",
+      "description": "Devuelve la lista completa de servicios de diseño, desarrollo web, e-commerce y automatizaciones con IA que ofrece ALLIMITE Agency."
+    },
+    {
+      "name": "solicitar_presupuesto",
+      "description": "Envía una solicitud de presupuesto a ALLIMITE Agency con los datos del cliente y requerimientos del proyecto."
+    }
+  ]
+}
