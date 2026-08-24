@@ -1,0 +1,25 @@
+# ALLIMITE Agency — allimite.agency
+User-agent: *
+Allow: /
+
+# Buscadores con IA: permitidos para citabilidad y descubrimiento
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Crawlers de modelos IA
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Preferencias de uso de contenido (contentsignals.org)
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+Sitemap: https://allimite.agency/sitemap.xml

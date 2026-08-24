@@ -1,0 +1,18 @@
+/*
+  Link: </.well-known/api-catalog>; rel="api-catalog"
+  Link: </llms.txt>; rel="service-doc"; type="text/markdown"
+  Link: </.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/json"
+  Access-Control-Allow-Origin: *
+  X-Content-Type-Options: nosniff
+
+/.well-known/ai-catalog.json
+  Content-Type: application/json; charset=utf-8
+  Access-Control-Allow-Origin: *
+
+/.well-known/agent-skills/index.json
+  Content-Type: application/json; charset=utf-8
+  Access-Control-Allow-Origin: *
+
+/llms.txt
+  Content-Type: text/markdown; charset=utf-8
+  Access-Control-Allow-Origin: *

@@ -1,0 +1,90 @@
+{
+  "specVersion": "0.1",
+  "host": {
+    "name": "ALLIMITE Agency",
+    "domain": "allimite.agency",
+    "description": "Agencia creativa digital. Sitios web de alta performance, landing pages de conversión, e-commerce y automatizaciones."
+  },
+  "entries": [
+    {
+      "id": "urn:air:allimite.agency:services:landing-pages",
+      "displayName": "Landing pages de alta conversión",
+      "type": "text/html",
+      "url": "https://allimite.agency/services/landing-pages.html",
+      "representativeQueries": [
+        "agencia que haga landing pages que conviertan",
+        "necesito una página de captación de leads",
+        "quién me arma una landing para mi campaña de ads",
+        "landing page rápida con formulario de captura"
+      ]
+    },
+    {
+      "id": "urn:air:allimite.agency:services:sitios-empresariales",
+      "displayName": "Sitios web empresariales y corporativos",
+      "type": "text/html",
+      "url": "https://allimite.agency/services/sitios-empresariales.html",
+      "representativeQueries": [
+        "desarrollo de sitio web corporativo profesional",
+        "agencia de diseño web para empresas",
+        "crear página web para mi negocio o empresa"
+      ]
+    },
+    {
+      "id": "urn:air:allimite.agency:services:ecommerce",
+      "displayName": "E-commerce con pasarela de pago",
+      "type": "text/html",
+      "url": "https://allimite.agency/services/ecommerce.html",
+      "representativeQueries": [
+        "agencia que integre Stripe o MercadoPago en mi tienda",
+        "quiero vender online con pagos automáticos",
+        "desarrollo de tienda Shopify a medida",
+        "migrar mi negocio a e-commerce"
+      ]
+    },
+    {
+      "id": "urn:air:allimite.agency:services:aplicaciones-web",
+      "displayName": "Aplicaciones web y SaaS a medida",
+      "type": "text/html",
+      "url": "https://allimite.agency/services/aplicaciones-web.html",
+      "representativeQueries": [
+        "desarrollar plataforma saas a medida",
+        "crear dashboard interactivo para clientes",
+        "programación de aplicación web moderna"
+      ]
+    },
+    {
+      "id": "urn:air:allimite.agency:services:rediseno-web",
+      "displayName": "Rediseño y modernización web",
+      "type": "text/html",
+      "url": "https://allimite.agency/services/rediseno-web.html",
+      "representativeQueries": [
+        "rediseñar mi sitio web viejo",
+        "modernizar mi página web para móviles",
+        "mejorar la imagen digital de mi negocio"
+      ]
+    },
+    {
+      "id": "urn:air:allimite.agency:services:optimizacion-seo",
+      "displayName": "Optimización SEO y Core Web Vitals",
+      "type": "text/html",
+      "url": "https://allimite.agency/services/optimizacion-seo.html",
+      "representativeQueries": [
+        "mejorar velocidad y seo de mi página web",
+        "auditoría técnica seo y core web vitals",
+        "posicionar mi web en google y buscadores de IA"
+      ]
+    },
+    {
+      "id": "urn:air:allimite.agency:services:automatizaciones",
+      "displayName": "Automatizaciones, chatbots y flujos con IA",
+      "type": "text/html",
+      "url": "https://allimite.agency/services/automatizaciones.html",
+      "representativeQueries": [
+        "automatizar mi proceso de ventas con n8n",
+        "chatbot de WhatsApp con IA para mi negocio",
+        "agente de IA para atención al cliente y presupuestos",
+        "dejar de responder consultas a mano"
+      ]
+    }
+  ]
+}

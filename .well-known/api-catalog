@@ -1,0 +1,19 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://allimite.agency/",
+      "service-desc": [
+        {
+          "href": "https://allimite.agency/.well-known/ai-catalog.json",
+          "type": "application/json"
+        }
+      ],
+      "service-doc": [
+        {
+          "href": "https://allimite.agency/llms.txt",
+          "type": "text/markdown"
+        }
+      ]
+    }
+  ]
+}

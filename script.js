@@ -111,10 +111,10 @@ const translations = {
         form_phone_ph: '+1 (555) 000-0000',
         form_budget: 'Budget Range',
         form_budget_default: 'Select your budget',
-        form_budget_1: '$100 — $300',
-        form_budget_2: '$300 — $500',
-        form_budget_3: '$500 — $1,000',
-        form_budget_4: '$1,000+',
+        form_budget_1: '$1,500 — $3,000',
+        form_budget_2: '$3,000 — $7,000',
+        form_budget_3: '$7,000 — $15,000',
+        form_budget_4: '$15,000+',
         form_message: 'Project Details',
         form_message_ph: 'Tell us about your project...',
         form_submit: 'Send Message',
@@ -233,10 +233,10 @@ const translations = {
         form_phone_ph: '+54 9 11 0000-0000',
         form_budget: 'Rango de Presupuesto',
         form_budget_default: 'Seleccioná tu presupuesto',
-        form_budget_1: '$100 — $300',
-        form_budget_2: '$300 — $500',
-        form_budget_3: '$500 — $1.000',
-        form_budget_4: '$1.000+',
+        form_budget_1: '$1,500 — $3,000',
+        form_budget_2: '$3,000 — $7,000',
+        form_budget_3: '$7.000 — $15.000',
+        form_budget_4: '$15.000+',
         form_message: 'Detalles del Proyecto',
         form_message_ph: 'Contanos sobre tu proyecto...',
         form_submit: 'Enviar Mensaje',
@@ -355,10 +355,10 @@ const translations = {
         form_phone_ph: '+55 11 90000-0000',
         form_budget: 'Faixa de Orçamento',
         form_budget_default: 'Selecione seu orçamento',
-        form_budget_1: '$100 — $300',
-        form_budget_2: '$300 — $500',
-        form_budget_3: '$500 — $1.000',
-        form_budget_4: '$1.000+',
+        form_budget_1: '$1,500 — $3,000',
+        form_budget_2: '$3,000 — $7,000',
+        form_budget_3: '$7.000 — $15.000',
+        form_budget_4: '$15.000+',
         form_message: 'Detalhes do Projeto',
         form_message_ph: 'Fale conosco sobre o seu projeto...',
         form_submit: 'Enviar Mensagem',
@@ -740,3 +740,75 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+
+/* =====================================================
+   WEBMCP - AGENT CONTEXT PROVIDER (navigator.modelContext)
+   ===================================================== */
+if (typeof navigator !== 'undefined' && navigator.modelContext) {
+    const SERVICIOS_AGENCIA = [
+        { id: "landing-pages", name: "Landing Pages de Alta Conversión", url: "https://allimite.agency/services/landing-pages.html", price_starting: "$1,500" },
+        { id: "sitios-empresariales", name: "Sitios Web Empresariales", url: "https://allimite.agency/services/sitios-empresariales.html", price_starting: "$3,000" },
+        { id: "ecommerce", name: "E-Commerce con Pasarelas de Pago", url: "https://allimite.agency/services/ecommerce.html", price_starting: "$3,500" },
+        { id: "aplicaciones-web", name: "Aplicaciones Web & SaaS a Medida", url: "https://allimite.agency/services/aplicaciones-web.html", price_starting: "$5,000" },
+        { id: "rediseno-web", name: "Rediseño & Modernización Web", url: "https://allimite.agency/services/rediseno-web.html", price_starting: "$2,000" },
+        { id: "optimizacion-seo", name: "Optimización SEO y Core Web Vitals", url: "https://allimite.agency/services/optimizacion-seo.html", price_starting: "$1,500" },
+        { id: "automatizaciones", name: "Automatizaciones con IA, n8n y WhatsApp", url: "https://allimite.agency/services/automatizaciones.html", price_starting: "$2,500" }
+    ];
+
+    navigator.modelContext.provideContext({
+        tools: [
+            {
+                name: "listar_servicios",
+                description: "Devuelve el catálogo oficial de servicios de ALLIMITE Agency con URL y precios base.",
+                inputSchema: { type: "object", properties: {} },
+                async execute() {
+                    return {
+                        content: [{ type: "text", text: JSON.stringify(SERVICIOS_AGENCIA, null, 2) }]
+                    };
+                }
+            },
+            {
+                name: "solicitar_presupuesto",
+                description: "Envía un requerimiento de proyecto y solicitud de presupuesto a ALLIMITE Agency.",
+                inputSchema: {
+                    type: "object",
+                    required: ["nombre", "email", "servicio", "detalle"],
+                    properties: {
+                        nombre: { type: "string", description: "Nombre del cliente o empresa." },
+                        email: { type: "string", format: "email", description: "Correo electrónico de contacto." },
+                        servicio: { type: "string", enum: ["landing-pages", "sitios-empresariales", "ecommerce", "aplicaciones-web", "rediseno-web", "optimizacion-seo", "automatizaciones"] },
+                        detalle: { type: "string", description: "Requerimientos y alcance del proyecto." },
+                        presupuesto: { type: "string", enum: ["1500-3000", "3000-7000", "7000-15000", "15000+"] }
+                    }
+                },
+                async execute(args) {
+                    try {
+                        const response = await fetch("https://formsubmit.co/ajax/lmaos.designer@gmail.com", {
+                            method: "POST",
+                            headers: {
+                                "Content-Type": "application/json",
+                                "Accept": "application/json"
+                            },
+                            body: JSON.stringify({
+                                name: args.nombre,
+                                email: args.email,
+                                service: args.servicio,
+                                budget: args.presupuesto || "No especificado",
+                                message: args.detalle,
+                                source: "WebMCP Agent Request"
+                            })
+                        });
+                        if (response.ok) {
+                            return { content: [{ type: "text", text: "Solicitud enviada con éxito. El equipo de ALLIMITE Agency responderá dentro de 24 horas." }] };
+                        } else {
+                            return { content: [{ type: "text", text: "Solicitud recibida. Para contacto directo escribir a lmaos.designer@gmail.com o a través de https://allimite.agency/#contact." }] };
+                        }
+                    } catch (e) {
+                        return { content: [{ type: "text", text: "Error de red al registrar solicitud. Por favor enviar directamente por https://allimite.agency/#contact." }] };
+                    }
+                }
+            }
+        ]
+    });
+}

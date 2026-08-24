@@ -1,0 +1,19 @@
+{
+  "specVersion": "0.2.0",
+  "skills": [
+    {
+      "id": "allimite-services",
+      "name": "Catálogo de Servicios ALLIMITE",
+      "description": "Permite consultar y listar los servicios de diseño web, landing pages, e-commerce y automatizaciones de ALLIMITE Agency.",
+      "entrypoint": "https://allimite.agency/services/",
+      "capabilities": ["discover", "quote"]
+    },
+    {
+      "id": "allimite-quote",
+      "name": "Solicitud de Presupuesto ALLIMITE",
+      "description": "Permite a agentes de IA enviar requerimientos de proyectos y solicitudes de presupuesto directamente a la agencia.",
+      "entrypoint": "https://allimite.agency/#contact",
+      "capabilities": ["lead_submission"]
+    }
+  ]
+}

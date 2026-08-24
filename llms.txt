@@ -1,0 +1,29 @@
+# ALLIMITE Agency
+> Agencia creativa digital fundada por Lautaro Silvero (Misiones, Argentina).
+> Especializada en sitios web de alta performance, landing pages de alta conversión,
+> e-commerce con pasarela de pago, aplicaciones web y automatizaciones inteligentes.
+> Trabajo remoto global con soporte en español e inglés.
+
+## Servicios
+- [Landing Pages](https://allimite.agency/services/landing-pages.html): Páginas de captación de leads de alta conversión y embudos optimizados.
+- [Sitios Empresariales](https://allimite.agency/services/sitios-empresariales.html): Sitios corporativos multipágina con arquitectura moderna.
+- [E-Commerce](https://allimite.agency/services/ecommerce.html): Tiendas online integradas con Shopify, Stripe y MercadoPago.
+- [Aplicaciones Web](https://allimite.agency/services/aplicaciones-web.html): Dashboards interactivos y plataformas SaaS a medida.
+- [Rediseño Web](https://allimite.agency/services/rediseno-web.html): Modernización integral de sitios obsoletos mejorando velocidad y conversión.
+- [Optimización SEO](https://allimite.agency/services/optimizacion-seo.html): SEO técnico, Core Web Vitals y posicionamiento en buscadores de IA.
+- [Automatizaciones](https://allimite.agency/services/automatizaciones.html): Flujos con n8n, chatbots con IA para WhatsApp y agentes autónomos.
+
+## Casos de Estudio y Demostraciones
+- [HydroPore](https://hydropore.shop): Tienda e-commerce en Shopify en producción con embudo de ventas optimizado.
+- [Luxe Dining](https://allimite.agency/luxe-dining/): Experiencia web inmersiva para gastronomía de lujo y reservas.
+- [NovaBrand](https://allimite.agency/novabrand/): Sitio de branding y diseño para marcas premium.
+- [FrameVision](https://allimite.agency/framevision/): Plataforma y portafolio interactivo para producción visual.
+- [CloudFlow](https://allimite.agency/cloudflow/): Dashboard analítico y SaaS de gestión en la nube.
+
+## Contacto & Presupuestos
+- Fundador: Lautaro Silvero (CEO & Founder)
+- Ubicación: Misiones, Argentina (Servicio Global Remoto)
+- Redes Oficiales:
+  - Instagram: https://www.instagram.com/allimite.agency/
+  - X (Twitter): https://x.com/allimiteagency
+- Formulario de Presupuestos: https://allimite.agency/#contact
