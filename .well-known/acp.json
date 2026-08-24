@@ -1,7 +1,7 @@
 {
   "protocol": {
+    "name": "acp",
     "version": "1.0",
-    "type": "acp",
     "merchant": {
       "name": "ALLIMITE Agency",
       "url": "https://allimite.agency/",
