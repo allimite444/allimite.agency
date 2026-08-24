@@ -1,7 +1,23 @@
+# ATENCION: este archivo NO tiene efecto en el deploy actual.
+#
+# El sitio se sirve desde GitHub Pages, que ignora _headers (es un formato de
+# Netlify y Cloudflare Pages). Las cabeceras que realmente llegan al visitante
+# las inyecta Cloudflare por delante del origen.
+#
+# Fuente de verdad de las cabeceras en produccion: el panel de Cloudflare.
+# Documentado en el proyecto de auditoria (fuera de este repo, porque todo lo
+# que se commitea aca queda publico):
+#   AUDITORIA AEO/clientes/allimite/infraestructura-cloudflare.md
+# Mantener este archivo sincronizado con esa configuracion sirve para dos cosas:
+#   1. dejar la intencion versionada y revisable en el repo;
+#   2. que el sitio siga siendo correcto si algun dia migra a Netlify o
+#      Cloudflare Pages, donde este archivo si se aplica.
+
 /*
   Link: </.well-known/api-catalog>; rel="api-catalog"
   Link: </llms.txt>; rel="service-doc"; type="text/markdown"
   Link: </.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/json"
+  Link: </.well-known/mcp.json>; rel="mcp-server"; type="application/json"
   Access-Control-Allow-Origin: *
   X-Content-Type-Options: nosniff
 
@@ -10,6 +26,16 @@
   Access-Control-Allow-Origin: *
 
 /.well-known/agent-skills/index.json
+  Content-Type: application/json; charset=utf-8
+  Access-Control-Allow-Origin: *
+
+# Archivos sin extension: GitHub Pages los sirve como application/octet-stream.
+# Cloudflare tiene que forzar el Content-Type correcto para estos dos.
+/.well-known/api-catalog
+  Content-Type: application/linkset+json; charset=utf-8
+  Access-Control-Allow-Origin: *
+
+/.well-known/ucp
   Content-Type: application/json; charset=utf-8
   Access-Control-Allow-Origin: *
 

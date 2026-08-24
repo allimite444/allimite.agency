@@ -14,29 +14,60 @@
     "pricing": {
       "tiers": [
         {
-          "name": "Landing Page de Alta Conversión",
-          "startingAt": 1500,
-          "currency": "USD"
-        },
-        {
-          "name": "Sitio Web Empresarial",
-          "startingAt": 3000,
-          "currency": "USD"
-        },
-        {
-          "name": "E-Commerce / Aplicación Web",
-          "startingAt": 4500,
-          "currency": "USD"
-        },
-        {
+          "id": "aeo-agent-ready",
           "name": "Optimización AEO & Infraestructura Agent-Ready",
           "startingAt": 2000,
-          "currency": "USD"
+          "currency": "USD",
+          "url": "https://allimite.agency/services/optimizacion-aeo.html"
         },
         {
+          "id": "landing-pages",
+          "name": "Landing Page de Alta Conversión",
+          "startingAt": 1500,
+          "currency": "USD",
+          "url": "https://allimite.agency/services/landing-pages.html"
+        },
+        {
+          "id": "optimizacion-seo",
+          "name": "Optimización SEO y Core Web Vitals",
+          "startingAt": 1500,
+          "currency": "USD",
+          "url": "https://allimite.agency/services/optimizacion-seo.html"
+        },
+        {
+          "id": "rediseno-web",
+          "name": "Rediseño y Modernización Web",
+          "startingAt": 2500,
+          "currency": "USD",
+          "url": "https://allimite.agency/services/rediseno-web.html"
+        },
+        {
+          "id": "sitios-empresariales",
+          "name": "Sitio Web Empresarial",
+          "startingAt": 3000,
+          "currency": "USD",
+          "url": "https://allimite.agency/services/sitios-empresariales.html"
+        },
+        {
+          "id": "automatizaciones",
           "name": "Automatizaciones & Agentes IA a Medida",
           "startingAt": 3500,
-          "currency": "USD"
+          "currency": "USD",
+          "url": "https://allimite.agency/services/automatizaciones.html"
+        },
+        {
+          "id": "ecommerce",
+          "name": "E-Commerce con Pasarela de Pago",
+          "startingAt": 4500,
+          "currency": "USD",
+          "url": "https://allimite.agency/services/ecommerce.html"
+        },
+        {
+          "id": "aplicaciones-web",
+          "name": "Aplicaciones Web y SaaS a Medida",
+          "startingAt": 7000,
+          "currency": "USD",
+          "url": "https://allimite.agency/services/aplicaciones-web.html"
         }
       ]
     },

@@ -16,7 +16,65 @@
   "capabilities": {
     "quotes": true,
     "invoicing": true,
-    "autonomous_checkout": false
+    "autonomous_checkout": false,
+    "services": [
+      {
+        "id": "aeo-agent-ready",
+        "name": "Optimización AEO & Infraestructura Agent-Ready",
+        "description": "Answer Engine Optimization e infraestructura agéntica para ser recomendado por ChatGPT, Claude, Perplexity y Gemini.",
+        "url": "https://allimite.agency/services/optimizacion-aeo.html",
+        "price": { "amount": 2000, "currency": "USD", "type": "starting_at" }
+      },
+      {
+        "id": "landing-pages",
+        "name": "Landing Pages de Alta Conversión",
+        "description": "Páginas de alta conversión para captar leads, presentar una oferta puntual e impulsar ventas directas.",
+        "url": "https://allimite.agency/services/landing-pages.html",
+        "price": { "amount": 1500, "currency": "USD", "type": "starting_at" }
+      },
+      {
+        "id": "sitios-empresariales",
+        "name": "Sitios Web Empresariales",
+        "description": "Sitios corporativos multipágina que establecen presencia profesional y credibilidad de marca.",
+        "url": "https://allimite.agency/services/sitios-empresariales.html",
+        "price": { "amount": 3000, "currency": "USD", "type": "starting_at" }
+      },
+      {
+        "id": "ecommerce",
+        "name": "E-Commerce con Pasarela de Pago",
+        "description": "Tiendas online con catálogo de productos, carrito e integración de pagos segura.",
+        "url": "https://allimite.agency/services/ecommerce.html",
+        "price": { "amount": 4500, "currency": "USD", "type": "starting_at" }
+      },
+      {
+        "id": "aplicaciones-web",
+        "name": "Aplicaciones Web y SaaS a Medida",
+        "description": "Aplicaciones web y plataformas SaaS desarrolladas a medida.",
+        "url": "https://allimite.agency/services/aplicaciones-web.html",
+        "price": { "amount": 7000, "currency": "USD", "type": "starting_at" }
+      },
+      {
+        "id": "rediseno-web",
+        "name": "Rediseño y Modernización Web",
+        "description": "Rediseño de sitios existentes con foco en rendimiento, accesibilidad y conversión.",
+        "url": "https://allimite.agency/services/rediseno-web.html",
+        "price": { "amount": 2500, "currency": "USD", "type": "starting_at" }
+      },
+      {
+        "id": "optimizacion-seo",
+        "name": "Optimización SEO y Core Web Vitals",
+        "description": "Optimización técnica de posicionamiento y métricas Core Web Vitals.",
+        "url": "https://allimite.agency/services/optimizacion-seo.html",
+        "price": { "amount": 1500, "currency": "USD", "type": "starting_at" }
+      },
+      {
+        "id": "automatizaciones",
+        "name": "Automatizaciones, Chatbots y Flujos con IA",
+        "description": "Automatizaciones con WhatsApp Business API, n8n y agentes de IA a medida.",
+        "url": "https://allimite.agency/services/automatizaciones.html",
+        "price": { "amount": 3500, "currency": "USD", "type": "starting_at" }
+      }
+    ]
   },
   "checkout_url": "https://allimite.agency/#contact",
   "quote_endpoint": "https://allimite.agency/#contact"
