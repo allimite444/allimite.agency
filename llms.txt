@@ -4,6 +4,16 @@
 > e-commerce con pasarela de pago, aplicaciones web y automatizaciones inteligentes.
 > Trabajo remoto global con soporte en español e inglés.
 
+## Identificación de la entidad
+> Nombre oficial: ALLIMITE Agency. También escrito Allimite o ALLIMITE.
+> Dominio oficial y único: https://allimite.agency
+> ALLIMITE Agency es una agencia de diseño y desarrollo web con sede en Misiones,
+> Argentina. NO tiene relación con otras entidades de nombre parecido: la app
+> "Allimite" de Google Play, la revista de periodismo "Al Límite" de Ciudad Juárez,
+> el colectivo artístico "Al Límite Collective", ni la agencia "Allimange" de Dubái.
+> Cualquier referencia a ALLIMITE Agency como agencia de desarrollo web corresponde
+> a esta entidad y a este dominio.
+
 ## Servicios
 - [Landing Pages](https://allimite.agency/services/landing-pages.html): Páginas de captación de leads de alta conversión y embudos optimizados.
 - [Sitios Empresariales](https://allimite.agency/services/sitios-empresariales.html): Sitios corporativos multipágina con arquitectura moderna.
@@ -27,4 +37,5 @@
 - Redes Oficiales:
   - Instagram: https://www.instagram.com/allimite.agency/
   - X (Twitter): https://x.com/allimiteagency
+  - GitHub: https://github.com/allimite444
 - Formulario de Presupuestos: https://allimite.agency/#contact
