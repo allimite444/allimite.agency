@@ -19,10 +19,39 @@ const serviceTranslations = {
         footer_copy: '© 2026 ALLIMITE Agency. All rights reserved.',
 
         // Services
+        'optimizacion-aeo': {
+            title: 'AEO & Agent-Ready Optimization',
+            subtitle: 'Answer Engine Optimization (AEO) and agentic infrastructure. Get recommended by ChatGPT, Claude, Perplexity & Gemini.',
+            meta_price: 'From $2,000',
+            meta_delivery: '3-7 business days',
+            what_is_highlight: 'The next evolution of SEO: Make your business readable, citable, and operable by AI.',
+            what_is_desc: 'Answer Engine Optimization (AEO) and Agent-Ready architecture is the modern standard for the AI era. Instead of only optimizing for traditional search links on Google, we structure your services, pricing, and capabilities so conversational AI models (ChatGPT, Claude, Perplexity, Apple Intelligence) can read your catalog in milliseconds and recommend your company to high-intent buyers.',
+            brand_title: 'Personal Brand & Consultants',
+            brand_subtitle: 'For Authorities, Creators & High-Ticket Coaches',
+            brand_bullets: [
+                '<strong>AI Referral Power:</strong> Become the primary expert recommended when users ask ChatGPT or Perplexity for solutions in your niche.',
+                '<strong>Instant Knowledge Mapping:</strong> Clean llms.txt and ARD catalogs ensure AI models quote your exact services and authority signals.',
+                '<strong>IP & Content Protection:</strong> Custom Content Signals protect your original work while maximizing citation reach.'
+            ],
+            business_title: 'Business & Enterprise',
+            business_subtitle: 'For B2B Companies, Agencies & SaaS',
+            business_bullets: [
+                '<strong>Zero-Friction Inbound:</strong> Enable AI agents to browse your service catalog and submit structured project quotes via WebMCP.',
+                '<strong>Cloudflare Agent-Ready Pass:</strong> Upgrade from Level 0 to Level 2/3 with verified DNS-AID, MCP cards, and RFC 9727 catalogs.',
+                '<strong>High-Ticket Positioning:</strong> Transparent UCP commerce profiles declare your currency and pricing tiers, filtering out unqualified leads.'
+            ],
+            feat1_title: 'WebMCP Browser Runtime',
+            feat1_desc: 'Interactive navigator.modelContext tools allowing browser-integrated AI agents to interact with your services directly.',
+            feat2_title: 'Semantic ARD & llms.txt',
+            feat2_desc: 'Ultra-clean text files and machine-readable capability catalogs paired with representative search queries.',
+            feat3_title: 'Bot Access & Cloudflare Security',
+            feat3_desc: 'Explicit permissions for AI search crawlers and response header link relations deployed at the edge.'
+        },
+
         'landing-pages': {
             title: 'Landing Pages',
             subtitle: 'High-converting pages designed to capture leads, showcase a specific offer, and drive direct sales.',
-            meta_price: 'From $150',
+            meta_price: 'From $1,500',
             meta_delivery: '2-5 business days',
             what_is_highlight: 'Your core offer on a single page fully optimized to sell.',
             what_is_desc: 'A Landing Page is a single, conversion-focused web page built specifically for marketing or advertising campaigns. Unlike traditional multi-page websites, it removes all distractions (like complex navigation menus or generic info) and is structured around a single, highly persuasive Call to Action (CTA) to convert visitors into customers.',
@@ -51,7 +80,7 @@ const serviceTranslations = {
         'sitios-empresariales': {
             title: 'Business Websites',
             subtitle: 'Complete multi-page websites that establish your brand\'s professional online presence and global credibility.',
-            meta_price: 'From $300',
+            meta_price: 'From $3,000',
             meta_delivery: '5-10 business days',
             what_is_highlight: 'The digital headquarters for your brand to build global trust.',
             what_is_desc: 'A Business Website is a complete multi-page platform that serves as the official digital headquarters for your brand or company. It details who you are, what values you stand for, what services or products you offer, and hosts trust signals like client testimonials, certifications, and case studies to convert search traffic into warm client inquiries.',
@@ -80,7 +109,7 @@ const serviceTranslations = {
         'ecommerce': {
             title: 'E-Commerce Stores',
             subtitle: 'Stunning online stores that make selling seamless. Product catalogs, shopping carts, and secure payment integrations.',
-            meta_price: 'From $500',
+            meta_price: 'From $4,500',
             meta_delivery: '7-15 business days',
             what_is_highlight: 'Your store open 24/7, fully automated and without borders.',
             what_is_desc: 'An E-Commerce Store is a dynamic website that enables companies to exhibit, manage, and sell products or services directly to consumers over the internet. It includes catalog filtering, product description sheets, digital shopping carts, secure checkout gateways, and automated inventory and shipping management.',
@@ -109,7 +138,7 @@ const serviceTranslations = {
         'aplicaciones-web': {
             title: 'Web Applications',
             subtitle: 'Custom web software with dynamic functionality, databases, user portals, and SaaS dashboards.',
-            meta_price: 'From $800',
+            meta_price: 'From $7,000',
             meta_delivery: '10-20 business days',
             what_is_highlight: 'Custom web software built to automate operations and scale.',
             what_is_desc: 'A Web Application is a highly interactive software application that runs in the browser, powered by a database and custom logic. Unlike static pages, it allows users to create accounts, log in, manipulate data, query complex databases, generate real-time reports, and subscribe to services (SaaS).',
@@ -138,7 +167,7 @@ const serviceTranslations = {
         'rediseno-web': {
             title: 'Website Redesign',
             subtitle: 'Transform your outdated website into a modern, fast, mobile-friendly experience that inspires trust.',
-            meta_price: 'From $200',
+            meta_price: 'From $2,500',
             meta_delivery: '5-7 business days',
             what_is_highlight: 'Digital evolution: speed, modern aesthetics, and better UX.',
             what_is_desc: 'A Website Redesign is the comprehensive overhaul of an existing site to modernize its visual aesthetics, optimize its technical code, improve loading speed, and align the interface with current user experience (UX) and mobile standards without losing current search engine authority.',
@@ -150,53 +179,53 @@ const serviceTranslations = {
                 '<strong>Mobile First:</strong> Ensure clients checking your website from social media links get an exceptional mobile experience.'
             ],
             business_title: 'Business & Company',
-            business_subtitle: 'For Companies Upgrading Tech',
+            business_subtitle: 'For Companies Undergoing Modernization',
             business_bullets: [
-                '<strong>Lower Bounce Rates:</strong> Keep visitors engaged longer by replacing slow, legacy pages with blazing-fast loads.',
-                '<strong>Better Conversion:</strong> Restructure user journeys to convert a higher percentage of existing organic traffic.',
-                '<strong>Brand Modernization:</strong> Update the company\'s digital identity to match modern competitors and win trust.'
+                '<strong>Lower Bounce Rates:</strong> Keep potential customers on your site instead of losing them to slow, outdated competitor pages.',
+                '<strong>Higher Conversion:</strong> Redesign user flows to guide visitors seamlessly into high-value sales conversations.',
+                '<strong>Digital Edge:</strong> Modernize your brand identity to stay ahead of newer, tech-forward competitors.'
             ],
-            feat1_title: 'SEO Rankings Preserved',
-            feat1_desc: 'Careful redirect management (301) and metadata preservation so you don\'t lose existing Google search traffic.',
-            feat2_title: 'Performance Boost',
-            feat2_desc: 'Upgrading dirty, bloated theme code to clean HTML5/CSS3 and optimized assets for speed.',
-            feat3_title: 'Modern UX Audit',
-            feat3_desc: 'Reorganizing the navigation, layouts, and forms to eliminate friction and maximize conversions.'
+            feat1_title: 'SEO Safeguard',
+            feat1_desc: 'Meticulous 301 redirect mapping to ensure you retain your existing Google rankings and domain authority.',
+            feat2_title: 'Performance Leap',
+            feat2_desc: 'Eliminating bloated code, compressing heavy assets, and tuning Core Web Vitals to the highest scores.',
+            feat3_title: 'Clean Navigation Flow',
+            feat3_desc: 'Simplifying site architecture and copywriting so prospects find the exact service they need in seconds.'
         },
 
         'optimizacion-seo': {
             title: 'SEO Optimization',
-            subtitle: 'Boost your search rankings with technical SEO audits, performance tuning, and organic traffic strategies.',
-            meta_price: 'From $100',
-            meta_delivery: 'Continuous / Variable',
-            what_is_highlight: 'Organic search visibility to attract hot leads without ad spend.',
-            what_is_desc: 'SEO Optimization is the practice of aligning your website\'s code, architecture, speed, and content with search engine algorithms (like Google). The goal is to rank organically for terms relevant to your business, generating a constant flow of interested visitors without spending on advertising.',
+            subtitle: 'Boost your search engine rankings with technical SEO, performance tuning, and content optimization.',
+            meta_price: 'From $1,500',
+            meta_delivery: 'Ongoing / Milestone',
+            what_is_highlight: 'Organic search visibility to attract high-intent clients on autopilot.',
+            what_is_desc: 'SEO Optimization is the engineering and content process applied to your website to maximize its visibility across organic search engines like Google. Its primary objective is to drive consistent, qualified inbound traffic without paying recurring ad fees.',
             brand_title: 'Personal Brand',
-            brand_subtitle: 'For Authors, Consultants & Leaders',
+            brand_subtitle: 'For Authors, Consultants & Thought Leaders',
             brand_bullets: [
-                '<strong>Organic Authority:</strong> Become the go-to authority in your niche when users search for your topics on Google.',
-                '<strong>Inbound Clients:</strong> Let clients find you when they are actively looking for the solutions you consult on.',
-                '<strong>Credibility boost:</strong> Ranking on the first page of Google instantly reinforces your elite status in the field.'
+                '<strong>Organic Authority:</strong> Become the top Google search result when people research high-level solutions in your niche.',
+                '<strong>Inbound Clients:</strong> Allow high-intent buyers searching for specific services to find your platform naturally.',
+                '<strong>Instant Credibility:</strong> Ranking at the top of search results immediately establishes trust and authority.'
             ],
             business_title: 'Business & Company',
-            business_subtitle: 'For SMBs, Local Businesses & Startups',
+            business_subtitle: 'For SMBs, Startups & Local Services',
             business_bullets: [
-                '<strong>Sustainable Traffic:</strong> Generate leads 24/7 without being dependent on a continuous advertising budget.',
-                '<strong>Lower CAC:</strong> Organic traffic has no cost-per-click, significantly reducing your Customer Acquisition Cost.',
-                '<strong>Local Visibility:</strong> Optimize for local search to attract nearby clients looking for your products or services.'
+                '<strong>Sustainable Inbound Pipeline:</strong> Generate qualified client inquiries every month without relying 100% on ad spend.',
+                '<strong>Lower CAC:</strong> Organic search traffic delivers zero-cost clicks, reducing your blended client acquisition costs.',
+                '<strong>Targeted Local & Global SEO:</strong> Capture geographically relevant clients searching for your exact enterprise solutions.'
             ],
-            feat1_title: 'Technical SEO Audit',
-            feat1_desc: 'Fixing search indexing issues, site maps, robots.txt, broken links, and site structure errors.',
+            feat1_title: 'Full Technical Audit',
+            feat1_desc: 'Fixing indexation errors, XML sitemaps, robots.txt, broken links, schema markups, and internal hierarchy.',
             feat2_title: 'Speed & Core Web Vitals',
-            feat2_desc: 'Tuning page load speeds to meet Google\'s strict Core Web Vitals criteria, giving you an edge in rankings.',
-            feat3_title: 'On-Page Optimization',
-            feat3_desc: 'Optimizing page titles, headings structure, meta descriptions, image alt tags, and keyword densities.'
+            feat2_desc: 'Optimizing server response times and frontend performance to meet Google\'s strict speed benchmarks.',
+            feat3_title: 'Advanced On-Page Architecture',
+            feat3_desc: 'Strategic title tags, meta descriptions, image alt data, and semantic heading hierarchies.'
         },
 
         'automatizaciones': {
             title: 'Automations & Bots (WhatsApp / n8n)',
-            subtitle: 'Automated workflows, n8n integration, WhatsApp chatbots, email automations, and AI agents to scale sales and streamline operations.',
-            meta_price: 'From $250',
+            subtitle: 'Automated workflows, n8n integration, WhatsApp chatbots, and AI agents to scale sales and streamline operations.',
+            meta_price: 'From $3,500',
             meta_delivery: '3-7 business days',
             what_is_highlight: 'Automate repetitive processes, save hours, and instantly respond to clients 24/7.',
             what_is_desc: 'n8n automations and WhatsApp bots connect your apps and systems to operate on autopilot. From lead qualification, email sequences, and sales follow-ups to automated AI responses and real-time syncing with your CRM or Google Sheets.',
@@ -239,68 +268,97 @@ const serviceTranslations = {
         footer_copy: '© 2026 ALLIMITE Agency. Todos los derechos reservados.',
 
         // Services
+        'optimizacion-aeo': {
+            title: 'Optimización AEO & Agent-Ready',
+            subtitle: 'Posicionamiento en motores de respuesta con IA. Hacemos que ChatGPT, Claude, Perplexity y Gemini recomienden tu empresa y coticen en automático.',
+            meta_price: 'Desde $2,000',
+            meta_delivery: '3-7 días hábiles',
+            what_is_highlight: 'La evolución del SEO: hacé que la Inteligencia Artificial recomiende tu negocio y venda por vos.',
+            what_is_desc: 'La Optimización AEO (Answer Engine Optimization) y la arquitectura Agent-Ready es el estándar para la era de la IA. Ya no optimizamos solo para que alguien haga clic en un enlace azul en Google, sino para que los modelos de lenguaje (ChatGPT, Claude, Perplexity, Apple Intelligence) lean tu catálogo en milisegundos, entiendan tus precios y te citen como la mejor solución ante clientes con presupuesto real.',
+            brand_title: 'Marca Personal & Consultores',
+            brand_subtitle: 'Para Referentes, Creadores y Coaches High-Ticket',
+            brand_bullets: [
+                '<strong>Recomendación Directa en IA:</strong> Convertite en la opción sugerida cuando un usuario le pregunte a ChatGPT o Perplexity por soluciones de tu rubro.',
+                '<strong>Catálogo Semántico Limpio:</strong> Archivos llms.txt y ARD estructurados para que los modelos conozcan tus servicios y autoridad sin errores.',
+                '<strong>Protección de Propiedad Intelectual:</strong> Directivas de Content Signals que permiten la citación protegiendo tus contenidos de entrenamiento no autorizado.'
+            ],
+            business_title: 'Negocio o Empresa',
+            business_subtitle: 'Para Empresas B2B, Pymes y Startups',
+            business_bullets: [
+                '<strong>Captación de Leads por IA:</strong> Permite que agentes inteligentes coticen proyectos y envíen datos de clientes calificados en automático con WebMCP.',
+                '<strong>Salto a Nivel Élite en Cloudflare:</strong> Subida garantizada de Nivel 0 a Nivel 2/3 con DNS-AID, tarjetas MCP y catálogo RFC 9727.',
+                '<strong>Posicionamiento de Alto Valor:</strong> Perfil UCP público que declara tus tarifas oficiales en dólares, filtrando a clientes sin presupuesto.'
+            ],
+            feat1_title: 'Runtime WebMCP en Navegador',
+            feat1_desc: 'Integración nativa con navigator.modelContext para que navegadores y agentes con IA ejecuten acciones en tu web.',
+            feat2_title: 'Catálogo ARD & llms.txt',
+            feat2_desc: 'Documentación optimizada para LLMs y manifiesto de capacidades con consultas clave para emparejar clientes con tus servicios.',
+            feat3_title: 'Control de Bots & Certificación',
+            feat3_desc: 'Permisos específicos para bots de búsqueda de IA, encabezados Link y validación en vivo en isitagentready.com.'
+        },
+
         'landing-pages': {
             title: 'Landing Pages',
             subtitle: 'Páginas de alta conversión diseñadas para capturar leads, destacar una oferta y generar ventas directas.',
-            meta_price: 'Desde $150',
+            meta_price: 'Desde $1,500',
             meta_delivery: '2-5 días hábiles',
             what_is_highlight: 'Tu oferta principal en una sola página optimizada para vender.',
             what_is_desc: 'Una Landing Page (o página de aterrizaje) es una única página web diseñada específicamente para campañas de marketing o publicidad. A diferencia de un sitio web tradicional, elimina cualquier tipo de distracción (como menús complejos o información secundaria) y se estructura en torno a una única llamada a la acción (CTA) clara y persuasiva, con el objetivo de convertir visitas en clientes.',
             brand_title: 'Marca Personal',
             brand_subtitle: 'Para Profesionales, Creadores y Consultores',
             brand_bullets: [
-                '<strong>Ventas Directas:</strong> Promocioná y vendé tus ebooks, cursos online, webinars o servicios de mentoría sin desvíos.',
-                '<strong>Captación de leads:</strong> Creá tu base de datos y lista de correos rápidamente regalando recursos descargables (lead magnets).',
-                '<strong>Claridad Absoluta:</strong> Dirigí el tráfico de tu link en bio directamente a una página que destaque tu propuesta de valor principal.'
+                '<strong>Venta Directa:</strong> Promocioná y vendé tus infoproductos, cursos, asesorías o servicios sin rodeos.',
+                '<strong>Captación de Leads:</strong> Creá listas de emails calificadas ofreciendo recursos gratuitos descargables (lead magnets).',
+                '<strong>Claridad Total:</strong> Dirigí el tráfico desde tu bio de Instagram o TikTok hacia una oferta puntual con alto impacto.'
             ],
             business_title: 'Negocio o Empresa',
             business_subtitle: 'Para Pymes, Startups y Equipos de Venta',
             business_bullets: [
-                '<strong>Campañas de Anuncios:</strong> El destino ideal para recibir el tráfico de Google Ads, Meta Ads (Facebook/Instagram) o TikTok Ads.',
-                '<strong>Mayor Retorno (ROI):</strong> Maximizá el rendimiento de tu presupuesto de marketing reduciendo el Costo de Adquisición de Cliente (CAC).',
-                '<strong>Automatización de Datos:</strong> Enviá los datos de los interesados directamente al CRM de tu equipo de ventas o email marketing.'
+                '<strong>Tráfico Publicitario:</strong> Es el destino ideal para tus campañas pagas de Google Ads, Meta Ads (Instagram/Facebook) o TikTok Ads.',
+                '<strong>Mayor Retorno (ROI):</strong> Aumentá drásticamente tu tasa de conversión, reduciendo el Costo de Adquisición de Cliente (CAC).',
+                '<strong>Integración CRM:</strong> Enviá los datos de tus clientes automáticamente a tu CRM, base de datos o correo al instante.'
             ],
-            feat1_title: 'Enfoque en Conversión',
-            feat1_desc: 'Estructura visual estratégica, textos persuasivos (copywriting) y botones llamativos diseñados para incentivar la acción.',
-            feat2_title: 'Carga Ultra Rápida',
-            feat2_desc: 'Código limpio y optimización de imágenes para que la página cargue en milisegundos, evitando que los usuarios la abandonen.',
-            feat3_title: 'Integración sin Fricción',
-            feat3_desc: 'Formularios conectados directamente con tu email, WhatsApp, Google Sheets, Mailchimp o tu CRM preferido.'
+            feat1_title: 'Estrategia de Conversión',
+            feat1_desc: 'Diseño enfocado en la persuasión visual, jerarquía clara de textos y llamadas a la acción imposibles de ignorar.',
+            feat2_title: 'Carga en Milisegundos',
+            feat2_desc: 'Código liviano y optimizado para que la página cargue al instante y no pierdas ni un solo cliente por lentitud.',
+            feat3_title: 'Formularios y Conexiones',
+            feat3_desc: 'Formularios conectados directo a tu WhatsApp, Mailchimp, Google Sheets o correo empresarial.'
         },
 
         'sitios-empresariales': {
             title: 'Sitios Empresariales',
-            subtitle: 'Sitios web completos de varias páginas que establecen la presencia profesional online y la credibilidad global de tu marca.',
-            meta_price: 'Desde $300',
+            subtitle: 'Sitios web completos de varias páginas que establecen la presencia profesional online de tu marca y su credibilidad global.',
+            meta_price: 'Desde $3,000',
             meta_delivery: '5-10 días hábiles',
             what_is_highlight: 'La sede digital de tu empresa para construir confianza global.',
             what_is_desc: 'Un Sitio Empresarial es una plataforma web completa de múltiples secciones que funciona como la sede digital oficial de una marca o empresa. Comunica quién sos, tus valores, qué servicios o productos ofrecés y expone elementos de confianza como testimonios, certificaciones y casos de estudio, para convertir a las visitas de motores de búsqueda en clientes calificados.',
             brand_title: 'Marca Personal',
-            brand_subtitle: 'Para Profesionales, Conferencistas y Expertos',
+            brand_subtitle: 'Para Profesionales, Conferencistas y Consultores Senior',
             brand_bullets: [
-                '<strong>Hub de Autoridad:</strong> Agrupá tu portfolio, charlas, blog, menciones en prensa y servicios en un espacio premium propio.',
-                '<strong>Posicionamiento de Élite:</strong> Proyectá una imagen profesional sólida que te permita cobrar tarifas más altas por tus consultorías.',
-                '<strong>Audiencia Orgánica:</strong> Publicá artículos y newsletters para construir autoridad en buscadores de forma gratuita (SEO).'
+                '<strong>Hub de Autoridad:</strong> Centralizá en un solo lugar tu biografía, portfolio de trabajos, prensa, blog y métodos de contratación.',
+                '<strong>Posicionamiento Premium:</strong> Proyectá una imagen de alto nivel que justifique cobrar tarifas más altas por tus servicios.',
+                '<strong>Audiencia a Largo Plazo:</strong> Publicá artículos o contenidos propios para posicionarte como referente de tu sector.'
             ],
             business_title: 'Negocio o Empresa',
-            business_subtitle: 'Para Pymes, Agencias y Corporaciones',
+            business_subtitle: 'Para Pymes, Agencias y Empresas Consolidadas',
             business_bullets: [
-                '<strong>Sede Digital 24/7:</strong> Mostrá una imagen corporativa seria y respondé a las preguntas más frecuentes de tus clientes en cualquier momento.',
-                '<strong>Cierre de Contratos:</strong> Destacá casos de éxito detallados y perfiles de tu equipo para ganar contratos B2B de alto valor.',
-                '<strong>Estructura Escalable:</strong> Ampliá la web a medida que crece tu negocio, sumando bolsa de trabajo, portal de clientes o sub-sitios.'
+                '<strong>Presencia Institucional:</strong> Mostrá una imagen seria y profesional que transmita seguridad a socios y clientes corporativos.',
+                '<strong>Validación Comercial:</strong> Destacá casos de éxito, equipo de trabajo y avales para cerrar acuerdos B2B más grandes.',
+                '<strong>Plataforma Escalable:</strong> Diseñada para crecer con tu empresa, sumando nuevas secciones o idiomas cuando lo necesites.'
             ],
             feat1_title: 'Diseño a Medida',
-            feat1_desc: 'No usamos plantillas genéricas. Diseñamos desde cero alineados perfectamente a la identidad visual de tu marca.',
-            feat2_title: '100% Responsivo',
-            feat2_desc: 'Tu web se verá increíble y se navegará sin problemas desde smartphones, tablets y pantallas de computadora.',
-            feat3_title: 'Preparado para SEO',
-            feat3_desc: 'Estructura técnica de títulos y etiquetas optimizada para que los buscadores puedan indexar y rankear tu web fácilmente.'
+            feat1_desc: 'Nada de plantillas genéricas. Diseñamos una identidad web personalizada y alineada al 100% con tu manual de marca.',
+            feat2_title: '100% Adaptable (Responsive)',
+            feat2_desc: 'Navegación impecable y perfectamente legible en smartphones, tablets, laptops y pantallas gigantes.',
+            feat3_title: 'Estructura Lista para SEO',
+            feat3_desc: 'Estructura semántica de encabezados, meta etiquetas y datos enriquecidos para posicionar alto en Google.'
         },
 
         'ecommerce': {
             title: 'E-Commerce',
             subtitle: 'Tiendas online diseñadas para vender sin fricción. Catálogos, carritos y pasarelas de pago seguras.',
-            meta_price: 'Desde $500',
+            meta_price: 'Desde $4,500',
             meta_delivery: '7-15 días hábiles',
             what_is_highlight: 'Tu tienda abierta las 24 horas, de forma automática y sin fronteras.',
             what_is_desc: 'Una tienda E-Commerce es un sitio web dinámico que permite a las empresas exhibir, gestionar y vender productos o servicios directamente por internet. Incluye catálogos interactivos con filtros, fichas de producto detalladas, carrito de compras virtual, pasarela de pago seguro y herramientas automatizadas de control de stock y logística.',
@@ -329,7 +387,7 @@ const serviceTranslations = {
         'aplicaciones-web': {
             title: 'Aplicaciones Web',
             subtitle: 'Software a medida ejecutable en el navegador. Bases de datos, portales de usuario y plataformas SaaS.',
-            meta_price: 'Desde $800',
+            meta_price: 'Desde $7,000',
             meta_delivery: '10-20 días hábiles',
             what_is_highlight: 'Software personalizado que automatiza procesos y escala tu negocio.',
             what_is_desc: 'Una Aplicación Web es una herramienta de software interactiva que se ejecuta en el navegador del usuario y está conectada a bases de datos y lógica de negocios compleja. A diferencia de las páginas estáticas, permite a los usuarios registrarse, iniciar sesión, procesar datos complejos en tiempo real y suscribirse a herramientas digitales (SaaS).',
@@ -358,7 +416,7 @@ const serviceTranslations = {
         'rediseno-web': {
             title: 'Rediseño Web',
             subtitle: 'Transformamos tu sitio web obsoleto en una experiencia moderna, rápida y adaptable que genera confianza inmediata.',
-            meta_price: 'Desde $200',
+            meta_price: 'Desde $2,500',
             meta_delivery: '5-7 días hábiles',
             what_is_highlight: 'Evolución digital: velocidad, estética moderna y mejor UX.',
             what_is_desc: 'El Rediseño Web consiste en reestructurar un sitio web actual para modernizar su aspecto visual, acelerar su velocidad de carga y adaptarlo a los estándares actuales de experiencia de usuario (UX) y usabilidad móvil, sin perder el posicionamiento orgánico ya ganado en buscadores.',
@@ -387,7 +445,7 @@ const serviceTranslations = {
         'optimizacion-seo': {
             title: 'Optimización SEO',
             subtitle: 'Mejoramos tu ranking en motores de búsqueda con SEO técnico, optimización de velocidad y estrategias de contenidos.',
-            meta_price: 'Desde $100',
+            meta_price: 'Desde $1,500',
             meta_delivery: 'Continuo / Variable',
             what_is_highlight: 'Visibilidad orgánica para atraer clientes calificados sin pagar publicidad.',
             what_is_desc: 'La Optimización SEO es el conjunto de técnicas de código, estructura y contenido aplicadas a tu sitio web para adaptarlo a los algoritmos de motores de búsqueda (como Google). Su finalidad es lograr que tu web aparezca en los primeros resultados de forma gratuita, atrayendo visitas calificadas continuamente sin pagar publicidad.',
@@ -416,7 +474,7 @@ const serviceTranslations = {
         'automatizaciones': {
             title: 'Automatizaciones & Bots (WhatsApp / n8n)',
             subtitle: 'Flujos de trabajo automatizados, integración de n8n, chatbots de WhatsApp, automatizaciones de correo electrónico e IA para escalar las ventas y optimizar la atención de tu negocio.',
-            meta_price: 'Desde $250',
+            meta_price: 'Desde $3,500',
             meta_delivery: '3-7 días hábiles',
             what_is_highlight: 'Automatiza procesos repetitivos, ahorra tiempo y responde a tus clientes en segundos las 24 horas.',
             what_is_desc: 'Las automatizaciones con n8n y bots de WhatsApp integran tus aplicaciones y sistemas para operar en piloto automático. Desde la calificación e ingesta de prospectos, secuencias de correo electrónico, hasta el seguimiento de ventas, respuestas automáticas con Inteligencia Artificial y sincronización en tiempo real con tu CRM o planillas de Google.',
@@ -459,10 +517,39 @@ const serviceTranslations = {
         footer_copy: '© 2026 ALLIMITE Agency. Todos os direitos reservados.',
 
         // Services
+        'optimizacion-aeo': {
+            title: 'Otimização AEO & Agent-Ready',
+            subtitle: 'Posicionamento em mecanismos de resposta com IA. Faça o ChatGPT, Claude, Perplexity e Gemini recomendarem sua empresa.',
+            meta_price: 'A partir de $2.000',
+            meta_delivery: '3-7 dias úteis',
+            what_is_highlight: 'A evolução do SEO: faça a Inteligência Artificial recomendar seu negócio.',
+            what_is_desc: 'A Otimização AEO (Answer Engine Optimization) e a arquitetura Agent-Ready são o novo padrão digital. Estruturamos seus serviços e preços para que modelos de IA (ChatGPT, Claude, Perplexity) leiam seu catálogo em milissegundos e recomendem sua empresa de forma direta.',
+            brand_title: 'Marca Pessoal & Consultores',
+            brand_subtitle: 'Para Especialistas, Criadores e Coaches',
+            brand_bullets: [
+                '<strong>Recomendação Direta em IA:</strong> Seja o especialista indicado quando alguém perguntar no ChatGPT sobre a sua área.',
+                '<strong>Catálogo Semântico Limpo:</strong> Arquivos llms.txt e ARD para que as IAs entendam seus serviços e autoridade com precisão.',
+                '<strong>Proteção de Direitos:</strong> Diretivas Content Signals que permitem recomendações protegendo seus conteúdos contra raspagem não autorizada.'
+            ],
+            business_title: 'Negócio ou Empresa',
+            business_subtitle: 'Para Empresas B2B, Startups e Agências',
+            business_bullets: [
+                '<strong>Captação Automática de Leads:</strong> Permita que agentes de IA enviem orçamentos de clientes qualificados via WebMCP.',
+                '<strong>Certificação Cloudflare de Nível 2/3:</strong> Implementação completa de DNS-AID, cartões MCP e catálogo RFC 9727.',
+                '<strong>Posicionamento High-Ticket:</strong> Perfil comercial transparente em dólares (USD) que atrai clientes de alto padrão.'
+            ],
+            feat1_title: 'Runtime WebMCP no Navegador',
+            feat1_desc: 'Integração de ferramentas interativas em navigator.modelContext para agentes autônomos.',
+            feat2_title: 'Catálogo ARD & llms.txt',
+            feat2_desc: 'Documentos otimizados para LLMs e manifesto de recursos com consultas estratégicas.',
+            feat3_title: 'Controle de Bots & Segurança',
+            feat3_desc: 'Regras inteligentes para bots de busca com IA e validação completa no escâner isitagentready.com.'
+        },
+
         'landing-pages': {
             title: 'Landing Pages',
             subtitle: 'Páginas de alta conversão projetadas para capturar leads, destacar ofertas e gerar vendas diretas.',
-            meta_price: 'A partir de $150',
+            meta_price: 'A partir de $1.500',
             meta_delivery: '2-5 dias úteis',
             what_is_highlight: 'Sua oferta principal em uma única página otimizada para vender.',
             what_is_desc: 'Uma Landing Page (ou página de destino) é uma página web única construída especificamente para campanhas de marketing ou publicidade. Diferente de um site tradicional, ela elimina qualquer tipo de distração (como menus complexos ou links extras) e foca em uma chamada para ação (CTA) única e persuasiva, visando converter o maior número possível de visitantes em clientes.',
@@ -478,176 +565,176 @@ const serviceTranslations = {
             business_bullets: [
                 '<strong>Tráfego de Anúncios:</strong> O destino ideal para o tráfego vindo de anúncios pagos no Google Ads, Facebook Ads ou TikTok Ads.',
                 '<strong>Maior Retorno (ROI):</strong> Aumente a eficácia das suas campanhas, reduzindo diretamente o Custo de Aquisição de Cliente (CAC).',
-                '<strong>Automação de Leads:</strong> Envie os dados dos interessados automaticamente para o CRM da sua empresa ou lista de e-mail marketing.'
+                '<strong>Integração com CRM:</strong> Envie os dados capturados diretamente para seu CRM ou sistema de e-mail marketing.'
             ],
-            feat1_title: 'Foco Total em Conversão',
-            feat1_desc: 'Estrutura estratégica, escrita altamente persuasiva (copywriting) e botões de ação que incentivam o clique.',
-            feat2_title: 'Carregamento Rápido',
-            feat2_desc: 'Código leve e imagens comprimidas para garantir que a página carregue instantaneamente em celulares e computadores.',
-            feat3_title: 'Integrações Automatizadas',
-            feat3_desc: 'Formulários de contato conectados ao seu e-mail, WhatsApp, planilhas do Google ou sistemas de CRM.'
+            feat1_title: 'Design Focado em Vendas',
+            feat1_desc: 'Estrutura estratégica, copywriting persuasivo e gatilhos visuais desenvolvidos para maximizar taxas de conversão.',
+            feat2_title: 'Carregamento Ultra-Rápido',
+            feat2_desc: 'Código leve e otimização total de imagens para carregamento em milissegundos sem perda de tráfego.',
+            feat3_title: 'Conexão com Formulários',
+            feat3_desc: 'Integração direta com WhatsApp, Mailchimp, Google Sheets ou CRM ativo da sua empresa.'
         },
 
         'sitios-empresariales': {
             title: 'Sites Corporativos',
-            subtitle: 'Sites completos de várias páginas que estabelecem a presença online profissional e a credibilidade do seu negócio.',
-            meta_price: 'A partir de $300',
+            subtitle: 'Sites completos de várias páginas que estabelecem a presença online profissional e a autoridade da sua marca.',
+            meta_price: 'A partir de $3.000',
             meta_delivery: '5-10 dias úteis',
-            what_is_highlight: 'A sede digital da sua empresa para construir confiança global.',
-            what_is_desc: 'Um Site Corporativo é uma plataforma digital de várias páginas que atua como a sede oficial do seu negócio ou marca na internet. Ele apresenta a história da empresa, seus valores corporativos, a lista completa de serviços ou produtos e exibe selos de confiança, depoimentos de clientes e cases de sucesso para qualificar o público que pesquisa pela sua empresa.',
+            what_is_highlight: 'A sede digital da sua empresa para construir confiança e autoridade global.',
+            what_is_desc: 'Um Site Corporativo é uma plataforma web completa de múltiplas páginas que atua como a sede digital oficial da sua marca ou empresa. Nele você apresenta sua história, valores, serviços ou produtos com detalhes, depoimentos de clientes e provas sociais, transformando visitantes em potenciais clientes qualificados.',
             brand_title: 'Marca Pessoal',
             brand_subtitle: 'Para Profissionais, Palestrantes e Especialistas',
             brand_bullets: [
-                '<strong>Hub de Autoridade:</strong> Centralize seu portfólio, artigos, aparições na mídia, agenda de palestras e serviços num só lugar.',
-                '<strong>Valorização Profissional:</strong> Apresente-se como um especialista de alto nível, justificando valores mais altos por suas consultorias.',
-                '<strong>Audiência Orgânica:</strong> Publique conteúdos em um blog integrado para atrair visitas gratuitas do Google (SEO) a longo prazo.'
+                '<strong>Central de Autoridade:</strong> Reúna seu portfólio, artigos, aparições na imprensa e canais de contratação em um só lugar.',
+                '<strong>Posicionamento de Alto Valor:</strong> Transmita uma imagem profissional impecável que justifique cobrar valores mais altos.',
+                '<strong>Construção de Audiência:</strong> Publique conteúdos e artigos para ranquear organicamente no Google ao longo dos anos.'
             ],
             business_title: 'Negócio ou Empresa',
-            business_subtitle: 'Para PMEs, Agências e Empresas',
+            business_subtitle: 'Para PMEs, Agências e Empresas Consolidadas',
             business_bullets: [
-                '<strong>Presença 24/7:</strong> Tenha um canal oficial confiável que responde às principais dúvidas dos seus clientes a qualquer hora.',
-                '<strong>Geração de Negócios:</strong> Apresente estudos de caso detalhados e a equipe da empresa para atrair contratos B2B valiosos.',
-                '<strong>Plataforma Expansível:</strong> Adicione novas seções como área de vagas de emprego, portal de clientes ou subpáginas regionalizadas.'
+                '<strong>Presença Institucional Sólida:</strong> Apresente uma imagem confiável para fechar contratos B2B de maior valor.',
+                '<strong>Validação Comercial:</strong> Destaque cases de sucesso, certificações e equipe para transmitir total segurança aos clientes.',
+                '<strong>Estrutura Escalável:</strong> Desenvolvido para crescer com sua empresa, permitindo adicionar novos serviços ou idiomas.'
             ],
             feat1_title: 'Design Exclusivo',
-            feat1_desc: 'Nada de templates genéricos repetidos. Criamos layouts personalizados, projetados de acordo com a sua identidade visual.',
+            feat1_desc: 'Sem modelos genéricos. Criamos uma identidade visual web sob medida e 100% alinhada à sua marca.',
             feat2_title: '100% Responsivo',
-            feat2_desc: 'Layout adaptável que se ajusta perfeitamente à tela de celulares, tablets e computadores de qualquer tamanho.',
-            feat3_title: 'Otimização Técnica SEO',
-            feat3_desc: 'Estrutura de tags e títulos limpa, permitindo que o Google e outros mecanismos de busca indexem seu site facilmente.'
+            feat2_desc: 'Visual impecável e navegação fluida em smartphones, tablets, notebooks e telas ultralargas.',
+            feat3_title: 'Preparado para SEO',
+            feat3_desc: 'Estrutura técnica com marcações semânticas e meta tags otimizadas para ranquear no Google.'
         },
 
         'ecommerce': {
-            title: 'E-Commerce',
-            subtitle: 'Lojas online modernas projetadas para vender de forma fluida. Catálogos, carrinhos e checkout integrado.',
-            meta_price: 'A partir de $500',
+            title: 'Lojas Virtuais (E-Commerce)',
+            subtitle: 'Lojas online modernas projetadas para vender de forma fluida. Catálogos, carrinhos e pagamentos seguros.',
+            meta_price: 'A partir de $4.500',
             meta_delivery: '7-15 dias úteis',
-            what_is_highlight: 'Sua loja aberta 24 horas por dia, automatizada e sem fronteiras.',
-            what_is_desc: 'Uma loja E-Commerce é um site interativo que permite às empresas exibir, gerenciar e vender seus produtos ou serviços na internet. Possui catálogo de itens com filtros de busca, páginas detalhadas com fotos e descrições, carrinho virtual de compras, processamento de pagamento seguro e controle integrado de entregas e estoque.',
+            what_is_highlight: 'Sua loja aberta 24 horas por dia, totalmente automatizada e sem fronteiras.',
+            what_is_desc: 'Uma Loja Virtual (E-Commerce) é uma plataforma dinâmica que permite comercializar produtos ou serviços pela internet com total segurança. Conta com catálogo categorizado, filtros inteligentes, carrinho de compras, integração com meios de pagamento e cálculo automático de frete.',
             brand_title: 'Marca Pessoal',
-            brand_subtitle: 'Para Criadores de Conteúdo e Influencers',
+            brand_subtitle: 'Para Criadores de Conteúdo e Influenciadores',
             brand_bullets: [
-                '<strong>Monetize sua Base:</strong> Venda sua linha de roupas, brindes, livros físicos ou produtos personalizados diretamente aos seus fãs.',
-                '<strong>Venda de Infoprodutos:</strong> Comercialize presets, pacotes de design, PDFs ou cursos com envio automático pós-pagamento.',
-                '<strong>Controle de Clientes:</strong> Tenha acesso total aos dados de contato dos compradores para ações de remarketing por e-mail.'
+                '<strong>Monetize seus Fãs:</strong> Venda produtos próprios (roupas, livros, acessórios) diretamente para a sua comunidade.',
+                '<strong>Produtos Digitais:</strong> Venda e-books, templates, cursos ou presets com entrega automática por e-mail.',
+                '<strong>100% do Lucro:</strong> Mantenha o controle da sua base de clientes sem pagar comissões abusivas para marketplaces.'
             ],
             business_title: 'Negócio ou Empresa',
-            business_subtitle: 'Para Lojas, Distribuidores e Marcas',
+            business_subtitle: 'Para Lojistas, Distribuidores e Marcas',
             business_bullets: [
-                '<strong>Vendas Automáticas:</strong> Receba pedidos e processe pagamentos com total segurança em qualquer hora do dia ou da noite.',
-                '<strong>Alcance Sem Limites:</strong> Expanda as barreiras físicas do seu negócio de bairro e venda para clientes de todo o país ou continente.',
-                '<strong>Gestão Inteligente:</strong> Controle o estoque, calcule fretes dos Correios/transportadoras e envie cupons de desconto.'
+                '<strong>Vendas 24/7 no Piloto Automático:</strong> Receba pedidos e pagamentos a qualquer hora do dia ou da noite.',
+                '<strong>Expansão Nacional e Global:</strong> Venda para qualquer cidade ou país sem as limitações de um endereço físico.',
+                '<strong>Gestão de Estoque e Pedidos:</strong> Painel intuitivo para gerenciar produtos, preços, pedidos e envios.'
             ],
-            feat1_title: 'Pagamento Integrado',
-            feat1_desc: 'Conecte sua loja com as principais soluções de pagamento como Stripe, PayPal ou Mercado Pago, com certificado SSL.',
-            feat2_title: 'Checkout Otimizado',
-            feat2_desc: 'Filtros rápidos, busca inteligente de produtos e finalização de compra rápida para evitar carrinhos abandonados.',
+            feat1_title: 'Pagamentos Seguros',
+            feat1_desc: 'Integração com gateways líderes como Stripe, PayPal e Mercado Pago com checkout seguro SSL.',
+            feat2_title: 'Experiência do Usuário (UX)',
+            feat2_desc: 'Navegação rápida, busca inteligente e processo de finalização de compra otimizado para evitar abandonos.',
             feat3_title: 'Painel Administrativo',
-            feat3_desc: 'Gerencie pedidos, cadastre novos produtos, edite preços e acesse relatórios de faturamento com facilidade.'
+            feat3_desc: 'Painel simples e intuitivo para atualizar catálogo, controlar estoque e acompanhar relatórios de faturamento.'
         },
 
         'aplicaciones-web': {
-            title: 'Aplicações Web',
-            subtitle: 'Sistemas web customizados executados no navegador. Bancos de dados, painéis de controle e plataformas SaaS.',
-            meta_price: 'A partir de $800',
+            title: 'Aplicações Web (SaaS)',
+            subtitle: 'Sistemas web sob medida com recursos dinâmicos, bancos de dados, painéis de controle e plataformas SaaS.',
+            meta_price: 'A partir de $7.000',
             meta_delivery: '10-20 dias úteis',
-            what_is_highlight: 'Software personalizado para automatizar processos e escalar seu negócio.',
-            what_is_desc: 'Uma Aplicação Web é um software completo executado diretamente a partir de um navegador de internet. Ao contrário de um site simples, conta com lógica de programação avançada e banco de dados que permite aos usuários criar perfis, fazer login, gerar relatórios em tempo real e pagar assinaturas dinâmicas (SaaS).',
+            what_is_highlight: 'Software sob medida na nuvem para automatizar processos e escalar seu negócio.',
+            what_is_desc: 'Uma Aplicação Web é um software completo executado diretamente no navegador e conectado a bancos de dados dinâmicos. Diferente de páginas estáticas, permite login de usuários, processamento de dados em tempo real, geração de relatórios e cobranças recorrentes por assinatura (SaaS).',
             brand_title: 'Marca Pessoal',
-            brand_subtitle: 'Para Creadores e Líderes de Tecnologia',
+            brand_subtitle: 'Para Criadores, Educadores e Líderes Técnicos',
             brand_bullets: [
-                '<strong>Ferramentas Próprias:</strong> Disponibilize calculadoras exclusivas ou portais de atendimento para seus clientes VIP.',
-                '<strong>Áreas de Membros:</strong> Crie um portal de ensino por assinatura recorrente com controle rígido de acesso dos alunos.',
-                '<strong>Pioneirismo de Marca:</strong> Desenvolva uma ferramenta inovadora para consolidar seu nome como líder tecnológico de seu nicho.'
+                '<strong>Ferramentas Próprias:</strong> Crie calculadoras de nicho, simuladores ou plataformas exclusivas para seus alunos.',
+                '<strong>Portais de Membros:</strong> Lance sua própria plataforma de cursos com controle de acessos e assinaturas mensais.',
+                '<strong>Autoridade Tecnológica:</strong> Desenvolva uma ferramenta única que consolide sua marca como referência no mercado.'
             ],
-            business_title: 'Negocio ou Empresa',
-            business_subtitle: 'Para Startups e Times Corporativos',
+            business_title: 'Negócio ou Empresa',
+            business_subtitle: 'Para Startups e Empresas em Expansão',
             business_bullets: [
-                '<strong>Lançamento de SaaS:</strong> Tire sua ideia de software do papel utilizando uma infraestrutura de banco de dados robusta e moderna.',
-                '<strong>Sistemas Internos:</strong> Desenvolva ferramentas para gerenciar fluxos de trabalho ou automatizar processos repetitivos da equipe.',
-                '<strong>Dashboards de Análise:</strong> Gráficos e painéis em tempo real integrados com APIs corporativas para controle de dados.'
+                '<strong>Desenvolvimento de SaaS:</strong> Transforme sua ideia de software em um produto escalável e seguro no mercado.',
+                '<strong>Automação Operacional:</strong> Elimine planilhas complexas criando sistemas internos sob medida para sua equipe.',
+                '<strong>Dashboards em Tempo Real:</strong> Painéis analíticos e relatórios operacionais atualizados instantaneamente.'
             ],
-            feat1_title: 'Stack Tecnológica Moderna',
-            feat1_desc: 'Programação feita em React, Next.js e Node.js, garantindo velocidade máxima e usabilidade digna de aplicativo móvel.',
-            feat2_title: 'Proteção & Autenticação',
-            feat2_desc: 'Acesso seguro com criptografia, bancos de dados protegidos e segurança de dados no tráfego de dados por APIs.',
-            feat3_title: 'Integrações com APIs',
-            feat3_desc: 'Sincronização com serviços externos de cobrança (Stripe), modelos de IA (OpenAI) ou sistemas de automação.'
+            feat1_title: 'Stack Tecnológico Moderno',
+            feat1_desc: 'Desenvolvimento ágil com React, Next.js e Node.js para máxima velocidade e performance fluida.',
+            feat2_title: 'Segurança & Autenticação',
+            feat2_desc: 'Autenticação criptografada de usuários, permissões de acesso e proteção avançada de banco de dados.',
+            feat3_title: 'Integrações via API',
+            feat3_desc: 'Conexão com meios de pagamento (Stripe), inteligência artificial (OpenAI) e ferramentas corporativas.'
         },
 
         'rediseno-web': {
             title: 'Redesenho de Sites',
-            subtitle: 'Transforme seu site antigo em uma ferramenta moderna, ágil e focada em resultados que passa credibilidade.',
-            meta_price: 'A partir de $200',
+            subtitle: 'Transforme seu site desatualizado em uma experiência moderna, rápida e otimizada para dispositivos móveis.',
+            meta_price: 'A partir de $2.500',
             meta_delivery: '5-7 dias úteis',
-            what_is_highlight: 'Evolução digital: velocidade, modernidade e melhor experiência.',
-            what_is_desc: 'O Redesenho de um Site consiste na reestruturação completa de uma página existente para modernizar sua estética visual, otimizar seu código técnico, acelerar seu carregamento e alinhar seu layout aos padrões de usabilidade móvel (UX), sem perder a autoridade já conquistada nas buscas orgânicas do Google.',
+            what_is_highlight: 'Evolução digital: velocidade, design sofisticado e foco em conversão.',
+            what_is_desc: 'O Redesenho de Sites moderniza a identidade visual, acelera a velocidade de carregamento e atualiza toda a usabilidade (UX/UI) do seu site atual, preservando o histórico de autoridade já conquistado nos buscadores.',
             brand_title: 'Marca Pessoal',
-            brand_subtitle: 'Para Profissionais em Evolução',
+            brand_subtitle: 'Para Profissionais em Transição de Posicionamento',
             brand_bullets: [
-                '<strong>Atualização de Nível:</strong> Alinhe a imagem do seu site com o novo preço dos seus serviços e seu patamar atual de autoridade.',
-                '<strong>Design Moderno:</strong> Substitua uma página antiga por uma interface limpa, com fontes elegantes e visual glassmorphism.',
-                '<strong>Foco em Dispositivos Móveis:</strong> Garanta que clientes que clicam no link da sua bio em redes sociais naveguem sem problemas.'
+                '<strong>Nova Fase da Marca:</strong> Alinhe o visual do seu site ao seu nível atual de faturamento e prestígio.',
+                '<strong>Design Moderno:</strong> Substitua layouts ultrapassados por uma estética premium com tipografias elegantes.',
+                '<strong>Experiência Mobile Perfeita:</strong> Garanta navegação fluida para quem clica nos links das suas redes sociais.'
             ],
             business_title: 'Negócio ou Empresa',
-            business_subtitle: 'Para Empresas Atualizando a Tecnologia',
+            business_subtitle: 'Para Empresas em Modernização',
             business_bullets: [
-                '<strong>Diminua a Perda de Clientes:</strong> Evite que potenciais clientes saiam da página ao se depararem com um visual lento ou antigo.',
-                '<strong>Aumente suas Conversões:</strong> Reorganize a navegação do site para facilitar a captação de contatos comerciais.',
-                '<strong>Destaque-se da Concorrência:</strong> Renove a identidade do site da sua empresa para mantê-la atualizada perante o mercado.'
+                '<strong>Redução de Rejeição:</strong> Evite que clientes em potencial fechem o site por conta de lentidão ou visual amador.',
+                '<strong>Aumento de Vendas:</strong> Reestruture os caminhos de navegação para direcionar o visitante direto ao contato comercial.',
+                '<strong>Destaque Competitivo:</strong> Modernize sua marca para liderar e superar concorrentes mais novos do seu setor.'
             ],
-            feat1_title: 'Manutenção de SEO',
-            feat1_desc: 'Criação de redirecionamentos 301 para garantir que o seu site não perca os rankings já conquistados nas buscas orgânicas do Google.',
-            feat2_title: 'Ganho de Velocidade',
-            feat2_desc: 'Eliminamos linhas de código desnecessárias e otimizamos imagens pesadas para atender aos critérios do Core Web Vitals.',
-            feat3_title: 'Usabilidade Otimizada (UX)',
-            feat3_desc: 'Simplificamos a navegação, deixando as informações mais fáceis de achar e os formulários rápidos de preencher.'
+            feat1_title: 'Preservação de SEO',
+            feat1_desc: 'Mapeamento detalhado de redirecionamentos 301 para não perder o ranqueamento orgânico no Google.',
+            feat2_title: 'Salto de Velocidade',
+            feat2_desc: 'Limpeza de código pesado, compressão de mídias e notas máximas no Google Core Web Vitals.',
+            feat3_title: 'Navegação Simplificada',
+            feat3_desc: 'Estrutura pensada para que o cliente encontre o serviço desejado e entre em contato em poucos cliques.'
         },
 
         'optimizacion-seo': {
             title: 'Otimização de SEO',
-            subtitle: 'Melhore seu posicionamento orgânico no Google com SEO técnico, melhorias de velocidade e conteúdo.',
-            meta_price: 'A partir de $100',
-            meta_delivery: 'Contínuo / Variável',
-            what_is_highlight: 'Visibilidade orgânica para atrair clientes qualificados sem pagar anúncios.',
-            what_is_desc: 'A Otimização de SEO é o conjunto de ações de código, estrutura técnica e conteúdo voltadas a adaptar seu site aos algoritmos de busca (como o Google). O objetivo é posicionar sua marca nas primeiras posições de forma orgânica (gratuita), gerando tráfego qualificado de clientes que já buscam pela sua solução.',
+            subtitle: 'Melhore seu posicionamento orgânico no Google com SEO técnico, otimização de velocidade e estrutura semântica.',
+            meta_price: 'A partir de $1.500',
+            meta_delivery: 'Contínuo / Mensal',
+            what_is_highlight: 'Tráfego orgânico constante para atrair clientes prontos para comprar.',
+            what_is_desc: 'A Otimização de SEO ajusta a estrutura de código, velocidade e conteúdos do seu site para colocá-lo nos primeiros resultados do Google de forma orgânica, gerando tráfego qualificado contínuo sem custo por clique.',
             brand_title: 'Marca Pessoal',
-            brand_subtitle: 'Para Autores, Consultores e Especialistas',
+            brand_subtitle: 'Para Consultores, Autores e Especialistas',
             brand_bullets: [
-                '<strong>Autoridade Conquistada:</strong> Seja a principal referência indicada pelo Google quando pesquisarem pelos temas da sua área.',
-                '<strong>Clientes Qualificados:</strong> Deixe que as pessoas descubram seus serviços exatamente no momento em que buscam por soluções.',
-                '<strong>Validação de Prestígio:</strong> Estar na primeira página do Google reforça seu posicionamento premium perante potenciais clientes.'
+                '<strong>Autoridade Orgânica:</strong> Seja a principal resposta encontrada quando pesquisarem soluções do seu nicho.',
+                '<strong>Clientes Qualificados:</strong> Atraia pessoas que já têm uma necessidade real e estão ativamente procurando seus serviços.',
+                '<strong>Credibilidade Imediata:</strong> Estar no topo do Google valida instantaneamente sua autoridade profissional.'
             ],
             business_title: 'Negócio ou Empresa',
-            business_subtitle: 'Para PMEs, Startups e Negócios Locais',
+            business_subtitle: 'Para PMEs, Startups e Comércio Local',
             business_bullets: [
-                '<strong>Tráfego Contínuo:</strong> Receba visitas e pedidos todos os dias do ano sem precisar depender de investimentos constantes em anúncios.',
-                '<strong>Redução do CAC:</strong> Tráfego orgânico não cobra taxas por clique, reduzindo drasticamente o seu custo de aquisição a longo prazo.',
-                '<strong>SEO Local:</strong> Posicione sua empresa na sua cidade para atrair clientes das redondezas que procuram seus produtos.'
+                '<strong>Canal de Vendas Sustentável:</strong> Receba pedidos de orçamento todos os meses sem depender apenas de tráfego pago.',
+                '<strong>Menor Custo por Lead:</strong> O tráfego orgânico reduz seu custo médio de aquisição de clientes ao longo do tempo.',
+                '<strong>SEO Local Estratégico:</strong> Posicione sua empresa na sua região geográfica para quem procura fornecedores locais.'
             ],
-            feat1_title: 'Auditoria de SEO Técnico',
-            feat1_desc: 'Ajuste de problemas de rastreamento do site, links quebrados, geração de sitemaps e arquitetura técnica.',
-            feat2_title: 'Ajustes Core Web Vitals',
-            feat2_desc: 'Melhoramos os tempos de carregamento e resposta de páginas do site de acordo com os critérios rígidos do Google.',
-            feat3_title: 'SEO On-Page Focado',
-            feat3_desc: 'Ajuste de tags de título, descrições meta, tags alt em fotos e estruturação balanceada de palavras-chave no texto.'
+            feat1_title: 'Auditoria Técnica Completa',
+            feat1_desc: 'Correção de erros de indexação, sitemaps, robots.txt, links quebrados e arquitetura semântica.',
+            feat2_title: 'Velocidade & Core Web Vitals',
+            feat2_desc: 'Otimização avançada de performance frontend para atender aos requisitos de velocidade do Google.',
+            feat3_title: 'SEO On-Page Avançado',
+            feat3_desc: 'Configuração estratégica de meta tags, títulos, textos alternativos e palavras-chave de alta conversão.'
         },
 
         'automatizaciones': {
             title: 'Automações & Bots (WhatsApp / n8n)',
-            subtitle: 'Fluxos de trabalho automatizados, integração com n8n, chatbots de WhatsApp, automações de e-mail e IA para escalar vendas e otimizar o atendimento.',
-            meta_price: 'A partir de $250',
+            subtitle: 'Fluxos automatizados, n8n, chatbots no WhatsApp e agentes de IA para escalar o atendimento e as vendas da sua empresa.',
+            meta_price: 'A partir de $3.500',
             meta_delivery: '3-7 dias úteis',
-            what_is_highlight: 'Automatize processos repetitivos, economize tempo e responda aos clientes em segundos 24 horas por dia.',
-            what_is_desc: 'Automações com n8n e bots de WhatsApp integram seus sistemas para funcionar no piloto automático. Qualificação de leads, sequências de e-mail, acompanhamento de vendas, respostas automáticas com Inteligência Artificial e sincronização em tempo real com seu CRM.',
-            brand_title: 'Marca Pessoal e Criadores',
-            brand_subtitle: 'Para Consultores, Mentores e Criadores de Conteúdo',
+            what_is_highlight: 'Automatize tarefas repetitivas, economize tempo e responda aos clientes em segundos 24 horas por dia.',
+            what_is_desc: 'As automações com n8n e bots de WhatsApp conectam suas ferramentas de trabalho para operar no piloto automático. Desde a qualificação de leads, disparos de e-mail e envio de notificações até respostas inteligentes com IA e integração direta com seu CRM ou planilhas.',
+            brand_title: 'Marca Pessoal & Criadores',
+            brand_subtitle: 'Para Coaches, Mentores e Criadores de Conteúdo',
             brand_bullets: [
-                '<strong>Atendimento 24/7 no WhatsApp:</strong> Responda dúvidas, agende reuniões e envie links de pagamento automaticamente.',
-                '<strong>Qualificação de Leads:</strong> Filtre os melhores clientes com menus interativos ou IA antes de agendar reuniões.',
-                '<strong>Economia de Tempo:</strong> Elimine tarefas manuais repetitivas e foque no crescimento da sua marca.'
+                '<strong>Atendimento 24/7 no WhatsApp:</strong> Tire dúvidas frequentes, envie links de pagamento e agende reuniões automaticamente.',
+                '<strong>Qualificação de Contatos:</strong> Filtre leads qualificados com perguntas interativas antes de direcioná-los para sua agenda.',
+                '<strong>Mais Tempo Livre:</strong> Elimine o trabalho braçal de responder mensagens manuais e foque na entrega dos seus serviços.'
             ],
-            business_title: 'Negocio ou Empresa',
+            business_title: 'Negócio ou Empresa',
             business_subtitle: 'Para PMEs, E-commerce e Equipes Comerciais',
             business_bullets: [
                 '<strong>Orquestração com n8n:</strong> Conecte WhatsApp, CRM, plataformas de pagamento, e-mail e bancos de dados sem limites.',
@@ -678,7 +765,7 @@ function applyServiceTranslations(lang) {
     // Detect current service from body data attribute
     const serviceKey = document.body.dataset.servicePage;
     const common = serviceTranslations[lang];
-    const spec = common[serviceKey];
+    const spec = common ? common[serviceKey] : null;
 
     if (!spec) return;
 
@@ -715,9 +802,10 @@ function applyServiceTranslations(lang) {
     if (pageSubtitleEl) pageSubtitleEl.textContent = spec.subtitle;
 
     const pillPriceEl = document.getElementById('pill-price');
-    if (pillPriceEl) pillPriceEl.textContent = `${common.price_prefix} ${spec.meta_price.replace('From ', '').replace('Desde ', '').replace('A partir de ', '')}`;
-
-
+    if (pillPriceEl) {
+        const priceNum = spec.meta_price.replace('From ', '').replace('Desde ', '').replace('A partir de ', '');
+        pillPriceEl.textContent = `${common.price_prefix} ${priceNum}`;
+    }
 
     const whatIsHighlightEl = document.getElementById('what-is-highlight');
     if (whatIsHighlightEl) whatIsHighlightEl.textContent = spec.what_is_highlight;
