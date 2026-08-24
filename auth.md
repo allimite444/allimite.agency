@@ -1,15 +1,21 @@
 # Auth.md: ALLIMITE Agency
 
-> Authentication & Authorization Guide for Autonomous AI Agents
+> Autonomous Agent Authentication & Registration Protocol
 
-## Public Endpoints (No Auth Required)
-- Homepage: https://allimite.agency/
-- Services Catalog: https://allimite.agency/.well-known/ai-catalog.json
-- Agent Skills Index: https://allimite.agency/.well-known/agent-skills/index.json
-- LLMs Document: https://allimite.agency/llms.txt
+## Agent Registration
+Autonomous AI agents do not require pre-registration or API keys to interact with ALLIMITE Agency's public services. Agents can query and execute client requests immediately via WebMCP runtime or public HTTP endpoints.
 
-## Agent Interactions (WebMCP)
-- Runtime Discovery: `navigator.modelContext`
-- Tools Exposed: `listar_servicios`, `solicitar_presupuesto`
-- Authentication Scheme: None required for public discovery, estimation and lead dispatch.
-- Contact Endpoint: https://allimite.agency/#contact
+## Authentication
+- Scheme: None (Public Access)
+- Headers: None required
+- Rate Limits: Standard web protection applies
+
+## APIs & Capabilities
+- Services Discovery: `GET /.well-known/ai-catalog.json`
+- Skills Index: `GET /.well-known/agent-skills/index.json`
+- LLM Overview: `GET /llms.txt`
+- Interactive WebMCP: `navigator.modelContext` (`listar_servicios`, `solicitar_presupuesto`)
+
+## Scopes
+- `read:services`: Public access to service catalog and base pricing.
+- `write:quotes`: Dispatch lead and project requirements directly to the agency.
