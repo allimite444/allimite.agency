@@ -5,10 +5,8 @@
   },
   "api_base_url": "https://allimite.agency",
   "transports": [
-    {
-      "type": "http",
-      "endpoint": "https://allimite.agency/#contact"
-    }
+    "http",
+    "https"
   ],
   "merchant": {
     "name": "ALLIMITE Agency",

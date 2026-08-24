@@ -7,9 +7,12 @@
     "email": "lmaos.designer@gmail.com",
     "url": "https://allimite.agency/#contact"
   },
-  "protocols": [
-    "ap2",
-    "a2a"
+  "extensions": [
+    {
+      "name": "ap2",
+      "version": "1.0",
+      "endpoint": "https://allimite.agency/#contact"
+    }
   ],
   "skills": [
     {
