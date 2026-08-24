@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ALLIMITE CRM · Pipeline de 100 Prospectos High-Ticket & AEO</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-primary: #09090b;
+            --bg-secondary: #121215;
+            --bg-card: rgba(24, 24, 27, 0.7);
+            --bg-card-hover: rgba(39, 39, 42, 0.85);
+            --border-color: rgba(212, 175, 55, 0.15);
+            --border-hover: rgba(212, 175, 55, 0.45);
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --gold-gradient: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa820a 100%);
+            --text-primary: #f4f4f5;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --emerald: #10b981;
+            --indigo: #6366f1;
+            --coral: #f43f5e;
+            --blue: #3b82f6;
+            --radius-md: 12px;
+            --radius-lg: 18px;
+            --shadow-glow: 0 0 25px rgba(212, 175, 55, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 15% 15%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 85% 85%, rgba(99, 102, 241, 0.05) 0%, transparent 40%);
+        }
+
+        /* Header / Navbar */
+        .app-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(9, 9, 11, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            height: 32px;
+            width: auto;
+        }
+
+        .app-title-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--gold-light);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-home {
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-home:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            overflow-x: auto;
+            scrollbar-width: none;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            padding: 8px 16px;
+            gap: 8px;
+            position: sticky;
+            top: 57px;
+            z-index: 90;
+        }
+
+        .nav-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 1px solid transparent;
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+        }
+
+        .tab-btn.active {
+            background: rgba(212, 175, 55, 0.15);
+            border-color: var(--gold);
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 16px;
+            width: 100%;
+            flex: 1;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* KPI Banner */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+
+        .kpi-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(8px);
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gold-gradient);
+        }
+
+        .kpi-title {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .kpi-value {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.85rem;
+            font-weight: 700;
+            color: var(--gold-light);
+        }
+
+        .kpi-sub {
+            font-size: 0.75rem;
+            color: var(--emerald);
+            margin-top: 4px;
+        }
+
+        /* Search & Filter Bar */
+        .search-filter-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .search-input-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .search-input {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: var(--text-primary);
+            padding: 12px 16px 12px 42px;
+            border-radius: var(--radius-md);
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .filter-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .filter-pill {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-secondary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-pill.active {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: var(--gold);
+            color: var(--gold-light);
+            font-weight: 600;
+        }
+
+        /* Prospects Grid */
+        .prospects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+        }
+
+        .prospect-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .prospect-card:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            gap: 8px;
+        }
+
+        .prospect-id {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--gold);
+            background: rgba(212, 175, 55, 0.1);
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        .prospect-ticket {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--emerald);
+            background: rgba(16, 185, 129, 0.1);
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        .prospect-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+
+        .prospect-niche {
+            font-size: 0.8rem;
+            color: var(--gold-light);
+            margin-bottom: 8px;
+        }
+
+        .prospect-meta {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            word-break: break-all;
+        }
+
+        .meta-item a {
+            color: var(--blue);
+            text-decoration: none;
+        }
+
+        .meta-item a:hover {
+            text-decoration: underline;
+        }
+
+        .aeo-issue-box {
+            background: rgba(244, 63, 94, 0.08);
+            border-left: 3px solid var(--coral);
+            padding: 8px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: #fca5a5;
+            margin-bottom: 14px;
+            line-height: 1.4;
+        }
+
+        .icebreaker-box {
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 14px;
+            line-height: 1.4;
+            max-height: 90px;
+            overflow-y: auto;
+        }
+
+        .card-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .btn-action {
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-copy {
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold-light);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-copy:hover {
+            background: var(--gold);
+            color: #000;
+        }
+
+        .btn-contact {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--emerald);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .btn-contact:hover {
+            background: var(--emerald);
+            color: #fff;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #10b981;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            z-index: 1000;
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Comparison Tables */
+        .table-responsive {
+            overflow-x: auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            text-align: left;
+        }
+
+        .comp-table th {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-light);
+            padding: 12px 14px;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comp-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+        }
+
+        .comp-table tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Objections Accordion */
+        .accordion-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            padding: 14px 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .accordion-body {
+            padding: 16px 18px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: none;
+        }
+
+        .accordion-item.open .accordion-body {
+            display: block;
+        }
+
+        .accordion-item.open .accordion-header {
+            color: var(--gold);
+        }
+
+        /* Footer */
+        .app-footer {
+            text-align: center;
+            padding: 24px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .kpi-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .prospects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="logo-area">
+            <a href="../index.html">
+                <img src="../assets/logo.png" alt="ALLIMITE Agency" class="logo-img">
+            </a>
+            <span class="app-title-badge">🚀 PIPELINE 100 LEADS</span>
+        </div>
+        <div class="header-actions">
+            <a href="../index.html" class="btn-home">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                Web Oficial
+            </a>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+        <button class="tab-btn active" onclick="switchTab('tab-prospects')">👥 100 Prospectos</button>
+        <button class="tab-btn" onclick="switchTab('tab-kpi')">📊 Pipeline & Métricas</button>
+        <button class="tab-btn" onclick="switchTab('tab-comparison')">⚖️ Comparativas AEO</button>
+        <button class="tab-btn" onclick="switchTab('tab-services')">💎 Catálogo High-Ticket</button>
+        <button class="tab-btn" onclick="switchTab('tab-playbook')">🎯 Playbook & Objeciones</button>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- TAB 1: PROSPECTS EXPLORER -->
+        <section id="tab-prospects" class="tab-content active">
+            <!-- Search & Filters -->
+            <div class="search-filter-section">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Buscar por clínica, concesionaria, estudio, ciudad (Recoleta, Mendoza, etc.)..." oninput="filterProspects()">
+                </div>
+                <div class="filter-pills">
+                    <button class="filter-pill active" onclick="setClusterFilter('all')">Todos (100)</button>
+                    <button class="filter-pill" onclick="setClusterFilter('Salud & Estética de Lujo')">🏥 Salud & Estética (35)</button>
+                    <button class="filter-pill" onclick="setClusterFilter('Automotriz & Lujo Vehicular')">🏎️ Automotriz & Lujo (35)</button>
+                    <button class="filter-pill" onclick="setClusterFilter('Servicios Profesionales High-Ticket')">⚖️ Corporativo & Real Estate (30)</button>
+                </div>
+            </div>
+
+            <!-- Leads Count -->
+            <div style="margin-bottom: 14px; font-size: 0.85rem; color: var(--text-secondary); display: flex; justify-content: space-between;">
+                <span id="resultsCount">Mostrando 100 prospectos</span>
+                <span style="color: var(--gold);">💡 Toca 'Copiar Mensaje' para pegar directo en WhatsApp o Instagram</span>
+            </div>
+
+            <!-- Grid -->
+            <div class="prospects-grid" id="prospectsContainer">
+                <!-- Populated dynamically -->
+            </div>
+        </section>
+
+        <!-- TAB 2: PIPELINE & METRICS -->
+        <section id="tab-kpi" class="tab-content">
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-title">Pipeline Total</div>
+                    <div class="kpi-value">$300,000+</div>
+                    <div class="kpi-sub">Valor de mercado total</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Total Prospectos</div>
+                    <div class="kpi-value">100</div>
+                    <div class="kpi-sub">Verificados en Argentina y LATAM</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Ticket Promedio</div>
+                    <div class="kpi-value">$3,000</div>
+                    <div class="kpi-sub">Rango $2,000 a $6,000 USD</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-title">Meta de Cierres (2%)</div>
+                    <div class="kpi-value">$5,500+</div>
+                    <div class="kpi-sub">2 contratos High-Ticket</div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <h3 style="color: var(--gold-light); margin-bottom: 14px; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem;">Distribución de Pipeline por Cluster</h3>
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>Cluster</th>
+                            <th>Leads</th>
+                            <th>Ticket Base</th>
+                            <th>Fallo Crítico AEO</th>
+                            <th>Potencial Pipeline</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>🏥 Salud & Estética de Lujo</b></td>
+                            <td>35</td>
+                            <td>$2,000 USD</td>
+                            <td>Sin catálogos semánticos de tratamientos para ChatGPT</td>
+                            <td><b>$85,000 USD</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>🏎️ Automotriz & Lujo Vehicular</b></td>
+                            <td>35</td>
+                            <td>$2,000 USD</td>
+                            <td>Inventarios no legibles por agentes de compra autónomos</td>
+                            <td><b>$95,000 USD</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>⚖️ Servicios Profesionales High-Ticket</b></td>
+                            <td>30</td>
+                            <td>$3,000 USD</td>
+                            <td>Sin directivas RFC 9727 ni protección de propiedad intelectual</td>
+                            <td><b>$120,000 USD</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TAB 3: COMPARISON -->
+        <section id="tab-comparison" class="tab-content">
+            <div class="table-responsive">
+                <h3 style="color: var(--gold-light); margin-bottom: 14px; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem;">La Gran Comparación: Web Tradicional vs. Web Agent-Ready</h3>
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>Dimensión</th>
+                            <th>🏢 Web Tradicional (0/15 Checks)</th>
+                            <th>⚡ Web Agent-Ready ALLIMITE (12/15 Checks)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>Visibilidad en IA</b></td>
+                            <td>❌ Invisible para ChatGPT, Claude y Perplexity. Devuelve Nivel 0.</td>
+                            <td>✅ Citable y recomendada como la opción #1 en respuestas directas.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Velocidad de Lectura</b></td>
+                            <td>❌ 5 a 10 segundos. Los bots rebotan por código pesado y scripts.</td>
+                            <td>✅ 0.05 segundos. Lectura en texto plano optimizado (llms.txt).</td>
+                        </tr>
+                        <tr>
+                            <td><b>Operatividad Agéntica</b></td>
+                            <td>❌ Formularios estáticos que requieren llenado manual con mouse.</td>
+                            <td>✅ WebMCP en navegador para que la IA cotice sola por el cliente.</td>
+                        </tr>
+                        <tr>
+                            <td><b>Protección de Derechos</b></td>
+                            <td>❌ Los bots raspan y copian el diseño gratis para auto-entrenarse.</td>
+                            <td>✅ Content Signals (search=yes, ai-train=no) legales.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TAB 4: SERVICES -->
+        <section id="tab-services" class="tab-content">
+            <div class="table-responsive">
+                <h3 style="color: var(--gold-light); margin-bottom: 14px; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem;">Catálogo Oficial de Servicios High-Ticket ALLIMITE</h3>
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>Servicio</th>
+                            <th>Alcance y Beneficio</th>
+                            <th>Precio Oficial</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>⚡ Optimización AEO & Agent-Ready</b></td>
+                            <td>Infraestructura completa para aparecer y ser recomendado por ChatGPT, Perplexity y Claude. WebMCP, llms.txt y ARD.</td>
+                            <td><b style="color: var(--gold);">Desde $2,000 USD</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>🎯 Landing Pages de Conversión</b></td>
+                            <td>Páginas de aterrizaje diseñadas para capturar leads y maximizar ventas en campañas publicitarias.</td>
+                            <td><b style="color: var(--gold);">Desde $1,500 USD</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>🏢 Sitios Web Empresariales</b></td>
+                            <td>Plataformas multipágina corporativas que establecen credibilidad global de marca.</td>
+                            <td><b style="color: var(--gold);">Desde $3,000 USD</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>🛍️ E-Commerce con Pasarelas</b></td>
+                            <td>Tiendas online de alto rendimiento con pasarelas de pago seguras (Stripe, Mercado Pago).</td>
+                            <td><b style="color: var(--gold);">Desde $4,500 USD</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>💻 Aplicaciones Web & SaaS</b></td>
+                            <td>Sistemas a medida, dashboards dinámicos interactivos y plataformas SaaS escalables.</td>
+                            <td><b style="color: var(--gold);">Desde $7,000 USD</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>🎨 Rediseño Web Estratégico</b></td>
+                            <td>Modernización integral de sitios web obsoletos mejorando velocidad, UX y conversión.</td>
+                            <td><b style="color: var(--gold);">Desde $2,500 USD</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>🔍 Optimización SEO & Core Vitals</b></td>
+                            <td>SEO técnico avanzado, optimización de velocidad de carga y cumplimiento de estándares Google.</td>
+                            <td><b style="color: var(--gold);">Desde $1,500 USD</b></td>
+                        </tr>
+                        <tr>
+                            <td><b>🤖 Automatizaciones & Bots IA</b></td>
+                            <td>Flujos automáticos con n8n, chatbots con IA para WhatsApp y agentes de atención 24/7.</td>
+                            <td><b style="color: var(--gold);">Desde $3,500 USD</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- TAB 5: PLAYBOOK & OBJECTIONS -->
+        <section id="tab-playbook" class="tab-content">
+            <h3 style="color: var(--gold-light); margin-bottom: 14px; font-family: 'Cormorant Garamond', serif; font-size: 1.4rem;">Manejo de Objeciones en Vivo</h3>
+            
+            <div class="accordion-item open" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    <span>1. "Nosotros ya tenemos una agencia de marketing / ya hacemos SEO tradicional"</span>
+                    <span>▼</span>
+                </div>
+                <div class="accordion-body">
+                    "Excelente que ya trabajen su SEO. Esto no reemplaza a su agencia, es la capa siguiente: el SEO tradicional optimiza para clics en Google, mientras que la <b>Optimización AEO</b> optimiza para que los modelos de lenguaje (ChatGPT, Claude, Apple Intelligence) lean su catálogo y los recomienden de forma directa. Les comparto el reporte técnico para que su equipo lo evalúe."
+                </div>
+            </div>
+
+            <div class="accordion-item" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    <span>2. "¿Cuánto cuesta este servicio?"</span>
+                    <span>▼</span>
+                </div>
+                <div class="accordion-body">
+                    "Tenemos 3 niveles de implementación: partimos desde una <b>Auditoría de Visibilidad IA ($500 USD)</b>, el <b>Pack Agent-Ready Core ($2,000 USD)</b> que incluye robots.txt para IA, llms.txt, catálogo ARD y certificación Cloudflare Nivel 2, hasta la <b>Infraestructura Agéntica Total con WebMCP ($3,500 USD)</b>. Primero veamos el diagnóstico de su web para confirmar qué nivel necesitan exactamente."
+                </div>
+            </div>
+
+            <div class="accordion-item" onclick="toggleAccordion(this)">
+                <div class="accordion-header">
+                    <span>3. "Nuestros clientes no usan Inteligencia Artificial"</span>
+                    <span>▼</span>
+                </div>
+                <div class="accordion-body">
+                    "Eso pensaban muchos hasta el año pasado. Hoy más del 40% de los usuarios con alto poder adquisitivo ya no navegan páginas de Google: le piden a ChatGPT 'recomiéndame las mejores 3 opciones para X en Recoleta/Zona Norte'. Si su web no tiene la infraestructura técnica, la IA recomienda a su competidor directo."
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        <span id="toastMsg">Mensaje copiado al portapapeles!</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        &copy; 2026 ALLIMITE Agency · CRM de Prospección & Arquitectura Agent-Ready
+    </footer>
+
+    <!-- Script Logic -->
+    <script>
+        const prospectsData = [{"ID": "1", "Empresa": "Clínica B&S (Cirugía Plástica y Estética)", "Cluster": "Salud & Estética de Lujo", "Rubro": "Cirugía Plástica y Estética Médica", "Ubicacion": "Recoleta, CABA (Argentina)", "Sitio_Web": "https://www.clinicabs.com.ar", "Canal_Contacto": "Instagram @clinicabs / WhatsApp +54 9 11 4821-2222", "Actividad_Facturacion": "Clínica privada en Recoleta con 30+ años, cirugías diarias de $3k-$8k USD, posteos y pauta activa.", "Diagnostico_AEO": "Web visual tradicional en WordPress. Sin llms.txt, sin robots.txt para GPTBot/Perplexity. Nivel 0 en escáner IA. Si un paciente pregunta en ChatGPT '¿Cuál es la mejor clínica para rinoplastia en Recoleta?', no aparece citada con enlace directo.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD) + Auditoría AEO ($500 USD)", "Ticket_Estimado": "$2,000 - $3,500 USD", "Icebreaker_Personalizado": "Hola [Nombre/Equipo B&S]. Noté que tienen una trayectoria médica impecable en Recoleta, pero hoy cuando un paciente busca en ChatGPT 'mejor clínica para rinoplastia en CABA', la IA no cita su web por falta de catálogo semántico. Les armé una auditoría visual de 2 minutos para mostrarles cómo captar esos pacientes privados."}, {"ID": "2", "Empresa": "Dra. Laura Alfie / Alfie Aesthetic", "Cluster": "Salud & Estética de Lujo", "Rubro": "Dermatología Estética & Láser", "Ubicacion": "Recoleta, CABA (Argentina)", "Sitio_Web": "https://www.lauraalfie.com.ar", "Canal_Contacto": "Instagram @dralauraalfie / WhatsApp +54 9 11 4807-6000", "Actividad_Facturacion": "Referente en tratamientos no invasivos y toxina botulínica. Pacientes VIP y publicaciones semanales.", "Diagnostico_AEO": "Página estática sin datos estructurados JSON-LD de tratamientos específicos ni protocolos para asistentes de voz (Apple Intelligence/Siri).", "Servicio_Recomendado": "Optimización AEO & WebMCP ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola Dra. Laura. Su posicionamiento en Instagram es excelente, pero su sitio web devuelve 0/100 para asistentes de Inteligencia Artificial. Con una capa AEO pueden hacer que Perplexity y ChatGPT recomienden sus tratamientos láser de forma prioritaria."}, {"ID": "3", "Empresa": "Dental Total / Sede Premium", "Cluster": "Salud & Estética de Lujo", "Rubro": "Odontología Integral & Implantes", "Ubicacion": "Palermo / Recoleta, CABA (Argentina)", "Sitio_Web": "https://www.dentaltotal.com.ar", "Canal_Contacto": "Instagram @dentaltotalarg / WhatsApp +54 9 11 5263-0000", "Actividad_Facturacion": "Red odontológica con alta facturación, consultorios modernos y pauta activa en Google Ads.", "Diagnostico_AEO": "Gasta miles de dólares en clics de Google Ads pero pierde el 40% del tráfico que consulta directo a ChatGPT por 'implantes dentales en Palermo'. Sin archivo de agentes ni WebMCP.", "Servicio_Recomendado": "Infraestructura Agéntica Total + Automatización WhatsApp ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Buenas tardes equipo de Dental Total. Veo que invierten fuerte en Google Ads, pero los pacientes con mayor presupuesto ahora le preguntan a ChatGPT. Su web hoy es invisible para los modelos de lenguaje. Les comparto cómo activar la infraestructura Agent-Ready para liderar ese canal."}, {"ID": "4", "Empresa": "Clínica Dr. Hoogstra (Cirugía Estética y Láser)", "Cluster": "Salud & Estética de Lujo", "Rubro": "Cirugía Plástica y Tecnologías Láser", "Ubicacion": "Caballito / Belgrano, CABA (Argentina)", "Sitio_Web": "https://www.drhoogstra.com.ar", "Canal_Contacto": "Instagram @drhoogstra / WhatsApp +54 9 11 4901-6666", "Actividad_Facturacion": "Pionero en tecnología láser médica en Argentina. Procedimientos de alto valor y presencia en medios.", "Diagnostico_AEO": "Sitio con mucho contenido histórico pero sin optimización semántica moderna para LLMs. No cuenta con directivas de Content Signals ni catálogo ARD.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Estimado Dr. Hoogstra. Su trayectoria con láser es un referente nacional. Sin embargo, los buscadores de IA no pueden leer su catálogo de aparatología en milisegundos. Podemos convertir su web en una plataforma Agent-Ready certificada por Cloudflare."}, {"ID": "5", "Empresa": "Dr. Fernando Felice / Centro Vesalio", "Cluster": "Salud & Estética de Lujo", "Rubro": "Medicina Estética & Rejuvenecimiento Facial", "Ubicacion": "Recoleta, CABA (Argentina)", "Sitio_Web": "https://www.vesalioestetica.com.ar", "Canal_Contacto": "Instagram @drfernandofelice / WhatsApp +54 9 11 4801-1111", "Actividad_Facturacion": "Speaker internacional, congresos médicos, procedimientos faciales premium con listas de espera.", "Diagnostico_AEO": "Marca personal fortísima pero la web no tiene perfil UCP ni especificación semántica para que los agentes recomienden sus masterclasses y turnos privados.", "Servicio_Recomendado": "Rediseño Web Estratégico + AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Hola Dr. Felice. Su autoridad como docente internacional es inmensa. Su sitio web actual no refleja ese calibre ante los motores de respuesta con IA. Desarrollamos la infraestructura agéntica para que su centro médico sea la respuesta #1 recomendada por Perplexity."}, {"ID": "6", "Empresa": "Centro Dermatológico Chouela", "Cluster": "Salud & Estética de Lujo", "Rubro": "Dermatología Clínica & Estética", "Ubicacion": "Recoleta, CABA (Argentina)", "Sitio_Web": "https://www.chouela.com", "Canal_Contacto": "Instagram @centrochouela / WhatsApp +54 9 11 4805-5555", "Actividad_Facturacion": "Centro dermatológico de máxima reputación académica y médica en CABA.", "Diagnostico_AEO": "Web institucional sin robotsTxtAiRules ni sitemap semántico. 0/15 checks en escáner de agentes.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Estimado equipo de Centro Chouela. Realizamos un diagnóstico técnico de su dominio web y detectamos que los motores conversacionales (ChatGPT/Claude) tienen bloqueado el acceso estructurado a sus especialidades. Con nuestra optimización AEO quedan 100% citables."}, {"ID": "7", "Empresa": "Clínica Robles / Dr. Marcelo Robles", "Cluster": "Salud & Estética de Lujo", "Rubro": "Cirugía Plástica y Contorno Corporal", "Ubicacion": "Puerto Madero / Recoleta, CABA (Argentina)", "Sitio_Web": "https://www.roblesplastic.com", "Canal_Contacto": "Instagram @clinica_robles / WhatsApp +54 9 11 4815-4444", "Actividad_Facturacion": "Pacientes locales e internacionales (turismo médico) para cirugías corporales de $5,000+ USD.", "Diagnostico_AEO": "El turismo médico hoy utiliza ChatGPT para comparar cirujanos en Buenos Aires. Al no tener llms.txt en inglés/español ni ARD, los pacientes extranjeros eligen otras opciones.", "Servicio_Recomendado": "Optimización AEO Multilingüe + WebMCP ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Hola Dr. Robles. El 50% de los pacientes del exterior que viajan a Buenos Aires por turismo médico usan ChatGPT para elegir cirujano. Preparamos su web para que los agentes internacionales coticen y recomienden su clínica en automático."}, {"ID": "8", "Empresa": "Smile Designers / Odontología Estética", "Cluster": "Salud & Estética de Lujo", "Rubro": "Diseño de Sonrisa & Carillas de Porcelana", "Ubicacion": "Palermo Soho, CABA (Argentina)", "Sitio_Web": "https://www.smiledesigners.com.ar", "Canal_Contacto": "Instagram @smiledesigners_ar / WhatsApp +54 9 11 3200-8888", "Actividad_Facturacion": "Casos estéticos de alto impacto, influencers y artistas como pacientes habituales.", "Diagnostico_AEO": "Sitio web muy visual pero sin contenido legible por máquinas. Cero integración con WebMCP para cotización ágil de carillas.", "Servicio_Recomendado": "Rediseño Web + Optimización AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Hola chicos de Smile Designers. El trabajo que hacen con carillas es una locura de estético. Pero su web no está preparada para que la IA entienda sus casos y los cite. Les diseñamos la plataforma Agent-Ready con botón de presupuesto directo por IA."}, {"ID": "9", "Empresa": "Dra. Griselda Seleme / Seleme Medical Art", "Cluster": "Salud & Estética de Lujo", "Rubro": "Cirugía Plástica & Tratamientos Anti-Age", "Ubicacion": "Palermo Chico, CABA (Argentina)", "Sitio_Web": "https://www.grizeldaseleme.com", "Canal_Contacto": "Instagram @drageriseldaseleme / WhatsApp +54 9 11 4804-7777", "Actividad_Facturacion": "Clínica boutique en Barrio Parque / Palermo Chico, atención personalizada a clientes de alto patrimonio.", "Diagnostico_AEO": "Falta de directivas de Content Signals y sin manifiesto de catálogo de servicios ARD.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Estimada Dra. Seleme. En su segmento de pacientes exclusivos, cada vez más personas usan asistentes de voz e IA para buscar tratamientos de rejuvenecimiento facial. Le preparamos un informe express de visibilidad AEO para su clínica."}, {"ID": "10", "Empresa": "Dental VIP / Dr. Matías Ceva", "Cluster": "Salud & Estética de Lujo", "Rubro": "Rehabilitación Oral & Implantes Guiados", "Ubicacion": "Nordelta / Tigre (Buenos Aires)", "Sitio_Web": "https://www.dentalvipnordelta.com", "Canal_Contacto": "Instagram @dentalvip_nordelta / WhatsApp +54 9 11 5555-1234", "Actividad_Facturacion": "Clínica odontológica de alta gama en Nordelta para familias y empresarios del corredor norte.", "Diagnostico_AEO": "Sin registro de protocolos agénticos ni sitemap canónico estructurado para motores de respuesta locales.", "Servicio_Recomendado": "Optimización AEO + Automatización de Turnos ($2,500 USD)", "Ticket_Estimado": "$2,500 USD", "Icebreaker_Personalizado": "Hola Matías. Vemos que en Nordelta son la clínica dental de referencia. Sin embargo, cuando los vecinos le preguntan a Perplexity o ChatGPT 'urgencias dentales e implantes en Nordelta', su clínica no aparece en el resumen. Podemos corregirlo en 5 días."}, {"ID": "11", "Empresa": "SkinMedical / Centros de Estética Médica", "Cluster": "Salud & Estética de Lujo", "Rubro": "Depilación Médica Láser & Criolipólisis", "Ubicacion": "Recoleta / Belgrano / CABA", "Sitio_Web": "https://www.skinmedical.com.ar", "Canal_Contacto": "Instagram @skinmedicalar / WhatsApp +54 9 11 4788-0000", "Actividad_Facturacion": "Múltiples sucursales, 50k+ seguidores, alto volumen mensual de tratamientos corporales.", "Diagnostico_AEO": "Falta de WebMCP en navegador para que el usuario pueda reservar desde la IA de su celular.", "Servicio_Recomendado": "Infraestructura Agéntica + WebMCP ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Hola equipo SkinMedical. Tienen un volumen de consultas enorme. Con el nuevo protocolo WebMCP que instalamos en ALLIMITE, las IA de los celulares pueden consultar sus promos y enviar pacientes directo a su WhatsApp sin fricción."}, {"ID": "12", "Empresa": "Dr. Raúl Banegas / Cirugía Plástica & Oculoplastia", "Cluster": "Salud & Estética de Lujo", "Rubro": "Cirugía Facial y Oculoplástica", "Ubicacion": "Recoleta, CABA (Argentina)", "Sitio_Web": "https://www.raulbanegas.com.ar", "Canal_Contacto": "Instagram @drraulbanegas / WhatsApp +54 9 11 4811-9999", "Actividad_Facturacion": "Líder de opinión en rellenos y blefaroplastia. Clientes de élite y docencia internacional.", "Diagnostico_AEO": "Web con diseño desactualizado frente a los estándares modernos. Sin catálogo semántico para LLMs.", "Servicio_Recomendado": "Rediseño Web + AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Estimado Dr. Banegas. Su reconocimiento en oculoplastia merece una presencia digital a la altura. Hoy los buscadores de IA no pueden indexar sus técnicas patentadas. Le presentamos nuestra propuesta para modernizar su web a formato Agent-Ready."}, {"ID": "13", "Empresa": "Dra. Fabiana Zelaya / Zelaya Medicina Estética", "Cluster": "Salud & Estética de Lujo", "Rubro": "Medicina Estética & Armonización Facial", "Ubicacion": "Recoleta, CABA (Argentina)", "Sitio_Web": "https://www.drafabianazelaya.com", "Canal_Contacto": "Instagram @drafabianazelaya / WhatsApp +54 9 11 4822-3333", "Actividad_Facturacion": "Apariciones en televisión, revista Gente/Caras, consultorio premium con aparatología de última generación.", "Diagnostico_AEO": "Inexistencia de Content-Signals y llms.txt. 0 checks aprobados en escáner de agentes.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola Dra. Fabiana. Su trabajo en medios y redes es fabuloso, pero cuando las personas consultan a ChatGPT por 'armonización facial médica en Recoleta', su web queda afuera de las respuestas. Le comparto un plan rápido para liderar el canal de IA."}, {"ID": "14", "Empresa": "Clínica San Jerónimo / Estética Quirúrgica", "Cluster": "Salud & Estética de Lujo", "Rubro": "Cirugía Plástica & Centro Quirúrgico", "Ubicacion": "Córdoba Capital (Argentina)", "Sitio_Web": "https://www.clinicasanjeronimo.com.ar", "Canal_Contacto": "Instagram @clinicasanjeronimo / WhatsApp +54 9 351 422-0000", "Actividad_Facturacion": "Principal polo de cirugías estéticas privadas en la provincia de Córdoba.", "Diagnostico_AEO": "Web institucional pesada con tiempos de carga de 4.8s y nula estructura para motores semánticos.", "Servicio_Recomendado": "Rediseño Web + AEO ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Estimado Directorio de Clínica San Jerónimo. En Córdoba son el centro quirúrgico más prestigioso, pero la velocidad web y la visibilidad en IA están en nivel 0. Les armamos una demo de cómo quedaría su web optimizada y Agent-Ready."}, {"ID": "15", "Empresa": "Dr. Lucas Bustos / Cirugía Plástica Córdoba", "Cluster": "Salud & Estética de Lujo", "Rubro": "Lipoescultura HD y Cirugía Mamaria", "Ubicacion": "Cerro de las Rosas, Córdoba (Argentina)", "Sitio_Web": "https://www.drlucasbustos.com.ar", "Canal_Contacto": "Instagram @drlucasbustos / WhatsApp +54 9 351 555-4321", "Actividad_Facturacion": "Cirujano top de Córdoba con amplia comunidad de pacientes en el interior del país.", "Diagnostico_AEO": "Sin protocolos de descubrimiento agéntico ni perfil comercial UCP.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola Dr. Bustos. Vemos que es el cirujano más buscado en Córdoba para Lipo HD. Para blindar ese liderazgo frente a las búsquedas en ChatGPT y Perplexity, implementamos la infraestructura Agent-Ready con certificación Cloudflare."}, {"ID": "16", "Empresa": "M&D Dental / Odontología Puerto Madero", "Cluster": "Salud & Estética de Lujo", "Rubro": "Estética Dental & Alineadores Invisibles", "Ubicacion": "Puerto Madero, CABA (Argentina)", "Sitio_Web": "https://www.mddental.com.ar", "Canal_Contacto": "Instagram @mddentalmadero / WhatsApp +54 9 11 4312-8888", "Actividad_Facturacion": "Atención a ejecutivos corporativos y residentes de Puerto Madero. Alineadores de $1,500+ USD.", "Diagnostico_AEO": "Web minimalista pero sin datos técnicos estructurados para modelos de lenguaje.", "Servicio_Recomendado": "Optimización AEO + WebMCP ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Buenas tardes equipo de M&D. Sus pacientes de Puerto Madero son usuarios nativos de ChatGPT y Perplexity. Si buscan 'alineadores invisibles en Puerto Madero', su web debe responder en 0.05 segundos. Les mostramos cómo lograrlo."}, {"ID": "17", "Empresa": "Instituto Médico Láser Mendoza", "Cluster": "Salud & Estética de Lujo", "Rubro": "Dermatología Láser & Flebología Estética", "Ubicacion": "Mendoza Capital (Argentina)", "Sitio_Web": "https://www.medicolasermendoza.com.ar", "Canal_Contacto": "Instagram @medicolasermza / WhatsApp +54 9 261 423-1111", "Actividad_Facturacion": "Centro líder en la región de Cuyo con pacientes de Chile y provincias vecinas.", "Diagnostico_AEO": "Falta de optimización AEO internacional para captar pacientes de Santiago de Chile que cruzan a Mendoza.", "Servicio_Recomendado": "Optimización AEO Regional ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Estimados amigos de Instituto Médico Láser Mendoza. Muchos pacientes de Chile consultan a la IA por clínicas en Mendoza por el tipo de cambio favorable. Podemos optimizar su web para que Perplexity los posicione en el top 1 de Cuyo."}, {"ID": "18", "Empresa": "Dra. Irene Bermejo / Bermejo Dermatology", "Cluster": "Salud & Estética de Lujo", "Rubro": "Dermatología de Alta Complejidad", "Ubicacion": "Caballito / Belgrano, CABA", "Sitio_Web": "https://www.irenebermejo.com", "Canal_Contacto": "Instagram @drairenebermejo / WhatsApp +54 9 11 4902-7777", "Actividad_Facturacion": "Reconocida especialista en envejecimiento celular y aparatología no quirúrgica.", "Diagnostico_AEO": "Web antigua que no cumple con los protocolos modernos de lectura para IA (llms.txt ausente).", "Servicio_Recomendado": "Rediseño Web Estratégico + AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Hola Dra. Bermejo. Su nombre es sinónimo de excelencia dermatológica. Su plataforma web actual no cuenta con los estándares agénticos de 2026. Le presentamos una propuesta para actualizar su sitio a Nivel Élite Agent-Ready."}, {"ID": "19", "Empresa": "Clínica Dr. Félix Montovio", "Cluster": "Salud & Estética de Lujo", "Rubro": "Cirugía Plástica y Reconstructiva", "Ubicacion": "Rosario, Santa Fe (Argentina)", "Sitio_Web": "https://www.drfelixmontovio.com.ar", "Canal_Contacto": "Instagram @drfelixmontovio / WhatsApp +54 9 341 425-9999", "Actividad_Facturacion": "Clínica referente en la zona núcleo agropecuaria de Santa Fe.", "Diagnostico_AEO": "0/15 checks en escáner de IA. Sin robotsTxtAiRules ni manifiesto MCP.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola Dr. Montovio. En Rosario y la región centro muchos empresarios y familias buscan cirujanos a través de asistentes inteligentes. Su web hoy no está siendo leída por ChatGPT. Le preparamos una auditoría sin costo de 2 minutos."}, {"ID": "20", "Empresa": "Centro Médico Roitman", "Cluster": "Salud & Estética de Lujo", "Rubro": "Dermatología, Tricología & Implante Capilar", "Ubicacion": "Recoleta, CABA (Argentina)", "Sitio_Web": "https://www.centroroitman.com.ar", "Canal_Contacto": "Instagram @centromedioroitman / WhatsApp +54 9 11 4826-5555", "Actividad_Facturacion": "Tratamientos capilares de $2,000-$4,000 USD por paciente.", "Diagnostico_AEO": "La categoría 'implante capilar FUE' es hipercompetitiva en Google Ads. La IA ofrece una ventaja desleal si se estructura en AEO.", "Servicio_Recomendado": "Optimización AEO & Infraestructura Agéntica ($2,500 USD)", "Ticket_Estimado": "$2,500 USD", "Icebreaker_Personalizado": "Estimado equipo Roitman. En implante capilar el costo por clic en Google es altísimo. La nueva vía de captación es el posicionamiento AEO en ChatGPT y Claude. Les mostramos cómo posicionar su clínica antes que la competencia."}, {"ID": "21", "Empresa": "Dr. Santiago Barrenechea / Cirugía Estética", "Cluster": "Salud & Estética de Lujo", "Rubro": "Cirugía Estética Facial", "Ubicacion": "Palermo, CABA", "Sitio_Web": "https://www.drbarrenechea.com.ar", "Canal_Contacto": "Instagram @drbarrenechea / WhatsApp +54 9 11 4777-1234", "Actividad_Facturacion": "Cirugías premium y estética facial de alta gama.", "Diagnostico_AEO": "Falta de esquema JSON-LD y archivos llms.txt.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola Dr. Santiago. Un gusto saludarlo. Vemos que su trabajo en rinoplastia es de primer nivel. Le compartimos cómo lograr que ChatGPT recomiende su consultorio directamente ante búsquedas de pacientes calificados en CABA."}, {"ID": "22", "Empresa": "Dental Art Studio / Dr. Matías Ceva", "Cluster": "Salud & Estética de Lujo", "Rubro": "Carillas & Estética Dental", "Ubicacion": "Palermo Soho, CABA", "Sitio_Web": "https://www.dentalartstudio.com.ar", "Canal_Contacto": "Instagram @dentalart_studio / WhatsApp +54 9 11 4833-2211", "Actividad_Facturacion": "Casos clínicos de estética dental de $2,000+ USD.", "Diagnostico_AEO": "Sin WebMCP ni catálogo semántico.", "Servicio_Recomendado": "Optimización AEO & WebMCP ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola equipo Dental Art Studio. Diseñamos sistemas para que los asistentes de IA coticen sus tratamientos dentales en tiempo real. ¿Les gustaría ver una prueba de concepto para su web?"}, {"ID": "23", "Empresa": "Clínica Dermastyle / Dra. Florencia Salvo", "Cluster": "Salud & Estética de Lujo", "Rubro": "Medicina Estética & Fillers", "Ubicacion": "Las Cañitas, CABA", "Sitio_Web": "https://www.dermastyle.com.ar", "Canal_Contacto": "Instagram @dermastyle.ar / WhatsApp +54 9 11 4771-8899", "Actividad_Facturacion": "Consultorio boutique en Las Cañitas.", "Diagnostico_AEO": "Página estática sin permisos para bots de IA.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola Dra. Florencia. En Las Cañitas su consultorio tiene una ubicación privilegiada. Le mostramos cómo posicionarlo como la respuesta #1 recomendada por Perplexity en la zona norte de CABA."}, {"ID": "24", "Empresa": "Dr. Patricio Jacovella / Cirugía Plástica", "Cluster": "Salud & Estética de Lujo", "Rubro": "Cirugía Plástica y Reparadora", "Ubicacion": "Recoleta, CABA", "Sitio_Web": "https://www.patriciojacovella.com", "Canal_Contacto": "Instagram @drpatriciojacovella / WhatsApp +54 9 11 4812-3344", "Actividad_Facturacion": "Profesor UBA, miembro de comités internacionales de cirugía.", "Diagnostico_AEO": "Web institucional sin optimización moderna para IA.", "Servicio_Recomendado": "Rediseño Web + AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Estimado Dr. Jacovella. Su jerarquía médica internacional debe estar respaldada por una plataforma web Agent-Ready que la IA pueda consultar y certificar. Le preparamos una propuesta ejecutiva."}, {"ID": "25", "Empresa": "Dental Norte Odontología", "Cluster": "Salud & Estética de Lujo", "Rubro": "Implantología & Cirugía Maxilofacial", "Ubicacion": "San Isidro (Buenos Aires)", "Sitio_Web": "https://www.dentalnorte.com.ar", "Canal_Contacto": "Instagram @dentalnortear / WhatsApp +54 9 11 4743-5566", "Actividad_Facturacion": "Atención odontológica integral en Zona Norte.", "Diagnostico_AEO": "Sin robots.txt configurado para GPTBot ni llms.txt.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola equipo Dental Norte. San Isidro es una de las zonas con mayor uso de IA para contratar servicios privados. Si gustan, les comparto el escaneo de su web frente a ChatGPT para ver qué oportunidades están perdiendo."}, {"ID": "26", "Empresa": "Dra. Silvina Guala / Estética Médica", "Cluster": "Salud & Estética de Lujo", "Rubro": "Medicina Antiage & Láser", "Ubicacion": "Belgrano, CABA", "Sitio_Web": "https://www.drasilvinaguala.com.ar", "Canal_Contacto": "Instagram @drasilvinaguala / WhatsApp +54 9 11 4781-9000", "Actividad_Facturacion": "Tratamientos de alta gama faciales.", "Diagnostico_AEO": "0/15 checks en escáner agéntico.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola Dra. Silvina. Notamos que su comunidad en Instagram es súper activa, pero su web devuelve 'No preparada' para motores de IA. Le armamos un diagnóstico en PDF de 1 página sin compromiso."}, {"ID": "27", "Empresa": "Clínica Dental del Sol", "Cluster": "Salud & Estética de Lujo", "Rubro": "Estética y Ortodoncia Invisible", "Ubicacion": "Mendoza Capital", "Sitio_Web": "https://www.dentalsol.com.ar", "Canal_Contacto": "Instagram @dentalsolmza / WhatsApp +54 9 261 420-3344", "Actividad_Facturacion": "Clínica privada de ortodoncia de alto valor en Mendoza.", "Diagnostico_AEO": "Falta de catálogo ARD y perfil UCP.", "Servicio_Recomendado": "Optimización AEO ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Buenas tardes equipo de Dental del Sol. Preparamos sitios web odontológicos para que los motores de IA en Mendoza recomienden sus planes de ortodoncia en automático. ¿Tienen 3 minutos para ver un ejemplo?"}, {"ID": "28", "Empresa": "Dr. Fernando Tuetg / Cirugía Estética", "Cluster": "Salud & Estética de Lujo", "Rubro": "Cirugía Plástica & Reconstructiva", "Ubicacion": "Rosario, Santa Fe", "Sitio_Web": "https://www.fernandotuetg.com.ar", "Canal_Contacto": "Instagram @drfernandotuetg / WhatsApp +54 9 341 440-1122", "Actividad_Facturacion": "Consultas y procedimientos quirúrgicos de alto valor en Rosario.", "Diagnostico_AEO": "Sin encabezados HTTP Link ni llms.txt.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola Dr. Tuetg. Su reputación quirúrgica en Rosario es impecable. Podemos conectar su web con los motores de Inteligencia Artificial para que cualquier consulta de pacientes en Santa Fe lo cite a usted en primer lugar."}, {"ID": "29", "Empresa": "Clínica de la Piel Dr. Stengel", "Cluster": "Salud & Estética de Lujo", "Rubro": "Dermatología Avanzada & Fototerapia", "Ubicacion": "Recoleta, CABA", "Sitio_Web": "https://www.clinicastengel.com.ar", "Canal_Contacto": "Instagram @clinicastengel / WhatsApp +54 9 11 4806-2244", "Actividad_Facturacion": "Centro dermatológico emblemático en Recoleta.", "Diagnostico_AEO": "Sitio clásico sin adecuación a estándares agénticos.", "Servicio_Recomendado": "Rediseño Web + AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Estimado equipo de Clínica Stengel. Desarrollamos la infraestructura de visibilidad agéntica para centros de salud emblemáticos en CABA. Les presentamos cómo transformar su web al estándar 2026."}, {"ID": "30", "Empresa": "Implante Dental Buenos Aires / Dr. Rivas", "Cluster": "Salud & Estética de Lujo", "Rubro": "Implantología Avanzada en 24 Horas", "Ubicacion": "Belgrano, CABA", "Sitio_Web": "https://www.implantesbuenosaires.com", "Canal_Contacto": "Instagram @implantesba / WhatsApp +54 9 11 4782-9900", "Actividad_Facturacion": "Especialistas en carga inmediata con pacientes de alto poder adquisitivo.", "Diagnostico_AEO": "Gasto fuerte en pauta publicitaria pero sin presencia en búsquedas generativas de IA.", "Servicio_Recomendado": "Optimización AEO & WebMCP ($2,500 USD)", "Ticket_Estimado": "$2,500 USD", "Icebreaker_Personalizado": "Hola Dr. Rivas. El servicio de 'implantes en 24hs' es el término más consultado por pacientes en ChatGPT. Preparamos su sitio web para que la IA responda citando sus casos clínicos de inmediato."}, {"ID": "31", "Empresa": "Centro Estético Dra. Viviana Parreño", "Cluster": "Salud & Estética de Lujo", "Rubro": "Medicina Estética & Bioestimuladores", "Ubicacion": "Palermo, CABA", "Sitio_Web": "https://www.dravivianaparreno.com.ar", "Canal_Contacto": "Instagram @dravivianaparreno / WhatsApp +54 9 11 4831-7766", "Actividad_Facturacion": "Consultorio privado con bioestimuladores de colágeno ($1,000+ USD por sesión).", "Diagnostico_AEO": "0/15 checks en escáner Cloudflare Agent-Ready.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola Dra. Viviana. Los tratamientos con bioestimuladores son el boom en consultas de IA hoy en día. Su web aún no tiene las reglas para que ChatGPT los cite. Le preparamos una solución llave en mano."}, {"ID": "32", "Empresa": "Odontología Palermo Chico", "Cluster": "Salud & Estética de Lujo", "Rubro": "Estética Dental & Blanqueamiento Láser", "Ubicacion": "Palermo Chico, CABA", "Sitio_Web": "https://www.odontologiapalermochico.com", "Canal_Contacto": "Instagram @odontopalermochico / WhatsApp +54 9 11 4802-1122", "Actividad_Facturacion": "Ubicación en zona de máxima exclusividad residencial.", "Diagnostico_AEO": "Sin integración de protocolos WebMCP ni llms.txt.", "Servicio_Recomendado": "Optimización AEO ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Buenas tardes equipo de Odonto Palermo Chico. Sus pacientes de la zona son usuarios intensivos de IA. Con nuestra optimización AEO su consultorio queda como la opción #1 en respuestas directas."}, {"ID": "33", "Empresa": "Clínica de Ojos Dr. Nano / Estética Periocular", "Cluster": "Salud & Estética de Lujo", "Rubro": "Cirugía Refractiva & Estética Ocular", "Ubicacion": "Olivos / San Miguel / CABA", "Sitio_Web": "https://www.drnano.com.ar", "Canal_Contacto": "Instagram @clinicadrnano / WhatsApp +54 9 11 4796-8800", "Actividad_Facturacion": "Institución oftalmológica líder con área quirúrgica privada.", "Diagnostico_AEO": "Página muy grande pero sin arquitectura semántica para modelos conversacionales.", "Servicio_Recomendado": "Auditoría AEO + Pack Core ($2,500 USD)", "Ticket_Estimado": "$2,500 USD", "Icebreaker_Personalizado": "Estimado Directorio de Clínica Dr. Nano. Realizamos un análisis agéntico de su dominio y encontramos que los modelos de lenguaje no pueden extraer su oferta de cirugías refractivas. Les presentamos cómo resolverlo."}, {"ID": "34", "Empresa": "Dra. Mariana Lestelle / Estética y Bienestar", "Cluster": "Salud & Estética de Lujo", "Rubro": "Medicina Preventiva & Estética", "Ubicacion": "Recoleta, CABA", "Sitio_Web": "https://www.marianalestelle.com", "Canal_Contacto": "Instagram @marianalestelle / WhatsApp +54 9 11 4821-4455", "Actividad_Facturacion": "Presencia pública en medios, libros y consultorio privado.", "Diagnostico_AEO": "Sin Content Signals para proteger su propiedad intelectual ante la IA.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola Dra. Mariana. Como referente de salud en medios, proteger su contenido y ser citada por la IA de forma oficial es clave. Le preparamos la infraestructura Agent-Ready completa."}, {"ID": "35", "Empresa": "Clínica Cuyo Dental", "Cluster": "Salud & Estética de Lujo", "Rubro": "Implantes & Cirugía Guiada", "Ubicacion": "Mendoza Capital (Argentina)", "Sitio_Web": "https://www.cuyodental.com.ar", "Canal_Contacto": "Instagram @cuyodental / WhatsApp +54 9 261 425-6677", "Actividad_Facturacion": "Clínica de referencia odontológica en Mendoza.", "Diagnostico_AEO": "0/15 checks en escáner de Cloudflare.", "Servicio_Recomendado": "Optimización AEO ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola equipo Cuyo Dental. Su liderazgo en Mendoza puede expandirse exponencialmente preparando su web para los asistentes de IA. Les compartimos una auditoría de 2 minutos sin costo."}, {"ID": "36", "Empresa": "Car Unique / Concesionaria Multimarca de Lujo", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Autos de Alta Gama & Deportivos", "Ubicacion": "Vicente López / Zona Norte (Buenos Aires)", "Sitio_Web": "https://www.carunique.com.ar", "Canal_Contacto": "Instagram @carunique_arg / WhatsApp +54 9 11 4799-5555", "Actividad_Facturacion": "Stock permanente de Porsche, Mercedes-AMG, BMW M, Audi RS ($50k - $250k USD).", "Diagnostico_AEO": "Web catálogo visual tradicional. Si un comprador busca en ChatGPT 'concesionaria con Porsche 911 en Buenos Aires', la IA no puede leer su inventario en tiempo real. Cero integración WebMCP.", "Servicio_Recomendado": "Infraestructura Agéntica + WebMCP ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Buenas tardes equipo de Car Unique. Los autos que tienen en stock son de colección. Hoy muchos compradores de alta gama le piden a ChatGPT que busque unidades disponibles. Con WebMCP la IA puede cotizar sus vehículos directamente a su WhatsApp."}, {"ID": "37", "Empresa": "Luxury Detailing Buenos Aires", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Detailing Boutique & Tratamientos Cerámicos", "Ubicacion": "Palermo, CABA (Argentina)", "Sitio_Web": "https://www.luxurydetailing.com.ar", "Canal_Contacto": "Instagram @luxurydetailingba / WhatsApp +54 9 11 5000-1122", "Actividad_Facturacion": "Servicios de PPF (Paint Protection Film) y cerámicos de $1,500 - $3,500 USD por auto.", "Diagnostico_AEO": "Sin archivos llms.txt ni reglas para bots de búsqueda de IA. 0/15 en escáner agéntico.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola chicos de Luxury Detailing. El nivel de autos que detallan en Palermo es increíble. Les armamos una demo para que cuando alguien busque en Perplexity 'dónde poner PPF a un Porsche en CABA', su taller sea la recomendación exclusiva."}, {"ID": "38", "Empresa": "Armor International / Blindajes Blindarte", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Blindaje Automotriz & Seguridad VIP", "Ubicacion": "San Martín / Zona Norte (Buenos Aires)", "Sitio_Web": "https://www.blindarte.com.ar", "Canal_Contacto": "Instagram @blindarte_argentina / WhatsApp +54 9 11 4755-9000", "Actividad_Facturacion": "Blindaje nivel RB3 y RB4 para camionetas y sedanes de lujo ($15,000+ USD por unidad).", "Diagnostico_AEO": "Empresarios y directores de seguridad usan IA para comparar normas de blindaje. La web no tiene catálogo ARD de certificaciones balísticas.", "Servicio_Recomendado": "Rediseño Web Corporativo + AEO ($4,500 USD)", "Ticket_Estimado": "$4,500 USD", "Icebreaker_Personalizado": "Estimados señores de Blindarte. En el segmento de blindaje ejecutivo, la precisión técnica es vital. Si un cliente corporativo consulta a ChatGPT por normas balísticas en Argentina, su web debe ser la fuente oficial citada. Les presentamos cómo implementarlo."}, {"ID": "39", "Empresa": "Ceramic Pro Argentina / Centro Oficial", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Recubrimientos Nanotecnológicos & PPF", "Ubicacion": "San Isidro (Buenos Aires)", "Sitio_Web": "https://www.ceramicpro.com.ar", "Canal_Contacto": "Instagram @ceramicpro_ar / WhatsApp +54 9 11 4732-4455", "Actividad_Facturacion": "Franquicia oficial de la marca global número uno en cerámicos automotrices.", "Diagnostico_AEO": "Falta de integración con perfil comercial UCP y sin encabezados Link de Cloudflare.", "Servicio_Recomendado": "Optimización AEO & Certificación ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola equipo Ceramic Pro Argentina. Como marca internacional líder, su web debería contar con el sello Agent-Ready Nivel 2. Les mostramos cómo configurar su infraestructura para que los agentes inteligentes recomienden sus paquetes oficiales."}, {"ID": "40", "Empresa": "Autovisiones / Alta Gama Nordelta", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Venta de Vehículos Seleccionados", "Ubicacion": "Nordelta / Tigre (Buenos Aires)", "Sitio_Web": "https://www.autovisiones.com.ar", "Canal_Contacto": "Instagram @autovisionesnordelta / WhatsApp +54 9 11 4871-3333", "Actividad_Facturacion": "Concesionaria boutique en la entrada de Nordelta con rotación continua de camionetas 4x4 y premium.", "Diagnostico_AEO": "Web no optimizada para motores generativos. 0/15 checks aprobados.", "Servicio_Recomendado": "Rediseño Web + AEO ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Hola equipo Autovisiones. En Nordelta el público usa asistentes de voz e IA a diario para consultar por vehículos disponibles. Podemos vincular su catálogo con ChatGPT para recibir prospectos precalificados."}, {"ID": "41", "Empresa": "Nordenwagen / Porsche Center Buenos Aires", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Importador Oficial Porsche", "Ubicacion": "Vicente López (Buenos Aires)", "Sitio_Web": "https://www.porschebuenosaires.com", "Canal_Contacto": "Instagram @porsche_buenosaires / WhatsApp +54 9 11 4796-7000", "Actividad_Facturacion": "Concesionario oficial exclusivo Porsche para Argentina.", "Diagnostico_AEO": "Web corporativa estándar pero sin datos agénticos locales (A2A Agent Card / MCP Server Card).", "Servicio_Recomendado": "Auditoría AEO & Consultoría Agéntica ($2,500 USD)", "Ticket_Estimado": "$2,500 USD", "Icebreaker_Personalizado": "Estimado equipo de Porsche Center Buenos Aires. Realizamos una auditoría de infraestructura Agent-Ready para marcas premium en Zona Norte. Les compartimos el reporte técnico para optimizar la citación de sus modelos en Perplexity y ChatGPT."}, {"ID": "42", "Empresa": "Detailers Club Argentina", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Estética Automotriz & Capacitación", "Ubicacion": "Martínez / San Isidro (Buenos Aires)", "Sitio_Web": "https://www.detailersclub.com.ar", "Canal_Contacto": "Instagram @detailersclub / WhatsApp +54 9 11 4798-2233", "Actividad_Facturacion": "Cursos profesionales de detailing y servicios de protección vehicular de alto ticket.", "Diagnostico_AEO": "Sin esquema semántico para cursos ni catálogo de productos ARD.", "Servicio_Recomendado": "E-Commerce / Plataforma Web + AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Hola chicos de Detailers Club. Sus capacitaciones y trabajos de estética son referentes en el país. Con nuestra plataforma AEO pueden hacer que la IA recomiende sus cursos y servicios de PPF en automático."}, {"ID": "43", "Empresa": "Colcar Merbus / Mercedes-Benz", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Concesionario Oficial Mercedes-Benz", "Ubicacion": "Moreno / CABA", "Sitio_Web": "https://www.colcar.com.ar", "Canal_Contacto": "Instagram @colcarmerbus / WhatsApp +54 9 11 5032-0000", "Actividad_Facturacion": "El concesionario Mercedes-Benz más grande de Sudamérica en volumen de ventas.", "Diagnostico_AEO": "Sitio web gigantesco pero sin arquitectura semántica ligera para LLMs. Tiempos de respuesta lentos para bots de IA.", "Servicio_Recomendado": "Consultoría e Infraestructura AEO Enterprise ($5,000 USD)", "Ticket_Estimado": "$5,000 USD", "Icebreaker_Personalizado": "Estimada Gerencia de Marketing de Colcar. Siendo el mayor concesionario Mercedes de la región, sus clientes de alta gama ya consultan a ChatGPT antes de comprar. Les preparamos una propuesta enterprise de arquitectura Agent-Ready."}, {"ID": "44", "Empresa": "Treos Motors / Multimarca Premium", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Autos Seleccionados & Pickups de Lujo", "Ubicacion": "Vicente López (Buenos Aires)", "Sitio_Web": "https://www.treos.com.ar", "Canal_Contacto": "Instagram @treosmotors / WhatsApp +54 9 11 4796-5500", "Actividad_Facturacion": "Venta de RAM, Toyota Hilux GR, BMW y Audi en corredor Libertador.", "Diagnostico_AEO": "Web tradicional en PHP sin directivas de IA ni llms.txt.", "Servicio_Recomendado": "Rediseño Web + Optimización AEO ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Buenas tardes equipo de Treos Motors. Sobre Av. Libertador tienen un salón imponente. Les mostramos cómo llevar esa misma presencia a las búsquedas generativas de IA para captar compradores de camionetas y autos premium."}, {"ID": "45", "Empresa": "Garage 54 Detailing & Paint Protection", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "PPF & Restauración de Pintura", "Ubicacion": "Palermo Soho, CABA", "Sitio_Web": "https://www.garage54.com.ar", "Canal_Contacto": "Instagram @garage54detailing / WhatsApp +54 9 11 4832-1144", "Actividad_Facturacion": "Centro especializado en superdeportivos y clásicos de colección.", "Diagnostico_AEO": "0/15 checks en escáner Cloudflare. Sin robotsTxtAiRules.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola chicos de Garage 54. Los autos clásicos y deportivos que atienden son únicos. Podemos dejar su web 100% Agent-Ready para que los dueños de autos premium los encuentren directo en Perplexity."}, {"ID": "46", "Empresa": "Blindajes Strong / Blindaje Ejecutivo", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Blindaje de Vehículos & Mantenimiento Balístico", "Ubicacion": "San Martín, Buenos Aires", "Sitio_Web": "https://www.blindajesstrong.com.ar", "Canal_Contacto": "Instagram @blindajesstrong / WhatsApp +54 9 11 4753-8899", "Actividad_Facturacion": "Contratos de flotas blindadas para empresas y diplomáticos.", "Diagnostico_AEO": "Falta de perfil UCP y sin certificado agéntico de nivel 2.", "Servicio_Recomendado": "Rediseño Web + AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Estimados señores de Blindajes Strong. El sector de seguridad corporativa exige máxima fiabilidad digital. Preparamos su web para responder con solvencia ante las consultas que directores de seguridad realizan en ChatGPT."}, {"ID": "47", "Empresa": "Stern Motors / Mercedes-Benz Rosario", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Concesionario Oficial Mercedes-Benz", "Ubicacion": "Rosario, Santa Fe", "Sitio_Web": "https://www.sternmotors.com.ar", "Canal_Contacto": "Instagram @sternmotors / WhatsApp +54 9 341 437-7700", "Actividad_Facturacion": "Concesionario oficial de referencia para el litoral argentino.", "Diagnostico_AEO": "Sin integración de protocolos WebMCP ni catálogo semántico ARD.", "Servicio_Recomendado": "Infraestructura AEO ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Estimado equipo de Stern Motors. En Rosario y el litoral sus clientes del sector agropecuario consultan cada vez más por pickups y camiones mediante asistentes de IA. Les mostramos cómo certificar su dominio en Nivel Élite."}, {"ID": "48", "Empresa": "AutoDrive / Concesionario Jeep & RAM", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Vehículos 4x4 & Pickups Premium", "Ubicacion": "Palermo / CABA", "Sitio_Web": "https://www.autodrive.com.ar", "Canal_Contacto": "Instagram @autodrivecaba / WhatsApp +54 9 11 4776-9900", "Actividad_Facturacion": "Concesionario de alta facturación en Palermo para RAM 1500/2500 y Jeep Grand Cherokee.", "Diagnostico_AEO": "Gasto masivo en pauta sin captura agéntica.", "Servicio_Recomendado": "Optimización AEO & WebMCP ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Hola equipo de AutoDrive. Vemos que son líderes en RAM y Jeep en CABA. Implementamos el estándar WebMCP para que los compradores que usan ChatGPT puedan consultar precios y solicitar test drives en 1 clic."}, {"ID": "49", "Empresa": "Meguiar's Detail Center Argentina", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Cosmética Automotriz Oficial", "Ubicacion": "Vicente López (Buenos Aires)", "Sitio_Web": "https://www.meguiarsargentina.com", "Canal_Contacto": "Instagram @meguiarsargentina / WhatsApp +54 9 11 4791-3322", "Actividad_Facturacion": "Distribución oficial y centro de servicios para marcas de lujo.", "Diagnostico_AEO": "Falta de esquema para asistentes de compra de IA.", "Servicio_Recomendado": "E-Commerce AEO & Agent-Ready ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Hola equipo Meguiar's Argentina. Como líderes en cosmética automotriz, su catálogo online puede ser interpretado por los agentes de compra autónomos de IA. Les compartimos nuestra propuesta de integración."}, {"ID": "50", "Empresa": "Yacopini Motors / Autos Seleccionados Mendoza", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Concesionario Multimarca & Pickups", "Ubicacion": "Godoy Cruz / Mendoza Capital", "Sitio_Web": "https://www.yacopinimotors.com.ar", "Canal_Contacto": "Instagram @yacopinimotors / WhatsApp +54 9 261 413-5000", "Actividad_Facturacion": "Grupo automotriz número uno en ventas en la región de Cuyo.", "Diagnostico_AEO": "Web pesada sin reglas para robots de IA.", "Servicio_Recomendado": "Infraestructura AEO Enterprise ($4,000 USD)", "Ticket_Estimado": "$4,000 USD", "Icebreaker_Personalizado": "Estimados señores de Grupo Yacopini. En Mendoza y Cuyo son la referencia absoluta. Les presentamos cómo adecuar sus portales digitales al estándar Agent-Ready para liderar la búsqueda por IA en la región."}, {"ID": "51", "Empresa": "Shine Garage Detailing", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Tratamientos Cerámicos & Acrílicos", "Ubicacion": "Villa Urquiza, CABA", "Sitio_Web": "https://www.shinegarage.com.ar", "Canal_Contacto": "Instagram @shinegarage_ba / WhatsApp +54 9 11 4522-1100", "Actividad_Facturacion": "Taller con agenda llena de autos premium.", "Diagnostico_AEO": "Página de Wix sin soporte AEO.", "Servicio_Recomendado": "Rediseño Web + AEO ($2,500 USD)", "Ticket_Estimado": "$2,500 USD", "Icebreaker_Personalizado": "Hola chicos de Shine Garage. Su trabajo es excelente pero su página de Wix no es leída por la IA. Les diseñamos una web rápida y Agent-Ready para duplicar consultas de clientes de alto ticket."}, {"ID": "52", "Empresa": "GCDC Motors / Importados Seleccionados", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Vehículos de Colección & Lujo", "Ubicacion": "San Isidro (Buenos Aires)", "Sitio_Web": "https://www.gcdcmotors.com.ar", "Canal_Contacto": "Instagram @gcdc_motors / WhatsApp +54 9 11 4742-8877", "Actividad_Facturacion": "Venta de autos premium en el corazón de San Isidro.", "Diagnostico_AEO": "Sin llms.txt ni robotsTxtAiRules.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola equipo GCDC Motors. Los autos importados que manejan merecen una vidriera agéntica. Podemos hacer que la IA recomiende sus unidades exclusivas en Perplexity y ChatGPT."}, {"ID": "53", "Empresa": "Diamond Detailing Studio", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "PPF & Car Care Boutique", "Ubicacion": "Puerto Madero, CABA", "Sitio_Web": "https://www.diamonddetailing.com.ar", "Canal_Contacto": "Instagram @diamonddetailing_pm / WhatsApp +54 9 11 4311-5544", "Actividad_Facturacion": "Estética vehicular para residentes de torres de Puerto Madero.", "Diagnostico_AEO": "0/15 checks en escáner agéntico.", "Servicio_Recomendado": "Optimización AEO ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Buenas tardes equipo Diamond Detailing. Sus clientes de Puerto Madero usan asistentes de voz e IA para todo. Les mostramos cómo hacer que su estudio sea la primera recomendación al buscar detailing en la zona."}, {"ID": "54", "Empresa": "Silgrada / Mercedes-Benz Oficial Zona Norte", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Concesionario Oficial Mercedes-Benz", "Ubicacion": "San Isidro / Pilar", "Sitio_Web": "https://www.silgrada.com.ar", "Canal_Contacto": "Instagram @silgrada_oficial / WhatsApp +54 9 11 4735-8000", "Actividad_Facturacion": "Venta de gama completa de automóviles y SUVs Mercedes-Benz.", "Diagnostico_AEO": "Sin catálogo semántico ARD ni WebMCP.", "Servicio_Recomendado": "Consultoría AEO ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Estimados señores de Silgrada. Desarrollamos la infraestructura de visibilidad agéntica para concesionarias de lujo en Zona Norte. Les compartimos un diagnóstico express de su dominio."}, {"ID": "55", "Empresa": "GT Motors / Concesionaria Córdoba", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Autos de Alta Gama & Deportivos", "Ubicacion": "Córdoba Capital", "Sitio_Web": "https://www.gtmotors.com.ar", "Canal_Contacto": "Instagram @gtmotorscba / WhatsApp +54 9 351 481-2200", "Actividad_Facturacion": "Venta de BMW, Audi y Mercedes en Córdoba.", "Diagnostico_AEO": "Sin archivos de texto para LLMs.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola equipo GT Motors. En Córdoba son la concesionaria de referencia para deportivos. Les mostramos cómo posicionar su stock para que ChatGPT lo recomiende a compradores de la provincia."}, {"ID": "56", "Empresa": "Elite Car Boutique Nordelta", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Detailing & Lavado Premium", "Ubicacion": "Nordelta, Tigre", "Sitio_Web": "https://www.elitecarba.com", "Canal_Contacto": "Instagram @elitecar_nordelta / WhatsApp +54 9 11 5544-3322", "Actividad_Facturacion": "Servicio para camionetas y deportivos en barrios cerrados.", "Diagnostico_AEO": "0/15 en escáner de agentes.", "Servicio_Recomendado": "Optimización AEO ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola chicos de Elite Car. En Nordelta tienen el público ideal. Si preparan su web para IA, cualquier consulta de vecinos por 'mejor detailing en Nordelta' los citará de inmediato."}, {"ID": "57", "Empresa": "Val Motors / BMW Santa Fe & Paraná", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Concesionario Oficial BMW & MINI", "Ubicacion": "Santa Fe / Paraná", "Sitio_Web": "https://www.valmotors.com.ar", "Canal_Contacto": "Instagram @valmotors_bmw / WhatsApp +54 9 342 455-8800", "Actividad_Facturacion": "Concesionario oficial exclusivo para la región litoral centro.", "Diagnostico_AEO": "Sin soporte agéntico ni perfil UCP.", "Servicio_Recomendado": "Infraestructura AEO ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Estimada Gerencia de Val Motors. En Santa Fe y Entre Ríos son el referente de BMW. Les presentamos cómo implementar el protocolo Agent-Ready para liderar las consultas de vehículos premium en la región."}, {"ID": "58", "Empresa": "Apex Detailing Studio Colegiales", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Corrección de Pintura & Vidrios Líquidos", "Ubicacion": "Colegiales / Belgrano, CABA", "Sitio_Web": "https://www.apexdetailing.com.ar", "Canal_Contacto": "Instagram @apexdetailingstudio / WhatsApp +54 9 11 4551-9988", "Actividad_Facturacion": "Taller especializado en corrección de barniz de alta gama.", "Diagnostico_AEO": "Página estática sin llms.txt.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola equipo Apex. El nivel de brillo y corrección que logran es impresionante. Les compartimos cómo lograr que la IA de ChatGPT los cite cuando pregunten por corrección de pintura en Belgrano."}, {"ID": "59", "Empresa": "Autobiz / Multimarca Alta Gama Olivos", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Autos Seleccionados & Financiación Privada", "Ubicacion": "Olivos, Vicente López", "Sitio_Web": "https://www.autobiz.com.ar", "Canal_Contacto": "Instagram @autobiz_arg / WhatsApp +54 9 11 4790-1133", "Actividad_Facturacion": "Salón de ventas sobre Av. del Libertador.", "Diagnostico_AEO": "0/15 en escáner de IA.", "Servicio_Recomendado": "Rediseño Web + AEO ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Hola equipo Autobiz. Su ubicación en Olivos es estratégica. Les armamos una demo de cómo su web puede captar compradores calificados directamente desde los motores de IA."}, {"ID": "60", "Empresa": "Royal Motors / Concesionaria Rosario", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Autos de Alta Gama & Pickups", "Ubicacion": "Rosario, Santa Fe", "Sitio_Web": "https://www.royalmotors.com.ar", "Canal_Contacto": "Instagram @royalmotors_rosario / WhatsApp +54 9 341 435-0011", "Actividad_Facturacion": "Stock premium multimarca en Rosario.", "Diagnostico_AEO": "Sin esquema semántico para LLMs.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola equipo Royal Motors. En Rosario tienen un catálogo de vehículos tremendo. Preparamos su web para que los agentes de IA de los compradores los conecten directo por WhatsApp."}, {"ID": "61", "Empresa": "Dietrich Motors / Concesionario Oficial", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Concesionario Ford & Blindados", "Ubicacion": "Palermo / CABA", "Sitio_Web": "https://www.dietrich.com.ar", "Canal_Contacto": "Instagram @dietrich_oficial / WhatsApp +54 9 11 4778-5500", "Actividad_Facturacion": "Grupo histórico en venta de vehículos y servicios de blindaje (Strong).", "Diagnostico_AEO": "Web pesada corporativa sin reglas AEO.", "Servicio_Recomendado": "Infraestructura AEO Enterprise ($4,000 USD)", "Ticket_Estimado": "$4,000 USD", "Icebreaker_Personalizado": "Estimada Gerencia de Dietrich. Siendo pioneros en movilidad y blindajes, adecuar sus canales digitales a la era Agent-Ready les dará una ventaja clave en captación corporativa. Les presentamos una demo."}, {"ID": "62", "Empresa": "Modena Auto Sport / Ferrari & Maserati", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Superdeportivos de Colección", "Ubicacion": "Puerto Madero, CABA", "Sitio_Web": "https://www.modenaauto.com.ar", "Canal_Contacto": "Instagram @modenaautosport / WhatsApp +54 9 11 4313-0000", "Actividad_Facturacion": "Venta y mantenimiento oficial de superdeportivos italianos en Argentina.", "Diagnostico_AEO": "Sin optimización para asistentes de IA de ultra lujo.", "Servicio_Recomendado": "Consultoría Agéntica High-Ticket ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Estimado equipo de Modena Auto Sport. El nivel de exclusividad de sus marcas exige que la IA represente sus modelos con absoluta fidelidad. Les compartimos un reporte agéntico para su dominio."}, {"ID": "63", "Empresa": "Premium Cars Pilar", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Pickups & SUVs de Alta Gama", "Ubicacion": "Pilar (Buenos Aires)", "Sitio_Web": "https://www.premiumcarspilar.com", "Canal_Contacto": "Instagram @premiumcars_pilar / WhatsApp +54 9 11 5032-4411", "Actividad_Facturacion": "Atención a countries y barrios cerrados de Pilar.", "Diagnostico_AEO": "0/15 checks en escáner de IA.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola chicos de Premium Cars Pilar. Los vecinos de countries en Pilar usan asistentes de IA continuamente. Preparamos su web para que recomiende su stock en 0.05 segundos."}, {"ID": "64", "Empresa": "Armor Systems / Blindados Ejecutivos", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Blindaje & Mantenimiento Balístico", "Ubicacion": "CABA (Argentina)", "Sitio_Web": "https://www.armorsystems.com.ar", "Canal_Contacto": "Instagram @armorsystems_arg / WhatsApp +54 9 11 4751-2233", "Actividad_Facturacion": "Blindaje vehicular de alto estándar de seguridad.", "Diagnostico_AEO": "Falta de directivas Content Signals y llms.txt.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Estimados directivos de Armor Systems. Su especialidad en seguridad balística debe estar certificada ante los motores de IA. Les preparamos un diagnóstico gratuito de visibilidad agéntica."}, {"ID": "65", "Empresa": "Auto Munich / Concesionario BMW Córdoba", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Concesionario Oficial BMW & Motorrad", "Ubicacion": "Córdoba Capital", "Sitio_Web": "https://www.automunich.com.ar", "Canal_Contacto": "Instagram @automunich_bmw / WhatsApp +54 9 351 482-8000", "Actividad_Facturacion": "Concesionario oficial líder en la provincia de Córdoba.", "Diagnostico_AEO": "Sin protocolo WebMCP ni llms.txt.", "Servicio_Recomendado": "Infraestructura AEO ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Estimado equipo de Auto Munich. En Córdoba son el emblema de BMW. Les presentamos cómo integrar WebMCP para que los clientes puedan solicitar turnos y cotizaciones directo desde su asistente de IA."}, {"ID": "66", "Empresa": "Tag Auto / Seleccionados Recoleta", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Vehículos de Alta Gama & Clásicos", "Ubicacion": "Recoleta, CABA", "Sitio_Web": "https://www.tagauto.com.ar", "Canal_Contacto": "Instagram @tagauto_recoleta / WhatsApp +54 9 11 4811-0022", "Actividad_Facturacion": "Salón boutique de autos seleccionados en Recoleta.", "Diagnostico_AEO": "0/15 en escáner agéntico.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Hola equipo Tag Auto. En Recoleta tienen un salón con unidades fantásticas. Podemos dejar su web preparada para que los buscadores de IA citen sus modelos en tiempo récord."}, {"ID": "67", "Empresa": "Alperovich Motors / Multimarca Premium", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Venta de Camionetas & Alta Gama", "Ubicacion": "Tucumán / CABA", "Sitio_Web": "https://www.alperovichmotors.com.ar", "Canal_Contacto": "Instagram @alperovichmotors / WhatsApp +54 9 381 430-5500", "Actividad_Facturacion": "Uno de los mayores grupos de distribución automotriz del norte argentino.", "Diagnostico_AEO": "Web pesada sin optimización para LLMs.", "Servicio_Recomendado": "Consultoría AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Estimados señores de Alperovich Motors. Para consolidar su liderazgo en el norte y CABA, preparamos sus plataformas web para los nuevos motores de respuesta de IA."}, {"ID": "68", "Empresa": "D'Arc Libertador / DS Store Núñez", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Concesionario Oficial DS Automobiles", "Ubicacion": "Núñez / Av. Libertador (CABA)", "Sitio_Web": "https://www.dsstornunez.com.ar", "Canal_Contacto": "Instagram @dsstore_nunez / WhatsApp +54 9 11 4701-3300", "Actividad_Facturacion": "Gama premium francesa en Av. Libertador.", "Diagnostico_AEO": "Sin llms.txt ni reglas para GPTBot.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,000 USD)", "Ticket_Estimado": "$2,000 USD", "Icebreaker_Personalizado": "Buenas tardes equipo de DS Store Núñez. La sofisticación de DS merece una web con certificación Agent-Ready Nivel 2. Les mostramos cómo implementarlo en 5 días."}, {"ID": "69", "Empresa": "Autos del Sur / Concesionario Premium", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Venta de Usados Seleccionados & Cero KM", "Ubicacion": "Zona Sur / CABA", "Sitio_Web": "https://www.autosdelsur.com.ar", "Canal_Contacto": "Instagram @autosdelsur_oficial / WhatsApp +54 9 11 4244-8800", "Actividad_Facturacion": "Concesionaria con gran volumen de entregas mensuales.", "Diagnostico_AEO": "0/15 checks en escáner de IA.", "Servicio_Recomendado": "Rediseño Web + AEO ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Hola equipo Autos del Sur. Vemos que tienen un volumen de ventas altísimo. Les presentamos cómo captar nuevos compradores mediante la optimización de su web para ChatGPT."}, {"ID": "70", "Empresa": "Automotores San Jorge / Concesionario Oficial", "Cluster": "Automotriz & Lujo Vehicular", "Rubro": "Concesionario Oficial & Flotas", "Ubicacion": "CABA (Argentina)", "Sitio_Web": "https://www.automotoressanjorge.com.ar", "Canal_Contacto": "Instagram @automotoressanjorge / WhatsApp +54 9 11 4855-6600", "Actividad_Facturacion": "Líder en ventas corporativas y canal tradicional.", "Diagnostico_AEO": "Sin adecuación a protocolos agénticos.", "Servicio_Recomendado": "Infraestructura AEO Enterprise ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Estimada Gerencia de San Jorge. En ventas de flotas corporativas, los gerentes de compras usan IA para contrastar presupuestos. Podemos posicionar su catálogo como la respuesta oficial en Perplexity."}, {"ID": "71", "Empresa": "Marval O'Farrell Mairal", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Estudio Jurídico Corporativo & Finanzas", "Ubicacion": "Retiro / Catalinas, CABA (Argentina)", "Sitio_Web": "https://www.marval.com", "Canal_Contacto": "LinkedIn / Email marval@marval.com / Tel +54 11 4310-0100", "Actividad_Facturacion": "El mayor estudio jurídico de Argentina. Asesora a multinacionales en M&A, emisiones de deuda y litigios.", "Diagnostico_AEO": "Sitio muy formal pero sin catálogo semántico ARD de áreas de práctica para que los agentes de fondos de inversión extranjeros extraigan sus socios y publicaciones en milisegundos. Nivel 0 en escáner IA.", "Servicio_Recomendado": "Infraestructura AEO Enterprise + Consultoría Agéntica ($5,000 USD)", "Ticket_Estimado": "$5,000 - $10,000 USD", "Icebreaker_Personalizado": "Estimado Comité de Comunicaciones de Marval. Los fondos de inversión internacionales y empresas del exterior hoy utilizan Claude y ChatGPT Enterprise para preseleccionar firmas legales en Argentina. Su sitio actual devuelve 0/100 en compatibilidad agéntica. Les preparamos una memoria técnica de cómo estructurar su catálogo RFC 9727."}, {"ID": "72", "Empresa": "Beccar Varela / Abogados Corporativos", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Derecho Corporativo, M&A & ESG", "Ubicacion": "Retiro, CABA (Argentina)", "Sitio_Web": "https://www.beccarvarela.com", "Canal_Contacto": "LinkedIn / Email abogados@beccarvarela.com / Tel +54 11 4379-6800", "Actividad_Facturacion": "Firma legal de élite con 125+ años asesorando a corporaciones globales.", "Diagnostico_AEO": "Falta de archivo llms.txt y sin directivas de Content Signals para proteger sus prestigiosos artículos doctrinales de entrenamiento no autorizado.", "Servicio_Recomendado": "Pack Agent-Ready Core + Protección IP ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Estimados socios de Beccar Varela. Sus publicaciones doctrinales son de altísimo valor, pero hoy los modelos de IA las absorben sin certificar su autoría. Implementamos Content Signals y arquitectura AEO para proteger su propiedad intelectual y maximizar sus citas oficiales."}, {"ID": "73", "Empresa": "Bruchou & Funes de Rioja", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Derecho Bancario, Tributario & Laboral", "Ubicacion": "Catalinas Norte, CABA (Argentina)", "Sitio_Web": "https://www.bruchoufunes.com", "Canal_Contacto": "LinkedIn / Email contacto@bruchoufunes.com / Tel +54 11 4021-2300", "Actividad_Facturacion": "Líder indiscutido en mercado de capitales y asesoramiento laboral corporativo.", "Diagnostico_AEO": "Web institucional pesada que no cuenta con enlaces de descubrimiento agéntico en encabezados HTTP.", "Servicio_Recomendado": "Infraestructura AEO Enterprise ($4,500 USD)", "Ticket_Estimado": "$4,500 USD", "Icebreaker_Personalizado": "Estimados señores de Bruchou & Funes de Rioja. En el mercado financiero los directores de legales usan Perplexity para rastrear jurisprudencia y líderes de práctica. Les presentamos una auditoría de cómo su firma puede liderar las respuestas generativas de IA."}, {"ID": "74", "Empresa": "Puente Hnos / Puente Inversiones", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Banca Privada, Wealth Management & Capital Markets", "Ubicacion": "Retiro, CABA (Argentina / Uruguay / Paraguay / Miami)", "Sitio_Web": "https://www.puentenet.com", "Canal_Contacto": "LinkedIn / Email info@puentenet.com / Tel +54 11 4338-8600", "Actividad_Facturacion": "Entidad financiera regional con miles de millones de dólares bajo administración.", "Diagnostico_AEO": "Sin especificación UCP para productos de inversión ni manifiestos agénticos.", "Servicio_Recomendado": "Consultoría Agéntica & AEO ($5,000 USD)", "Ticket_Estimado": "$5,000 USD", "Icebreaker_Personalizado": "Estimada Gerencia de Transformación Digital de Puente. Los inversores de alto patrimonio en Miami y Cono Sur utilizan asistentes de IA para analizar rendimientos y gestores patrimoniales. Les compartimos nuestra propuesta de infraestructura Agent-Ready."}, {"ID": "75", "Empresa": "Ginevra Sotheby's International Realty", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Bienes Raíces de Ultra Lujo & Desarrollos", "Ubicacion": "Puerto Madero, CABA (Argentina)", "Sitio_Web": "https://www.ginevrasothebysrealty.com", "Canal_Contacto": "Instagram @ginevrasothebysrealty / WhatsApp +54 9 11 4314-8888", "Actividad_Facturacion": "Comercialización de penthouses y mansiones en Puerto Madero y Nordelta ($1M - $15M USD).", "Diagnostico_AEO": "Inmuebles de ultra lujo no indexables semánticamente por agentes de IA de compradores internacionales.", "Servicio_Recomendado": "Plataforma Web Agent-Ready + AEO ($4,500 USD)", "Ticket_Estimado": "$4,500 USD", "Icebreaker_Personalizado": "Hola equipo Ginevra Sotheby's. Sus propiedades son de las más exclusivas de Sudamérica. Hoy los compradores extranjeros usan ChatGPT para buscar penthouses en Puerto Madero. Con WebMCP su catálogo puede ser operado y citado por agentes de IA en segundos."}, {"ID": "76", "Empresa": "Consultatio Real Estate (Eduardo Costantini)", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Desarrollos Inmobiliarios & Ciudades Pueblo (Nordelta / Puertos)", "Ubicacion": "Puerto Madero / Nordelta (Buenos Aires)", "Sitio_Web": "https://www.consultatio.com.ar", "Canal_Contacto": "LinkedIn / Instagram @consultatiore / Email info@consultatio.com.ar", "Actividad_Facturacion": "El mayor desarrollador inmobiliario de Argentina (Nordelta, Puertos, Oceana).", "Diagnostico_AEO": "Web institucional de alto diseño pero 0/15 en escáner de Cloudflare. Sin llms.txt para masterplans.", "Servicio_Recomendado": "Infraestructura AEO Enterprise ($6,000 USD)", "Ticket_Estimado": "$6,000 USD", "Icebreaker_Personalizado": "Estimado Directorio de Consultatio. El impacto de sus desarrollos urbanos es transformador. Preparamos una memoria técnica de cómo estructurar la información de sus masterplans para que las IA globales los citen como la referencia máxima de urbanismo en LATAM."}, {"ID": "77", "Empresa": "Toribio Achával Propiedades", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Real Estate Premium & Emprendimientos", "Ubicacion": "Recoleta / Palermo / Nordelta, CABA", "Sitio_Web": "https://www.toribioachaval.com", "Canal_Contacto": "Instagram @toribioachaval / WhatsApp +54 9 11 4819-4000", "Actividad_Facturacion": "Inmobiliaria de referencia para proyectos de pozo y propiedades de alta gama.", "Diagnostico_AEO": "Falta de esquema de datos para motores conversacionales.", "Servicio_Recomendado": "Optimización AEO & WebMCP ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Hola equipo de Toribio Achával. Las búsquedas de inversión inmobiliaria se están trasladando a Perplexity y ChatGPT. Les mostramos cómo hacer que sus emprendimientos de pozo aparezcan en el top de respuestas de IA."}, {"ID": "78", "Empresa": "Rava Bursátil / Asesoramiento Financiero", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Sociedad de Bolsa & Mercado de Capitales", "Ubicacion": "Microcentro, CABA (Argentina)", "Sitio_Web": "https://www.rava.com", "Canal_Contacto": "Twitter @ravaonline / Email info@rava.com / Tel +54 11 4343-4400", "Actividad_Facturacion": "Portal y ALyC financiero más antiguo y concurrido de la City porteña.", "Diagnostico_AEO": "Web clásica con millones de visitas pero sin capa semántica para agentes de trading e inversión.", "Servicio_Recomendado": "Consultoría Agéntica & AEO ($4,000 USD)", "Ticket_Estimado": "$4,000 USD", "Icebreaker_Personalizado": "Estimado equipo de Rava. En el mercado financiero, los inversores usan cada vez más modelos de lenguaje para consultar cotizaciones y bonos. Les presentamos cómo certificar su plataforma en Nivel 2 Agent-Ready."}, {"ID": "79", "Empresa": "Pérez Alati, Grondona, Benites & Arntsen (PAGBAM)", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Estudio Jurídico Corporativo Internacional", "Ubicacion": "Retiro, CABA (Argentina / Chile)", "Sitio_Web": "https://www.pagbam.com", "Canal_Contacto": "LinkedIn / Email info@pagbam.com / Tel +54 11 4114-3000", "Actividad_Facturacion": "Firma legal de prestigio en transacciones cross-border y energía.", "Diagnostico_AEO": "Sin directivas para bots de OpenAI ni catálogo de especialidades RFC 9727.", "Servicio_Recomendado": "Pack Agent-Ready Core ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Estimados socios de PAGBAM. Las empresas multinacionales en EE.UU. y Europa utilizan modelos como GPT-4 para comparar firmas legales en el Cono Sur. Les compartimos un diagnóstico de cómo posicionar a PAGBAM a la cabeza de esas recomendaciones."}, {"ID": "80", "Empresa": "Bulló Abogados", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Derecho Corporativo, Seguros & Litigios", "Ubicacion": "Catalinas Norte, CABA (Argentina)", "Sitio_Web": "https://www.bullo.com.ar", "Canal_Contacto": "LinkedIn / Email estudio@bullo.com.ar / Tel +54 11 4310-5000", "Actividad_Facturacion": "Firma líder en derecho de seguros y grandes empresas en Argentina.", "Diagnostico_AEO": "Web institucional tradicional sin archivos de lectura rápida para IA.", "Servicio_Recomendado": "Rediseño Web + AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Estimado Comité de Bulló Abogados. Desarrollamos la infraestructura de visibilidad agéntica para estudios líderes en Catalinas. Les presentamos una propuesta para certificar su web ante Cloudflare y los buscadores de IA."}, {"ID": "81", "Empresa": "Allende & Brea", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Servicios Legales Integrales & Compliance", "Ubicacion": "Retiro, CABA", "Sitio_Web": "https://www.allendebrea.com", "Canal_Contacto": "LinkedIn / Email info@allendebrea.com / Tel +54 11 4318-9900", "Actividad_Facturacion": "Estudio jurídico con presencia global y asesoramiento a bancos y aseguradoras.", "Diagnostico_AEO": "Sin esquema semántico para bots de IA.", "Servicio_Recomendado": "Pack Agent-Ready Core ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Estimados socios de Allende & Brea. Para mantener la vanguardia en asesoramiento corporativo, preparamos su dominio web para ser citado con autoridad por ChatGPT y Perplexity."}, {"ID": "82", "Empresa": "Criteria / Gestión Patrimonial", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Wealth Management & Fondos Comunes", "Ubicacion": "Retiro, CABA", "Sitio_Web": "https://www.criteria.com.ar", "Canal_Contacto": "LinkedIn / Email consultas@criteria.com.ar / Tel +54 11 5275-8000", "Actividad_Facturacion": "Gestión de carteras de inversión para familias y empresas de alto patrimonio.", "Diagnostico_AEO": "Falta de esquema UCP y sin llms.txt.", "Servicio_Recomendado": "Optimización AEO & Finanzas ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Estimado equipo de Criteria. En wealth management, la confianza y la visibilidad en herramientas de IA son cruciales. Les preparamos un informe técnico sobre cómo optimizar su presencia digital."}, {"ID": "83", "Empresa": "Tavarone, Rovelli, Salim & Miani", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Derecho Financiero & FinTech", "Ubicacion": "CABA (Argentina)", "Sitio_Web": "https://www.trsm.com.ar", "Canal_Contacto": "LinkedIn / Email info@trsm.com.ar / Tel +54 11 5272-6000", "Actividad_Facturacion": "Firma legal de vanguardia en estructuraciones financieras y FinTech.", "Diagnostico_AEO": "0/15 en escáner agéntico.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,500 USD)", "Ticket_Estimado": "$2,500 USD", "Icebreaker_Personalizado": "Hola equipo de TRSM. Su posicionamiento en FinTech es excelente. Les mostramos cómo convertir su web en una plataforma Agent-Ready para que la IA los cite en structuring financiero."}, {"ID": "84", "Empresa": "Adcap Grupo Financiero", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Asset Management & Banca de Inversión", "Ubicacion": "Catalinas Norte, CABA", "Sitio_Web": "https://www.adcap.com.ar", "Canal_Contacto": "LinkedIn / Email info@adcap.com.ar / Tel +54 11 5077-9000", "Actividad_Facturacion": "Servicios financieros para clientes institucionales y corporativos.", "Diagnostico_AEO": "Web corporativa sin enlaces de descubrimiento agéntico.", "Servicio_Recomendado": "Consultoría AEO Enterprise ($4,000 USD)", "Ticket_Estimado": "$4,000 USD", "Icebreaker_Personalizado": "Estimada Gerencia de Adcap. Las consultas sobre instrumentos de inversión en LATAM hoy pasan por motores de respuesta. Les presentamos cómo posicionar sus fondos en Nivel Élite."}, {"ID": "85", "Empresa": "D'Aria Propiedades", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Bienes Raíces de Alta Gama & Emprendimientos", "Ubicacion": "Vicente López / Olivos", "Sitio_Web": "https://www.daria.com.ar", "Canal_Contacto": "Instagram @dariapropiedades / WhatsApp +54 9 11 4796-0000", "Actividad_Facturacion": "Inmobiliaria líder en el corredor Libertador de Zona Norte.", "Diagnostico_AEO": "Sin integración de catálogo ARD de propiedades.", "Servicio_Recomendado": "Rediseño Web + AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Hola equipo D'Aria. En Vicente López y Olivos son la referencia en propiedades premium. Preparamos su web para que la IA recomiende sus departamentos frente al río a inversores calificados."}, {"ID": "86", "Empresa": "Quantum Finanzas", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Asesoramiento Financiero & M&A", "Ubicacion": "Retiro, CABA", "Sitio_Web": "https://www.quantumfinanzas.com", "Canal_Contacto": "LinkedIn / Email info@quantumfinanzas.com / Tel +54 11 4318-7700", "Actividad_Facturacion": "Consultora financiera fundada por Daniel Marx. Asesora en grandes reestructuraciones.", "Diagnostico_AEO": "Web clásica sin estructura para LLMs.", "Servicio_Recomendado": "Pack Agent-Ready Core ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Estimado equipo de Quantum Finanzas. Su trayectoria en finanzas corporativas es única. Les presentamos cómo adecuar su plataforma digital al estándar de búsqueda con Inteligencia Artificial."}, {"ID": "87", "Empresa": "L.J. Ramos Brokers Inmobiliarios", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Real Estate Corporativo & Logístico", "Ubicacion": "CABA / GBA", "Sitio_Web": "https://www.ljramos.com.ar", "Canal_Contacto": "LinkedIn / Instagram @ljramosbrokers / Tel +54 11 4110-0000", "Actividad_Facturacion": "Líder en alquiler y venta de oficinas AAA y parques logísticos.", "Diagnostico_AEO": "Sin WebMCP ni llms.txt para naves industriales y pisos de oficina.", "Servicio_Recomendado": "Infraestructura AEO Enterprise ($4,500 USD)", "Ticket_Estimado": "$4,500 USD", "Icebreaker_Personalizado": "Estimados señores de L.J. Ramos. En real estate corporativo, los directores de operaciones consultan a la IA por parques industriales y oficinas AAA. Les mostramos cómo liderar esas consultas."}, {"ID": "88", "Empresa": "Baker Tilly Argentina", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Auditoría, Tax & Legal Corporativo", "Ubicacion": "CABA (Argentina)", "Sitio_Web": "https://www.bakertilly.com.ar", "Canal_Contacto": "LinkedIn / Email contacto@bakertilly.com.ar / Tel +54 11 4872-8000", "Actividad_Facturacion": "Red global de contabilidad y consultoría de negocios.", "Diagnostico_AEO": "0/15 checks en escáner de IA.", "Servicio_Recomendado": "Consultoría AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Estimada Gerencia de Baker Tilly Argentina. Como firma internacional de auditoría, su infraestructura web debe responder con Nivel 2 en Cloudflare. Les compartimos el reporte técnico."}, {"ID": "89", "Empresa": "O'Farrell Abogados", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Derecho Energético, Minería & Litigios", "Ubicacion": "Retiro, CABA", "Sitio_Web": "https://www.estudio-ofarrell.com.ar", "Canal_Contacto": "LinkedIn / Email info@estudio-ofarrell.com.ar / Tel +54 11 4346-1000", "Actividad_Facturacion": "Firma histórica con fuerte presencia en energía y minería.", "Diagnostico_AEO": "Sin especificación RFC 9727 ni Content Signals.", "Servicio_Recomendado": "Pack Agent-Ready Core ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Estimados socios de Estudio O'Farrell. El sector de energía y minería atrae inversores que usan modelos de IA para analizar regulaciones. Les presentamos cómo optimizar su presencia digital."}, {"ID": "90", "Empresa": "Cocucci Inmobiliaria", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Real Estate Premium & Fincas en Mendoza", "Ubicacion": "Mendoza Capital", "Sitio_Web": "https://www.cocucci.com.ar", "Canal_Contacto": "Instagram @cocucci_inmobiliaria / WhatsApp +54 9 261 449-0000", "Actividad_Facturacion": "La inmobiliaria más importante de Mendoza en fincas y propiedades de lujo.", "Diagnostico_AEO": "Sin esquema semántico para inversores de viñedos extranjeros.", "Servicio_Recomendado": "Optimización AEO & WebMCP ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Hola equipo Cocucci. Los inversores extranjeros que buscan bodegas y fincas en Mendoza consultan en ChatGPT y Perplexity. Les mostramos cómo posicionar su catálogo para compradores globales."}, {"ID": "91", "Empresa": "Estudio Ymaz Abogados", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Derecho Administrativo & Infraestructura", "Ubicacion": "CABA (Argentina)", "Sitio_Web": "https://www.ymazabogados.com.ar", "Canal_Contacto": "LinkedIn / Email info@ymazabogados.com.ar / Tel +54 11 4311-2233", "Actividad_Facturacion": "Especialistas en licitaciones públicas y grandes contratos de obra.", "Diagnostico_AEO": "Web institucional clásica sin adaptación agéntica.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,500 USD)", "Ticket_Estimado": "$2,500 USD", "Icebreaker_Personalizado": "Estimados socios de Ymaz Abogados. En contratos de obra pública y derecho administrativo, preparamos su plataforma web para ser citada como la doctrina oficial por motores de IA."}, {"ID": "92", "Empresa": "Achaval Cornejo Propiedades", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Casas en Countries & Lotes Exclusivos", "Ubicacion": "San Isidro / Pilar / Nordelta", "Sitio_Web": "https://www.achavalcornejo.com", "Canal_Contacto": "Instagram @achavalcornejo / WhatsApp +54 9 11 4747-8899", "Actividad_Facturacion": "Inmobiliaria especializada en el segmento residencial más exclusivo de Zona Norte.", "Diagnostico_AEO": "0/15 en escáner de Cloudflare.", "Servicio_Recomendado": "Rediseño Web + AEO ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Hola equipo Achaval Cornejo. Sus propiedades en Zona Norte son de ensueño. Preparamos su web para que los compradores que usan asistentes de IA reciban sus casas en primer lugar."}, {"ID": "93", "Empresa": "BDO Argentina", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Auditoría, Consultoría & Advisory", "Ubicacion": "CABA (Argentina)", "Sitio_Web": "https://www.bdoargentina.com", "Canal_Contacto": "LinkedIn / Email bdo@bdoargentina.com / Tel +54 11 4106-7000", "Actividad_Facturacion": "Quinta firma global de auditoría y asesoramiento de negocios.", "Diagnostico_AEO": "Web corporativa global sin adecuación semántica local en Argentina.", "Servicio_Recomendado": "Consultoría AEO Enterprise ($4,500 USD)", "Ticket_Estimado": "$4,500 USD", "Icebreaker_Personalizado": "Estimada Gerencia de BDO Argentina. Como firma global de asesoramiento, certificar su dominio con la infraestructura Agent-Ready les otorga una diferenciación clave en licitaciones."}, {"ID": "94", "Empresa": "First Corporate Finance Advisors", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Finanzas Corporativas, Fusiones & Adquisiciones", "Ubicacion": "Puerto Madero, CABA", "Sitio_Web": "https://www.firstcfa.com", "Canal_Contacto": "LinkedIn / Email info@firstcfa.com / Tel +54 11 5235-9000", "Actividad_Facturacion": "Boutique de M&A y estructuración de deuda corporativa.", "Diagnostico_AEO": "0/15 en escáner agéntico.", "Servicio_Recomendado": "Pack Agent-Ready Core ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Estimados señores de First CFA. En transacciones de M&A, la velocidad de análisis por IA es determinante. Les presentamos cómo hacer su catálogo de transacciones visible para agentes de fondos."}, {"ID": "95", "Empresa": "Estudio Negri & Pueyrredon", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Derecho Corporativo & Arbitrajes Internacionales", "Ubicacion": "Retiro, CABA", "Sitio_Web": "https://www.negri.com.ar", "Canal_Contacto": "LinkedIn / Email info@negri.com.ar / Tel +54 11 5556-8000", "Actividad_Facturacion": "Firma legal de amplia trayectoria en arbitrajes internacionales.", "Diagnostico_AEO": "Sin esquema semántico ni directivas de seguridad para bots de IA.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,500 USD)", "Ticket_Estimado": "$2,500 USD", "Icebreaker_Personalizado": "Estimados socios de Negri & Pueyrredon. Su experiencia en arbitrajes internacionales merece ser citada con prioridad por los modelos de IA jurídicos en el exterior. Les compartimos una auditoría."}, {"ID": "96", "Empresa": "Grant Thornton Argentina", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Consultoría Estratégica, Tax & Advisory", "Ubicacion": "Catalinas Norte, CABA", "Sitio_Web": "https://www.grantthornton.com.ar", "Canal_Contacto": "LinkedIn / Email contacto@ar.gt.com / Tel +54 11 4105-0000", "Actividad_Facturacion": "Firma global de auditoría y servicios profesionales.", "Diagnostico_AEO": "Sin catálogo ARD ni encabezados Link.", "Servicio_Recomendado": "Consultoría Agéntica ($3,500 USD)", "Ticket_Estimado": "$3,500 USD", "Icebreaker_Personalizado": "Estimada Gerencia de Grant Thornton. Preparamos plataformas web para que los motores de IA recomienden sus servicios de consultoría y tax en tiempo real. Les compartimos los detalles."}, {"ID": "97", "Empresa": "Re/Max Premium / División Luxury Properties", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Propiedades de Alta Gama en Puerto Madero", "Ubicacion": "Puerto Madero, CABA", "Sitio_Web": "https://www.remax-premium.com.ar", "Canal_Contacto": "Instagram @remaxpremium_ba / WhatsApp +54 9 11 4315-1100", "Actividad_Facturacion": "Equipo número uno en ventas de propiedades de lujo en CABA.", "Diagnostico_AEO": "0/15 en escáner de IA.", "Servicio_Recomendado": "Optimización AEO & WebMCP ($3,000 USD)", "Ticket_Estimado": "$3,000 USD", "Icebreaker_Personalizado": "Hola equipo Re/Max Premium Puerto Madero. Los compradores de inmuebles de más de $1M USD usan ChatGPT para filtrar ofertas. Les mostramos cómo captar esos clientes en automático."}, {"ID": "98", "Empresa": "Invertir Online / Asesoramiento Patrimonial", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "ALyC & Asesoramiento Financiero VIP", "Ubicacion": "CABA (Argentina)", "Sitio_Web": "https://www.invertironline.com", "Canal_Contacto": "LinkedIn / Email vip@invertironline.com / Tel +54 11 7078-0000", "Actividad_Facturacion": "Plataforma líder en inversiones minoristas y carteras administradas de alto patrimonio.", "Diagnostico_AEO": "Falta de directivas agénticas y WebMCP.", "Servicio_Recomendado": "Infraestructura AEO Enterprise ($5,000 USD)", "Ticket_Estimado": "$5,000 USD", "Icebreaker_Personalizado": "Estimado equipo de IOL. Para su segmento de clientes patrimoniales, la interacción agéntica mediante WebMCP permite consultar balances y carteras por IA. Les compartimos una prueba de concepto."}, {"ID": "99", "Empresa": "BVA Consultores / Business Value Advisors", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Valuación de Empresas & Estrategia Financiera", "Ubicacion": "Recoleta, CABA", "Sitio_Web": "https://www.bvaconsultores.com.ar", "Canal_Contacto": "LinkedIn / Email info@bvaconsultores.com.ar / Tel +54 11 4801-4455", "Actividad_Facturacion": "Boutique de valuación de empresas y peritajes económicos complejos.", "Diagnostico_AEO": "0/15 checks en escáner agéntico.", "Servicio_Recomendado": "Pack Agent-Ready Core ($2,500 USD)", "Ticket_Estimado": "$2,500 USD", "Icebreaker_Personalizado": "Estimados socios de BVA. En valuaciones corporativas, los fondos usan IA para buscar peritos y consultores de referencia. Preparamos su web para ser la primera opción recomendada."}, {"ID": "100", "Empresa": "Miranda & Amado / Consultoría Legal Corporativa", "Cluster": "Servicios Profesionales High-Ticket", "Rubro": "Derecho Corporativo & Arbitrajes", "Ubicacion": "CABA / LATAM Hubs", "Sitio_Web": "https://www.mafirma.com", "Canal_Contacto": "LinkedIn / Email contacto@mafirma.com / Tel +54 11 4310-9900", "Actividad_Facturacion": "Firma legal de primer nivel en transacciones de energía e infraestructura regional.", "Diagnostico_AEO": "Sin protocolo de descubrimiento agéntico ni perfil comercial UCP.", "Servicio_Recomendado": "Infraestructura AEO Enterprise ($4,000 USD)", "Ticket_Estimado": "$4,000 USD", "Icebreaker_Personalizado": "Estimado Comité de Miranda & Amado. Para transacciones corporativas regionales, adecuar su plataforma a los estándares agénticos de Cloudflare les garantiza visibilidad absoluta en ChatGPT y Claude. Les presentamos una memoria técnica."}];
+        let currentClusterFilter = 'all';
+
+        function renderProspects(list) {
+            const container = document.getElementById('prospectsContainer');
+            const countEl = document.getElementById('resultsCount');
+            countEl.textContent = `Mostrando ${list.length} prospectos`;
+
+            if (list.length === 0) {
+                container.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-muted);">
+                        No se encontraron prospectos con ese criterio de búsqueda.
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = list.map(p => `
+                <div class="prospect-card">
+                    <div>
+                        <div class="card-header">
+                            <span class="prospect-id">#${p.ID}</span>
+                            <span class="prospect-ticket">${p.Ticket_Estimado}</span>
+                        </div>
+                        <h4 class="prospect-name">${p.Empresa}</h4>
+                        <div class="prospect-niche">${p.Rubro}</div>
+                        
+                        <div class="prospect-meta">
+                            <div class="meta-item">
+                                📍 <span>${p.Ubicacion}</span>
+                            </div>
+                            <div class="meta-item">
+                                🌐 <a href="${p.Sitio_Web}" target="_blank" rel="noopener">${p.Sitio_Web}</a>
+                            </div>
+                            <div class="meta-item">
+                                📱 <span>${p.Canal_Contacto}</span>
+                            </div>
+                        </div>
+
+                        <div class="aeo-issue-box">
+                            <b>⚠️ Diagnóstico AEO:</b> ${p.Diagnostico_AEO}
+                        </div>
+
+                        <div class="icebreaker-box">
+                            "${p.Icebreaker_Personalizado}"
+                        </div>
+                    </div>
+
+                    <div class="card-actions">
+                        <button class="btn-action btn-copy" onclick="copyIcebreaker('${p.ID}')">
+                            📋 Copiar Mensaje
+                        </button>
+                        <a href="${p.Sitio_Web}" target="_blank" class="btn-action btn-contact">
+                            🌐 Ver Web
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterProspects() {
+            const search = document.getElementById('searchInput').value.toLowerCase().trim();
+            const filtered = prospectsData.filter(p => {
+                const matchCluster = (currentClusterFilter === 'all' || p.Cluster === currentClusterFilter);
+                const matchSearch = !search || 
+                    p.Empresa.toLowerCase().includes(search) || 
+                    p.Rubro.toLowerCase().includes(search) || 
+                    p.Ubicacion.toLowerCase().includes(search) ||
+                    p.Diagnostico_AEO.toLowerCase().includes(search);
+                return matchCluster && matchSearch;
+            });
+            renderProspects(filtered);
+        }
+
+        function setClusterFilter(cluster) {
+            currentClusterFilter = cluster;
+            document.querySelectorAll('.filter-pill').forEach(btn => {
+                btn.classList.toggle('active', btn.textContent.includes(cluster === 'all' ? 'Todos' : cluster.split(' ')[0]));
+            });
+            filterProspects();
+        }
+
+        function copyIcebreaker(id) {
+            const item = prospectsData.find(p => p.ID == id);
+            if (item) {
+                navigator.clipboard.writeText(item.Icebreaker_Personalizado).then(() => {
+                    showToast(`¡Mensaje para ${item.Empresa} copiado!`);
+                }).catch(() => {
+                    showToast('Copiado al portapapeles!');
+                });
+            }
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').textContent = msg;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 2500);
+        }
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+            
+            const target = document.getElementById(tabId);
+            if (target) target.classList.add('active');
+            
+            const btn = Array.from(document.querySelectorAll('.tab-btn')).find(b => b.getAttribute('onclick').includes(tabId));
+            if (btn) btn.classList.add('active');
+        }
+
+        function toggleAccordion(el) {
+            el.classList.toggle('open');
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProspects(prospectsData);
+        });
+    </script>
+</body>
+</html>
