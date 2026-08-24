@@ -1,13 +1,17 @@
 {
   "specVersion": "0.1",
   "host": {
+    "identifier": "urn:air:allimite.agency",
     "name": "ALLIMITE Agency",
+    "displayName": "ALLIMITE Agency",
     "domain": "allimite.agency",
     "description": "Agencia creativa digital. Sitios web de alta performance, landing pages de conversión, e-commerce y automatizaciones."
   },
   "entries": [
     {
+      "identifier": "urn:air:allimite.agency:services:landing-pages",
       "id": "urn:air:allimite.agency:services:landing-pages",
+      "name": "Landing pages de alta conversión",
       "displayName": "Landing pages de alta conversión",
       "type": "text/html",
       "url": "https://allimite.agency/services/landing-pages.html",
@@ -19,7 +23,9 @@
       ]
     },
     {
+      "identifier": "urn:air:allimite.agency:services:sitios-empresariales",
       "id": "urn:air:allimite.agency:services:sitios-empresariales",
+      "name": "Sitios web empresariales y corporativos",
       "displayName": "Sitios web empresariales y corporativos",
       "type": "text/html",
       "url": "https://allimite.agency/services/sitios-empresariales.html",
@@ -30,7 +36,9 @@
       ]
     },
     {
+      "identifier": "urn:air:allimite.agency:services:ecommerce",
       "id": "urn:air:allimite.agency:services:ecommerce",
+      "name": "E-commerce con pasarela de pago",
       "displayName": "E-commerce con pasarela de pago",
       "type": "text/html",
       "url": "https://allimite.agency/services/ecommerce.html",
@@ -42,7 +50,9 @@
       ]
     },
     {
+      "identifier": "urn:air:allimite.agency:services:aplicaciones-web",
       "id": "urn:air:allimite.agency:services:aplicaciones-web",
+      "name": "Aplicaciones web y SaaS a medida",
       "displayName": "Aplicaciones web y SaaS a medida",
       "type": "text/html",
       "url": "https://allimite.agency/services/aplicaciones-web.html",
@@ -53,7 +63,9 @@
       ]
     },
     {
+      "identifier": "urn:air:allimite.agency:services:rediseno-web",
       "id": "urn:air:allimite.agency:services:rediseno-web",
+      "name": "Rediseño y modernización web",
       "displayName": "Rediseño y modernización web",
       "type": "text/html",
       "url": "https://allimite.agency/services/rediseno-web.html",
@@ -64,7 +76,9 @@
       ]
     },
     {
+      "identifier": "urn:air:allimite.agency:services:optimizacion-seo",
       "id": "urn:air:allimite.agency:services:optimizacion-seo",
+      "name": "Optimización SEO y Core Web Vitals",
       "displayName": "Optimización SEO y Core Web Vitals",
       "type": "text/html",
       "url": "https://allimite.agency/services/optimizacion-seo.html",
@@ -75,7 +89,9 @@
       ]
     },
     {
+      "identifier": "urn:air:allimite.agency:services:automatizaciones",
       "id": "urn:air:allimite.agency:services:automatizaciones",
+      "name": "Automatizaciones, chatbots y flujos con IA",
       "displayName": "Automatizaciones, chatbots y flujos con IA",
       "type": "text/html",
       "url": "https://allimite.agency/services/automatizaciones.html",
