@@ -610,9 +610,12 @@ button { cursor: pointer; }
 .hero-subtitle {
     font-size: var(--fs-lg);
     color: var(--text-secondary);
-    max-width: 580px;
-    margin: 0 auto var(--space-xl);
-    line-height: 1.7;
+    max-width: 840px;
+    margin: 0 auto var(--space-2xl);
+    line-height: 1.8;
+    text-wrap: balance;
+    text-wrap: pretty;
+    letter-spacing: 0.01em;
 }
 
 .hero-cta {
