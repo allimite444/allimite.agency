@@ -17,7 +17,7 @@ const translations = {
         // Hero
         hero_badge: 'Available for new projects',
         hero_title: 'We Craft<br><span class="gradient-text">Digital Experiences</span>',
-        hero_subtitle: 'Boutique digital architecture and high-conversion web engineering studio headquartered in Eldorado, Misiones (Argentina). We engineer next-generation digital infrastructures and Agent-Ready platforms for the AI era, operating 100% remotely with leading enterprises across the Americas and Europe.',
+        hero_subtitle: 'Digital vanguard and Agent-Ready infrastructure agency based in Eldorado, Misiones (Argentina) with international reach. We build high-end digital solutions that multiply conversion and brand equity for corporate clients across the Americas and Europe, operating with borderless distributed excellence.',
         hero_cta_work: 'Our Work',
         hero_cta_talk: "Let's Talk",
         stat_projects: 'Projects Built',
@@ -142,7 +142,7 @@ const translations = {
         // Hero
         hero_badge: 'Disponible para nuevos proyectos',
         hero_title: 'Creamos<br><span class="gradient-text">Experiencias Digitales</span>',
-        hero_subtitle: 'Estudio boutique de arquitectura digital e ingeniería web de alta conversión con sede central en Eldorado, Misiones (Argentina). Desarrollamos infraestructuras de vanguardia y plataformas preparadas para la era de la Inteligencia Artificial, operando de manera 100% remota con marcas y empresas líderes en todo el mundo.',
+        hero_subtitle: 'Agencia de vanguardia digital e infraestructura Agent-Ready con base en Eldorado, Misiones (Argentina) y alcance internacional. Desarrollamos soluciones digitales de alta gama que multiplican la conversión y el valor de marca para clientes corporativos en América y Europa, operando con excelencia distribuida sin fronteras.',
         hero_cta_work: 'Nuestro Trabajo',
         hero_cta_talk: 'Hablemos',
         stat_projects: 'Proyectos Realizados',
@@ -267,7 +267,7 @@ const translations = {
         // Hero
         hero_badge: 'Disponível para novos projetos',
         hero_title: 'Nós Criamos<br><span class="gradient-text">Experiências Digitais</span>',
-        hero_subtitle: 'Estúdio boutique de arquitetura digital e engenharia web de alta conversão com sede em Eldorado, Misiones (Argentina). Desenvolvemos infraestruturas de ponta e plataformas preparadas para a era da Inteligência Artificial, operando 100% remotamente com marcas e empresas líderes em todo o mundo.',
+        hero_subtitle: 'Agência de vanguarda digital e infraestrutura Agent-Ready com base em Eldorado, Misiones (Argentina) e alcance internacional. Desenvolvemos soluções digitais de alta gama que multiplicam a conversão e o valor de marca para clientes corporativos na América e Europa, operando com excelência distribuída sem fronteiras.',
         hero_cta_work: 'Nosso Trabalho',
         hero_cta_talk: 'Fale Conosco',
         stat_projects: 'Projetos Criados',
