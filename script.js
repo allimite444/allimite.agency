@@ -17,7 +17,7 @@ const translations = {
         // Hero
         hero_badge: 'Available for new projects',
         hero_title: 'We Craft<br><span class="gradient-text">Digital Experiences</span>',
-        hero_subtitle: 'Digital Creative Agency building modern, high-performance websites and web apps that drive real results for businesses worldwide.',
+        hero_subtitle: 'Digital Creative Agency based in Eldorado, Misiones (Argentina) and operating 100% remotely for clients worldwide. We build modern, high-performance websites that drive real results.',
         hero_cta_work: 'Our Work',
         hero_cta_talk: "Let's Talk",
         stat_projects: 'Projects Built',
@@ -28,18 +28,19 @@ const translations = {
         // About
         about_tag: 'About Us',
         about_title: 'Turning Ideas into <span class="gradient-text">Pixel-Perfect</span> Reality',
-        about_p1: "We are a passionate team of digital creators who transform business ideas into stunning digital experiences. We specialize in creating fast, modern, and responsive websites that not only look incredible but also <strong>convert visitors into customers</strong>.",
+        about_p1: "We are a passionate team of digital creators based in <strong>Eldorado, Misiones (Argentina)</strong>, operating under a 100% remote model worldwide. We specialize in creating fast, modern, and responsive websites that not only look incredible but also <strong>convert visitors into customers</strong>.",
         about_p2: "Whether you need a sleek landing page, a full business website, or a custom web application — we deliver premium quality on time, every time. Our approach combines cutting-edge technology with thoughtful design to create solutions that truly stand out.",
         about_h1: 'Fast and efficient delivery',
         about_h2: '100% Responsive on all devices',
         about_h3: 'SEO Optimized for search engines',
         about_h4: "Unlimited Revisions until you're happy",
+        about_h5: 'Based in Eldorado, Misiones · 100% Remote & Global Operations',
         tech_title: 'Tech Stack',
 
         // Founder
         founder_tag: "CEO & Founder",
         founder_title: "Lautaro Silvero",
-        founder_p1: "Hello! Welcome to Allimite Agency. I am Lautaro Silvero, 27 years old, and from the province of Misiones, Argentina, I lead this project as CEO and Founder.",
+        founder_p1: "Hello! Welcome to ALLIMITE Agency. I am Lautaro Silvero, 27 years old, and from Eldorado, Misiones, Argentina, I lead this project as CEO and Founder, working 100% remotely with clients worldwide.",
         founder_p2: "My goal from day one has been to break traditional barriers and truly push our clients' potential to the limit. In a constantly changing digital environment, we focus on creating solid, innovative, and personalized strategies. Here, we don't just shape ideas, we build the success of your brand.",
 
         // Services
@@ -105,7 +106,7 @@ const translations = {
         contact_tag: 'Get in Touch',
         contact_title: "Let's Build Something <span class=\"gradient-text\">Amazing</span>",
         contact_desc: "Have a project in mind? We'd love to hear about it. Fill out the form and we'll get back to you within 24 hours.",
-        contact_location: 'Available Worldwide (Remote)',
+        contact_location: 'Eldorado, Misiones (Argentina) · Worldwide Remote Operations',
         form_name: 'Your Name',
         form_name_ph: 'John Doe',
         form_email: 'Your Email',
@@ -122,7 +123,7 @@ const translations = {
         form_submit: 'Send Message',
 
         // Footer
-        footer_tagline: 'Building digital experiences that make an impact.',
+        footer_tagline: 'Based in Eldorado, Misiones (Argentina) · Creating high-impact digital experiences worldwide, 100% remotely.',
         footer_copy: '© 2026 ALLIMITE Agency. All rights reserved.',
 
         // Form success
@@ -141,7 +142,7 @@ const translations = {
         // Hero
         hero_badge: 'Disponible para nuevos proyectos',
         hero_title: 'Creamos<br><span class="gradient-text">Experiencias Digitales</span>',
-        hero_subtitle: 'Agencia Creativa Digital creando sitios web modernos y de alto rendimiento que generan resultados reales para empresas en todo el mundo.',
+        hero_subtitle: 'Agencia Creativa Digital con sede en Eldorado, Misiones (Argentina) y alcance global. Diseñamos plataformas web modernas y de alto rendimiento que generan resultados reales para empresas en todo el mundo, operando de manera 100% remota.',
         hero_cta_work: 'Nuestro Trabajo',
         hero_cta_talk: 'Hablemos',
         stat_projects: 'Proyectos Realizados',
@@ -152,18 +153,19 @@ const translations = {
         // About
         about_tag: 'Sobre Nosotros',
         about_title: 'Convirtiendo Ideas en <span class="gradient-text">Realidad Perfecta</span>',
-        about_p1: 'Somos un equipo apasionado de creadores digitales que transformamos ideas de negocio en experiencias digitales impactantes. Nos especializamos en crear sitios web rápidos, modernos y adaptables que no solo se ven increíbles, sino que también <strong>convierten visitantes en clientes</strong>.',
+        about_p1: 'Somos un equipo apasionado de creadores digitales con base en <strong>Eldorado, Misiones (Argentina)</strong> y operación 100% remota a nivel internacional. Nos especializamos en crear sitios web rápidos, modernos y adaptables que no solo se ven increíbles, sino que también <strong>convierten visitantes en clientes</strong>.',
         about_p2: 'Ya sea que necesiten una landing page elegante, un sitio web empresarial completo o una aplicación web personalizada — entregamos calidad premium a tiempo, siempre. Nuestro enfoque combina tecnología de vanguardia con diseño cuidadoso para crear soluciones que realmente destacan.',
         about_h1: 'Entrega rápida y eficiente',
         about_h2: '100% Adaptable en todos los dispositivos',
         about_h3: 'SEO Optimizado para buscadores',
         about_h4: 'Revisiones Ilimitadas hasta que estén satisfechos',
+        about_h5: 'Sede en Eldorado, Misiones · Operación 100% Remota e Internacional',
         tech_title: 'Tecnologías',
 
         // Founder
         founder_tag: "CEO y Fundador",
         founder_title: "Lautaro Silvero",
-        founder_p1: "¡Hola! Bienvenidos a Allimite Agency. Soy Lautaro Silvero, tengo 27 años y desde la provincia de Misiones, Argentina, lidero este proyecto como CEO y Fundador.",
+        founder_p1: "¡Hola! Bienvenidos a ALLIMITE Agency. Soy Lautaro Silvero, tengo 27 años y desde Eldorado, Misiones, Argentina, lidero este proyecto como CEO y Fundador, operando de manera remota con clientes de todo el mundo.",
         founder_p2: "Mi objetivo desde el primer día ha sido romper las barreras tradicionales y llevar el potencial de nuestros clientes verdaderamente al límite. En un entorno digital que cambia constantemente, nos enfocamos en crear estrategias sólidas, innovadoras y personalizadas. Aquí no solo plasmamos ideas, construimos el éxito de tu marca.",
 
         // Services
@@ -229,7 +231,7 @@ const translations = {
         contact_tag: 'Contacto',
         contact_title: 'Construyamos Algo <span class="gradient-text">Increíble</span>',
         contact_desc: '¿Tienen un proyecto en mente? Nos encantaría escucharlo. Completen el formulario y les respondemos en menos de 24 horas.',
-        contact_location: 'Disponible en todo el mundo (Remoto)',
+        contact_location: 'Eldorado, Misiones (Argentina) · Cobertura Internacional Remota',
         form_name: 'Tu Nombre',
         form_name_ph: 'Juan Pérez',
         form_email: 'Tu Email',
@@ -246,7 +248,7 @@ const translations = {
         form_submit: 'Enviar Mensaje',
 
         // Footer
-        footer_tagline: 'Creando experiencias digitales que generan impacto.',
+        footer_tagline: 'Con sede en Eldorado, Misiones (Argentina) · Creando experiencias digitales de alto impacto para todo el mundo de forma 100% remota.',
         footer_copy: '© 2026 ALLIMITE Agency. Todos los derechos reservados.',
 
         // Form success
@@ -265,7 +267,7 @@ const translations = {
         // Hero
         hero_badge: 'Disponível para novos projetos',
         hero_title: 'Nós Criamos<br><span class="gradient-text">Experiências Digitais</span>',
-        hero_subtitle: 'Agência Criativa Digital criando sites modernos e de alto desempenho que geram resultados reais para empresas em todo o mundo.',
+        hero_subtitle: 'Agência Criativa Digital com sede em Eldorado, Misiones (Argentina) e alcance global. Criamos sites modernos e de alto desempenho que geram resultados reais para empresas em todo o mundo, operando 100% remotamente.',
         hero_cta_work: 'Nosso Trabalho',
         hero_cta_talk: 'Fale Conosco',
         stat_projects: 'Projetos Criados',
@@ -276,18 +278,19 @@ const translations = {
         // About
         about_tag: 'Sobre Nós',
         about_title: 'Transformando Ideias em <span class="gradient-text">Realidade Perfeita</span>',
-        about_p1: 'Somos uma equipe apaixonada de criadores digitais que transforma ideias de negócios em experiências digitais incríveis. Especializamo-nos na criação de sites rápidos, modernos e adaptáveis que não apenas parecem incríveis, mas também <strong>convertem visitantes em clientes</strong>.',
+        about_p1: 'Somos uma equipe apaixonada de criadores digitais com sede em <strong>Eldorado, Misiones (Argentina)</strong> e operação 100% remota internacionalmente. Especializamo-nos na criação de sites rápidos, modernos e adaptáveis que não apenas parecem incríveis, mas também <strong>convertem visitantes em clientes</strong>.',
         about_p2: 'Seja para uma landing page elegante, um site corporativo completo ou um aplicativo web sob medida — entregamos qualidade premium no prazo, sempre. Nossa abordagem combina tecnologia de ponta com design humanizado para criar soluções que realmente se destacam.',
         about_h1: 'Entrega rápida e eficiente',
         about_h2: '100% Adaptável em todos os dispositivos',
         about_h3: 'Otimizado para SEO nos mecanismos de busca',
         about_h4: 'Revisões Ilimitadas até você ficar satisfeito',
+        about_h5: 'Sede em Eldorado, Misiones · Operação 100% Remota e Internacional',
         tech_title: 'Tecnologias',
 
         // Founder
         founder_tag: "CEO e Fundador",
         founder_title: "Lautaro Silvero",
-        founder_p1: "Olá! Bem-vindos à Allimite Agency. Sou Lautaro Silvero, tenho 27 anos e da província de Misiones, Argentina, lidero este projeto como CEO e Fundador.",
+        founder_p1: "Olá! Bem-vindos à ALLIMITE Agency. Sou Lautaro Silvero, tenho 27 anos e de Eldorado, Misiones, Argentina, lidero este projeto como CEO e Fundador, operando remotamente com clientes em todo o mundo.",
         founder_p2: "Meu objetivo desde o primeiro dia tem sido quebrar as barreiras tradicionais e levar o potencial de nossos clientes verdadeiramente ao limite. Em um ambiente digital que muda constantemente, nos concentramos em criar estratégias sólidas, inovadoras e personalizadas. Aqui não apenas moldamos ideias, construímos o sucesso da sua marca.",
 
         // Services
@@ -353,7 +356,7 @@ const translations = {
         contact_tag: 'Entre em Contato',
         contact_title: 'Vamos Criar Algo <span class="gradient-text">Incrível</span>',
         contact_desc: 'Têm um projeto em mente? Nós adoraríamos ouvir a respeito. Preencham o formulário e responderemos em até 24 horas.',
-        contact_location: 'Disponível para todo o mundo (Remoto)',
+        contact_location: 'Eldorado, Misiones (Argentina) · Operação Remota Internacional',
         form_name: 'Seu Nome',
         form_name_ph: 'João Silva',
         form_email: 'Seu E-mail',
@@ -370,7 +373,7 @@ const translations = {
         form_submit: 'Enviar Mensagem',
 
         // Footer
-        footer_tagline: 'Criando experiências digitais que geram impacto.',
+        footer_tagline: 'Com sede em Eldorado, Misiones (Argentina) · Criando experiências digitais de alto impacto para todo o mundo 100% remotamente.',
         footer_copy: '© 2026 ALLIMITE Agency. Todos os direitos reservados.',
 
         // Form success

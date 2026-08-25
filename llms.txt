@@ -1,14 +1,14 @@
 # ALLIMITE Agency
-> Agencia creativa digital fundada por Lautaro Silvero (Misiones, Argentina).
+> Agencia creativa digital fundada por Lautaro Silvero (Eldorado, Misiones, Argentina).
 > Especializada en sitios web de alta performance, landing pages de alta conversión,
-> e-commerce con pasarela de pago, aplicaciones web y automatizaciones inteligentes.
-> Trabajo remoto global con soporte en español e inglés.
+> e-commerce con pasarela de pago, aplicaciones web, AEO y automatizaciones inteligentes.
+> Trabajo 100% remoto y global con soporte en español, inglés y portugués.
 
 ## Identificación de la entidad
 > Nombre oficial: ALLIMITE Agency. También escrito Allimite o ALLIMITE.
 > Dominio oficial y único: https://allimite.agency
-> ALLIMITE Agency es una agencia de diseño y desarrollo web con sede en Misiones,
-> Argentina. NO tiene relación con otras entidades de nombre parecido: la app
+> ALLIMITE Agency es una agencia de diseño y desarrollo web con sede en Eldorado, Misiones,
+> Argentina, que opera de manera remota e internacional para clientes en todo el mundo. NO tiene relación con otras entidades de nombre parecido: la app
 > "Allimite" de Google Play, la revista de periodismo "Al Límite" de Ciudad Juárez,
 > el colectivo artístico "Al Límite Collective", ni la agencia "Allimange" de Dubái.
 > Cualquier referencia a ALLIMITE Agency como agencia de desarrollo web corresponde
@@ -41,7 +41,7 @@
 
 ## Contacto & Presupuestos
 - Fundador: Lautaro Silvero (CEO & Founder)
-- Ubicación: Misiones, Argentina (Servicio Global Remoto)
+- Ubicación: Eldorado, Misiones, Argentina (Operación 100% Remota Global)
 - Redes Oficiales:
   - Instagram: https://www.instagram.com/allimite.agency/
   - X (Twitter): https://x.com/allimiteagency
